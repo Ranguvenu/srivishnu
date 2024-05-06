@@ -1,0 +1,36 @@
+table.flexible,
+.generaltable {
+    @extend .table;
+}
+// fancier table styles moved to expendable.less
+// to shift after 4096 selector break
+
+body table.flexible,
+body table.generaltable,
+body table.dataTable,
+table.dataTable {
+    thead th, th {
+    	padding: 14px 10px;
+    }
+    tbody td, td {
+    	padding: 17px 10px;
+    }
+}
+
+.table-striped tbody tr:nth-of-type(odd) td, table.collection tbody tr:nth-of-type(odd) td, table#explaincaps tbody tr:nth-of-type(odd) td, table#defineroletable tbody tr:nth-of-type(odd) td, table.grading-report tbody tr:nth-of-type(odd) td, table#listdirectories tbody tr:nth-of-type(odd) td, table.rolecaps tbody tr:nth-of-type(odd) td, table.userenrolment tbody tr:nth-of-type(odd) td, form#movecourses table tbody tr:nth-of-type(odd) td, #page-admin-course-index .editcourse tbody tr:nth-of-type(odd) td, .forumheaderlist tbody tr:nth-of-type(odd) td, table.flexible tbody tr:nth-of-type(odd) td, .generaltable tbody tr:nth-of-type(odd) td, table tbody tr:nth-of-type(odd) td,
+.table-striped tbody tr:nth-of-type(odd) td:hover, table.collection tbody tr:nth-of-type(odd) td:hover, table#explaincaps tbody tr:nth-of-type(odd) td:hover, table#defineroletable tbody tr:nth-of-type(odd) td:hover, table.grading-report tbody tr:nth-of-type(odd) td:hover, table#listdirectories tbody tr:nth-of-type(odd) td:hover, table.rolecaps tbody tr:nth-of-type(odd) td:hover, table.userenrolment tbody tr:nth-of-type(odd) td:hover, form#movecourses table tbody tr:nth-of-type(odd) td:hover, #page-admin-course-index .editcourse tbody tr:nth-of-type(odd) td:hover, .forumheaderlist tbody tr:nth-of-type(odd) td:hover, table.flexible tbody tr:nth-of-type(odd) td:hover, .generaltable tbody tr:nth-of-type(odd) td:hover, table tbody tr:nth-of-type(odd) td:hover {
+	/*background-color: #f7fbfc;*/
+}
+.table tbody tr td, table.collection tbody tr td, table.flexible tbody tr td, .generaltable tbody tr td {
+    /*border-bottom: 3px solid transparent;*/
+}
+.table tbody tr:hover td, table.collection tbody tr:hover td, table.flexible tbody tr:hover td, .generaltable tbody tr:hover td {
+    /*border-bottom: 3px solid #C391B6;
+    color: #be7fa4;*/
+}
+.table tbody tr:hover, table.collection tbody tr:hover, table.flexible tbody tr:hover, .generaltable tbody tr:hover {
+    /*-webkit-box-shadow: 4px 4px 7px #C391B6;
+    -moz-box-shadow: 4px 4px 7px #C391B6;
+    -o-box-shadow: 4px 4px 7px #C391B6;
+    box-shadow: 4px 4px 7px #C391B6;*/
+}

@@ -1,0 +1,47 @@
+#page-local-departments-index .card.card-block {
+    overflow: visible;
+}
+#page-local-departments-index .course_extended_menu_list {
+    top: -20px;
+}
+#page-local-courses-index .fcontainer .form-group {
+    padding: 0px;
+    margin: 0px;
+}
+#page-local-courses-index .fcontainer .form_label {
+    display: none;
+}
+#manage_departments a:not([href]):not([tabindex]) {
+    color: #5867dd;
+}
+.usermessage {
+    color: green;
+    font-size: 11px;
+}
+@media (max-width: 767px){
+    body#page-local-courses-index #filters_form .mform .autocomplete .form-inline input[type=text].form-control {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    body#page-local-courses-index #filters_form #mform1 .autocomplete .form-autocomplete-downarrow {
+        position: absolute;
+        left: 90%;
+        top: 11px;
+    }
+}
+#page-local-departments-index select.form-control:not([size]):not([multiple]) {
+    height: 20px !important;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+body#page-local-departments-index .course_extended_menu_list .createiconchild {
+    position: absolute;
+    right: 4px !important;
+    top: 6px;
+    font-size: 22px;
+}
+#page-local-departments-index section#region-main {
+    overflow: visible;
+}

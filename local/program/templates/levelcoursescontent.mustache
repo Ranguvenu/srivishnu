@@ -1,0 +1,38 @@
+<div class="tab-content">
+    {{# curriculumsemester }}
+        {{# canaddcourse }}
+        <div class="pull-right mb-15">
+            <a href="javascript:void(0)" class="addcourse" onclick="(function(e){ require('local_program/ajaxforms').init({contextid:{{ contextid }}, component:'local_program', callback:'course_form', form_status:0, plugintype: 'local_program', pluginname: 'course', id:0, ccid: {{ curriculumid }}, semesterid: {{semesterid}} }) })(event)">{{#str}}addcourse, local_program {{/ str }}</a>
+        </div>
+        {{/ canaddcourse }}
+        {{# userview}}
+        {{# mycompletionstatus }}
+            <span class="pull-right mt-15 mb-10 semestercomplition completed">{{# str}} semestercompleted, local_program {{/ str}}</span>
+        {{/ mycompletionstatus }}
+        {{# myinprogressstatus }}
+            <span class="pull-right mt-15 mb-10 semestercomplition inprogress">{{# str}} semesterinprogress, local_program {{/ str}}</span>
+        {{/ myinprogressstatus }}
+        {{/ userview}}
+            <div class="w-full pull-left semester_description">{{{description}}}</div>
+        {{# curriculumsemestercourses }}
+        <div class="w-full pull-left lpcourse_content pt-10 pb-10 pl-15 pr-15">
+            <div class="col-md-12 col-sm-12 col-xs-12 p-0 semestercourse_list {{ coursecompletionstatus }} ">
+                <div class="col-md-5 col-sm-12 col-xs-12 semestercourse_left">
+                    <div class="w-full pull-left pl-0 pt-15 pb-15 pr-15">
+                        <h5 class="coursename">
+                            <span class="course_icon mr-15">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                            </span>
+                            {{{ course }}}
+                        </h5>
+                    </div>
+                </div>
+                {{> local_program/coursesessionblock }}
+            </div>
+        </div>
+        {{/ curriculumsemestercourses }}
+        {{^ curriculumsemestercourses }}
+            <div class="w-full pull-left alert alert-info text-xs-center m-15">{{#str}} noassignedcourses, local_program {{/ str }}</div>
+        {{/ curriculumsemestercourses }}
+    {{/ curriculumsemester }}
+</div>

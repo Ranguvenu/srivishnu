@@ -1,0 +1,20 @@
+<?php
+$string['pluginname'] = 'Colleges';
+$string['editcollege'] = 'Update College';
+$string['addcollege'] = 'Create College';
+$string['collegename'] = 'College Name';
+$string['idnumbercoursedep'] = 'College Shortcode';
+$string['managecolleges'] = 'Manage Colleges';
+$string['createcollege'] = 'Create College';
+$string['leftmenu_browsecolleges'] = 'Manage Colleges';
+$string['college'] = 'College';
+$string['collegeidnumbertaken'] = 'College Shortcode already exists';
+$string['selectfaculty'] = 'Select Faculties';
+$string['facultyname'] = 'Faculty Name';
+$string['collegealreadyexists'] = 'College Shortcode already exists under this University';
+$string['spacesnotallowed'] = 'Spaces are not allowed.Please enter valid value.';
+$string['emptyuniversity'] = 'Please select University';
+$string['emptycollegefullname'] = 'Please enter College Name';
+$string['emptycollegeshortname'] = 'Please enter College Shortcode';
+$string['confirm'] = 'Alert !';
+$string['confirmmessageusers'] = 'Users are created under this college';

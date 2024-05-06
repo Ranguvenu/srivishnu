@@ -1,0 +1,99 @@
+#trainer_programs_courses thead tr th,
+#trainer_distanceprograms_courses thead tr th{
+    display: none;
+}
+.program_details{
+    background-color: #e1f2f9;
+    border-right: 2px solid #21315e;
+}
+.program_details .info_lable{
+    min-width: 105px;
+}
+.coursedetails{
+    background-color: #eceae6;
+}
+#trainer_distanceprograms_courses .coursedetails {
+    min-height: 145px;
+}
+#trainer_programs_courses .coursedetails{
+    min-height: 181px;
+}
+.coursedetails .content{
+    border-bottom: 1px solid #3ca2b8;
+}
+.coursedetails .content:last-child {
+    border-bottom: none;
+}
+.trainerview_headers{
+    font-size: 1.25rem;
+    font-weight: 500;
+    position: relative;
+}
+.trainerview_headers:after{
+    position: absolute;
+    content: '';
+    border-bottom: 2px solid;
+    width: 100%;
+    bottom: -2px;
+    left: 0px;
+}
+#trainer_programs_courses .trainersview::after,
+#trainer_programs_courses .trainersview .program_details::after,
+#trainer_distanceprograms_courses .trainersview::after,
+#trainer_distanceprograms_courses .trainersview .program_details::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.block.block_faculty_dashboard #trainer_programs_courses, 
+.block.block_faculty_dashboard #trainer_distanceprograms_courses {
+    table-layout: fixed;
+}
+.block.block_faculty_dashboard #trainer_programs_courses td, 
+.block.block_faculty_dashboard #trainer_distanceprograms_courses td {
+    float: left;
+    width: 100%;
+}
+.block.block_faculty_dashboard #trainer_programs_courses thead td, 
+.block.block_faculty_dashboard #trainer_distanceprograms_courses thead td {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.block.block_faculty_dashboard #trainer_programs_courses tbody td, 
+.block.block_faculty_dashboard #trainer_distanceprograms_courses tbody td {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+@media(min-width: 768px){
+    #trainer_programs_courses .trainersview,
+    #trainer_distanceprograms_courses .trainersview {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0px;
+    }
+    .coursedetails .content .col-md-3 {
+        width: 25%;
+    }
+    .coursedetails .course_viewbtn{
+        margin-top: -3px;
+    }
+}
+@media(max-width: 767px){
+    #trainer_programs_courses .trainersview .program_details,
+    #trainer_distanceprograms_courses .trainersview .program_details {
+        border-right: 0px;
+        margin-bottom: 10px;
+    }
+    #trainer_programs_courses .trainersview .coursedetails,
+    #trainer_distanceprograms_courses .trainersview .coursedetails {
+        width: 100%;
+    }
+}
+@media(max-width: 544px){
+    #trainer_programs_courses .trainersview .coursedetails .content, #trainer_distanceprograms_courses .trainersview .coursedetails .content {
+        padding: 0px;
+    }
+}

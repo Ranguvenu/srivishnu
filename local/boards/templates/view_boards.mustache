@@ -1,0 +1,97 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_templates/catalog
+
+    This template renders the courses content for the courses plugin.
+
+    Example context (json):
+    {}
+}}
+
+        <div class="col-md-12 col-sm-12 col-12 catcourses_list">
+            <div class="col-md-12 col-sm-12 col-12 course_container">
+                <div class="courseimg_container col-12 col-md-4">
+                    <div style="background-image: url('{{ coursefileurl }}');" alt="{{ coursename }}" class="courseimg courseimg_bg" ></div>
+                </div>
+                <div class="coursecontent col-12 col-md-8">
+                    <div class="col-md-10 col-sm-10 col-10 p-0 mt-10px">
+                        {{^ coursenameCut}}
+                            <p class="course_name" ><a href="{{ courseurl }}">{{ boardfullname }}</a></p>
+                        {{/ coursenameCut}}
+                        {{# coursenameCut}}
+                            <p class="course_name" ><a href="{{ courseurl }}" title="{{ boardname }}">{{ coursenameCut }}</a></p>
+                        {{/ coursenameCut}}
+                    </div>
+                    <div class="col-md-2 pull-right showoptions{{id}} actionicons ">
+                <span  class="pull-right showoptions" data-action="showoptions{{id}}" onmouseenter="(function(e){ require('local_boards/quickactions').quickactionsCall({ selector:'showoptions{{id}}' }) })(event)" onmouseleave="(function(e){require('local_boards/quickactions').quickactionsCall({ selector:'showoptions{{id}}' }) })(event)"><i class="fa fa-ellipsis-h options"></i>
+                </span>
+                <ul class="col-md-12 col-sm-12 col-12 p-0 options_container" id = "showoptions{{ id }}">
+                {{# delete}}    
+                <li>
+                    <a href="javascript:void(0)" title ="{{# str}} delete {{/str}}"  onclick = "(function(e){ require('local_boards/boarddatatables').boardDelete({action:'deleteboard', id: {{ id }} ,confirm: {{{status}}} ,actionstatus:'Confirmation', actionstatusmsg:'{{{ delete_message }}}' }) })(event)"><i class="fa fa-trash fa-fw" aria-hidden="true" title="" aria-label="Delete"></i></a>
+                </li>
+                {{/ delete}}
+                
+                {{# edit}}
+                <li>
+
+                <a href="javascript:void(0)" title="{{# str}} edit {{/str}}" onclick="(function(e){ require('local_boards/newboard').init({selector:'createschoolmodal', contextid:1, boardid:{{id}}, parentid:0 }) })(event)"><i class="fa fa-cog fa-fw" title=""></i></a>
+                    <!--<img src="{{ editicon }}" title="{{# str}} edit {{/str}}" data-action= "createschoolmodal" class="createschoolmodal icon" data-value="{{ recordid }}" onclick="(function(e){ require('local_school/newschool').init({selector:'createschoolmodal', contextid:1, schoolid:{{ recordid }}, parentid:{{ parentid }} }) })(event)">-->
+                </li>
+                {{/ edit}}
+                </ul>
+            </div>
+                    <div class="w-full pull-left">
+                        <div class="coursedesc">
+                            {{# coursesummary }}
+                                <p class="desc" title = "Course Descripton" >{{ coursesummary }}</p>
+                            {{/ coursesummary }}
+                            {{^ coursesummary }}
+                                <p class="alert alert-info text-xs-center">{{#str}}noboardsummary, local_boards{{/str}}</p>
+                            {{/ coursesummary }}
+                        </div>
+                        <div class="w-full pull-left cat_btm">
+                            <div class="col-md-7 col-sm-7 col-12 p-0">
+                                <span class="text-mute  d pull-left catbtm_colon">{{#str}}department, local_boards{{/str}} <span class="colon_align">:</span> </span><span title="{{departname}}">{{departname}}</span>
+                            </div>
+                            <div class="col-md-5 col-sm-5 col-12 p-0"> 
+                                <span class="text-muted lable_align">{{#str}}boardcode, local_boards{{/str}} <span class="colon_align">:</span> </span><span>
+                                {{# boardcode }} {{boardcode}} {{/ boardcode }} 
+                                {{^ boardcode }} N/A {{/ boardcode }}</span>
+                            </div>
+                        </div>
+                        <div class="w-full pull-left cat_btm">
+                            <div class="col-md-7 col-sm-7 col-12 p-0">
+                                    <span class="text-muted pull-left catbtm_colon">{{#str}}credithours, local_boards{{/str}} <span class="colon_align">:</span> </span><span>{{credithours}}</span>
+                                </div>
+                            <div class="col-md-5 col-sm-5 col-12 p-0 pull-right"> 
+                                <span class="text-muted lable_align">{{#str}}boardcost, local_boards{{/str}} <span class="colon_align">:</span> </span><span>{{# boardcost }} {{boardcost}} {{/ boardcost }} {{^ boardcost }} N/A {{/ boardcost }}</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 boardtype"><span class="text-muted">Type :</span>{{{boardtype}}}</div>
+            </div>
+        </div>
+
+<div class="col-md-12">{{{ pagination }}}</div>
+{{# nocourses}}
+  <div class='w-full pull-left text-xs-center alert alert-info'>No courses available.</div>
+{{/ nocourses}}
+
+

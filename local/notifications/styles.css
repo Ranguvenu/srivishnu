@@ -1,0 +1,58 @@
+.path-local-notifications .mform #id_notificationid optgroup:first-child{
+    display: none;
+}
+#page-local-notifications-index .notif_basicinfo{
+    width: 50%;
+    float: left;
+}
+#page-local-notifications-index .notif_dept{
+    width: 50%;
+    float: right;
+}
+#page-local-notifications-index .notif_body{
+    margin-left: 20px;
+}
+#page-local-notifications-index .notifications_data{
+    clear: both;
+}
+#page-local-notifications-index #page #region-main div[role=main]{
+    position: relative;
+}
+#page-local-notifications-index #notification-form #notification-form_caption{
+    position: absolute;
+    top: 25px;
+    right: 0px;
+}
+#page-local-notifications-index a .icon {
+    color: #5867dd;
+}
+#page-local-notifications-index #notification-form #notification-form_caption > a{
+    color: #fff;
+    font-size: 16px;
+}
+body#page-local-notifications-index .custom_btn_dv {
+    margin-bottom: 5px;
+}
+body#page-local-notifications-index #region-main .card.card-block{
+    overflow-x: visible;
+}
+body#page-local-notifications-index .course_extended_menu_list{
+    top: -40px;
+}
+body#page-local-notifications-index .course_extended_menu_itemlink .icon{
+    padding: 10px 15px 10px 10px;
+}
+body#page-local-notifications-index .course_extended_menu_list .createiconchild{
+    right: 12px;
+    top: 22px;
+    color: #5867dd;
+}
+#notification_info_wrapper {
+    overflow: auto;
+}
+.modal.local_notifications .has-danger select#id_notificationid.form-control-danger {
+    background-image: none;
+}
+#page-local-notifications-index section#region-main {
+    overflow: visible;
+}

@@ -1,0 +1,9 @@
+body#page-local-faculties-index ul.course_extended_menu_list {
+    top: -20px;
+}
+body#page-local-faculties-index #region-main>.card.card-block {
+    overflow: visible;
+}
+#page-local-faculties-index section#region-main {
+    overflow: visible;
+}

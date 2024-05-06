@@ -1,0 +1,77 @@
+<div class="col-md-12 p-0 curriculumview_tabscontainer">
+    <div class="semestertabs_list">
+        <ul class="nav nav-tabs" role="tablist">
+            {{# curriculumsemesteryears}}
+                <li class="nav-item {{^ disabled }} curriculumsemesteryears {{/ disabled }}" role="presentation">
+                    {{# caneditsemesteryear }}
+                        <div class="actionicons showoptions{{ id }}">
+                            <span  class="pull-right showoptions" data-action="showoptions{{ id }}" onmouseenter="(function(e){ require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{ id }}' }) })(event)" onmouseleave="(function(e){require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{ id }}' }) })(event)"><i class="fa fa-ellipsis-h options"></i>
+                            </span>
+                            <ul class="col-md-12 col-sm-12 col-12 p-0 options_container" id = "showoptions{{ id }}">
+                                {{# caneditsemesteryear }}
+                                <li>
+                                    <a href="javascript:void(0)" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:1, component:'local_curriculum', callback:'curriculum_managesemester_form', form_status:0, plugintype: 'local', pluginname: 'curriculum_addsemester', id: {{id}}, curriculumid:{{curriculumid}}  }) })(event)">
+                                        <i class="fa fa-cog fa-fw" aria-hidden="true" title="Edit Year"></i>
+                                    </a>
+                                </li>
+                                {{/ caneditsemesteryear }}
+                                {{# candeletesemesteryear }}
+                                <li>
+                                    <a  href="javascript:void(0)" onclick="(function(e){ require('local_program/program').deleteConfirm({action:'deletesemester', id: {{ id }}, curriculumid: {{ curriculumid }}}) })(event)">
+                                        <i class="fa fa-times" aria-hidden="true" title="Delete Year"></i>
+    				                </a>
+                                </li>
+                            {{/ candeletesemesteryear }}
+			    {{^ candeletesemesteryear }}
+			    <li>
+				<a href="javascript:void(0)" alt = "{{# str}} delete {{/ str}}"
+				    title = "{{# str}} delete {{/ str}}" onclick="(function(e){ require('local_program/program').deleteConfirm({action:'cannotdeletesemester', id: {{ id }}, curriculumid: {{ curriculumid }}}) })(event)">
+					<i class="fa fa-times" aria-hidden="true" title="Delete Year"></i>
+				</a>
+                            </li>
+			    {{/ candeletesemesteryear }}
+                            </ul>
+                        </div>
+                        {{/ caneditsemesteryear }}
+                    {{# disabled }}
+                        <span class="nav-link">{{{ year }}}</span>
+                    {{/ disabled}}
+                    {{^ disabled }}
+                        <a class="nav-link {{active}} {{#userview}}{{#mycompletionstatus}}{{mycompletionstatus}}{{/mycompletionstatus}}{{#myinprogressstatus}}{{myinprogressstatus}}{{/myinprogressstatus}}{{/userview}}" data-toggle="tab" href="javascript:void(0);" aria-controls="ccyear{{ id }}" data-yearid = "{{id}}" role="tab">{{{ year }}}</a>
+                    {{/ disabled }}
+                </li>
+            {{/ curriculumsemesteryears }}
+        </ul>
+    </div>
+    <div class="levetabscontent_container">
+        {{{ curriculumsemesteryear }}}
+    </div>
+</div>
+{{#js}}
+    $( document ).ready(function() {
+        var semesterheight = $('.semestertabs_list').height();
+        $('.levetabscontent_container').css('min-height', semesterheight+'px');
+    });
+    $('.curriculumsemesters').click(function(){
+        if ($(this).find('.nav-link').hasClass('active')){
+            return true;
+        }
+        if ($('.tab-content #{{semesterid}}').hasClass('active')){
+            return true;
+        }
+
+        var yearid = $(this).find('.nav-link').data('yearid');
+        $.ajax({
+            method: 'POST',
+            url: M.cfg.wwwroot + '/local/program/ajax.php',
+            data: {
+                action: 'curriculumyearsemesters',
+                curriculumid:{{curriculumid}},
+                yearid: yearid
+            },
+            success:function(resp){
+                $('.levetabscontent_container').html(resp);
+            }
+        });
+    });
+{{/js}}

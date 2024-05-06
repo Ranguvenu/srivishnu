@@ -1,0 +1,6 @@
+body#page-local-boards-index ul.course_extended_menu_list {
+    top: -20px;
+}
+body#page-local-boards-index #region-main>.card.card-block {
+    overflow: visible;
+}

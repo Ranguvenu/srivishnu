@@ -1,0 +1,8 @@
+/.project
+/.settings
+/.buildpath
+/nbproject/**
+/Thumbs.db
+
+/node_modules/
+/.eclipse-pmd

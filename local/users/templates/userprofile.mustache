@@ -1,0 +1,123 @@
+{{!
+    This file is part of eAbyas
+    Copyright eAbyas Info Solutons Pvt Ltd, India
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    
+    @author eabyas  <info@eabyas.in>
+}}
+
+        <div class="edu_info w-full pull-left">
+                                        <div class="profile_data_content">
+                                            <div class="col-md-4 cnt-left pull-left">
+                                                <div class="w-full">
+                                                    <div class ="pull-left fontfa">
+                                                        <i class="fa fa-sitemap"></i>
+                                                    </div>
+                                                    <div class ="pull-left">
+                                                        <h6>
+                                                        <div class="pr_info_titles">{{# str }} organization, local_users {{/ str }}</div>
+                                                            <span class="pull-left"></span>
+                                                        </h6>
+                                                        <p class="pull-left">
+                                                            <div class="pull-left pl-10px">{{ organisation }}</div>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+<!-- <mallikarjun> - ODL-786 hide department for University head -- starts -->
+{{# dptdispay}}
+                                            <div class="col-md-4 cnt-left pull-left">
+                                                <div class="w-full">
+                                                    <div class ="pull-left fontfa">
+                                                        <i class="fa fa-building-o"></i>
+                                                    </div>
+                                                    <div class ="pull-left">
+                                                        <h6>
+                                                        <div class="pr_info_titles">{{#open_univdept_status}} {{# str }} college, local_users {{/ str }} {{/open_univdept_status}} {{^open_univdept_status}} {{# str }} department, local_users {{/ str }}{{/open_univdept_status}}</div>
+                                                            <span class="pull-left"></span>
+                                                        </h6>
+                                                        <p class="pull-left">
+                                                            <div class="pull-left pl-10px">{{ department }}</div>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+{{/ dptdispay}}
+<!-- <mallikarjun> - ODL-786 hide department for University head -- ends -->
+                                            <div class="col-md-4 cnt-left pull-left">
+                                                <div class="w-full">
+                                                    <div class ="pull-left fontfa">
+                                                        <i class="fa fa-map-marker"></i>
+                                                    </div>
+                                                    <div class ="pull-left">
+                                                        <h6>
+                                                            <div class="pr_info_titles">{{# str }} location, local_users {{/ str }}</div>
+                                                            <span class="pull-left"></span>
+                                                        </h6>
+                                                        <p class="pull-left">
+                                                            <div class="pull-left pl-10px">{{ location }}</div>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile_data_content">
+                                            <div class="col-md-4 cnt-left pull-left">
+                                                <div class="w-full">
+                                                    <div class ="pull-left fontfa">
+                                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class ="pull-left">
+                                                        <h6>
+                                                            <div class="pr_info_titles">{{# str }} phno, local_users {{/ str }}</div>
+                                                            <span class="pull-left"></span>
+                                                        </h6>
+                                                        <p class="pull-left">
+                                                            <div class="pull-left pl-10px">{{ phnumber }}</div>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                            <div class="col-md-4 cnt-left pull-left">
+                                                <div class="w-full">
+                                                    <div class ="pull-left fontfa">
+                                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class ="pull-left">
+                                                        <h6>
+                                                            <div class="pr_info_titles">{{# str }} address, local_users {{/ str }}</div>
+                                                            <span class="pull-left"></span>
+                                                        </h6>
+                                                        <p class="pull-left">
+                                                            <div class="pull-left pl-10px">{{ address }}</div>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 cnt-left pull-left">
+                                                <div class="w-full">
+                                                    <div class ="pull-left fontfa">
+                                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class ="pull-left">
+                                                        <h6>
+                                                        <div class="pr_info_titles">{{# str }} serviceid, local_users {{/ str }}</div>
+                                                            <span class="pull-left"></span>
+                                                        </h6>
+                                                        <p class="pull-left">
+                                                            <div class="pull-left pl-10px">{{ empid }}</div>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>

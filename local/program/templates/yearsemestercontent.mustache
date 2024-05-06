@@ -1,0 +1,195 @@
+<div class="tab-content">
+    {{# curriculumsemesteryears }}
+    {{#candoactions}}
+        {{# cancreatesemester }}
+        <div class="pull-right ml-15px">
+            <a href="javascript:void(0)" class="btn btn-sm addsemester" onclick="(function(e){ require('local_program/ajaxforms').init({contextid:{{ contextid }}, component:'local_program', callback:'curriculum_managesemester_form', form_status:0, plugintype: 'local_program', pluginname: 'addsemester', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, programid: {{programid}} }) })(event)">{{#str}}addsemester, local_program {{/ str }}</a>
+        </div>
+        {{/ cancreatesemester }}
+       {{/candoactions}}
+        {{#issiteadmin}}
+        {{#canenrolcourse}}
+        {{#coursesadded}}
+        <div class="pull-right ml-15px">
+            <a href="{{cfg.wwwroot}}/local/program/massenroll.php?id={{programid}}&ccid={{curriculumid}}&year={{yearid}}" ><i class="icon fa fa-users" aria-hidden="true" title ="Bulkenroll for single year courses"></i></a>
+        </div>
+        
+        <div class="pull-right ml-15px">
+            <a href="{{cfg.wwwroot}}/local/program/courseenrol.php?id={{programid}}&ccid={{curriculumid}}&year={{yearid}}" ><i class="icon fa fa-user-circle-o" aria-hidden="true" title ="Mass Enroll"></i></a>
+        </div>
+       
+        <div class="pull-right ml-15px">
+            <a href="javascript:void(0)" onclick="(function(e){ require(['local_program/ajaxforms'], function(ajaxforms){
+              ajaxforms.init({contextid:{{ contextid }}, component:'local_program', callback:'curriculum_managestudent_form', form_status:0, plugintype: 'local_program', pluginname: 'addstudent', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, programid: {{programid}} });             
+          }) }) (event)"><i    class="icon fa fa-user-plus" aria-hidden="true" title ="Assign Students"></i></a>
+        </div>
+        <div class="pull-right ml-15px">
+            <a href="{{cfg.wwwroot}}/local/program/users.php?ccid={{curriculumid}}&prgid={{programid}}&yearid={{yearid}}" ><i class="icon fa fa-user" aria-hidden="true" title ="View Students"></i></a>
+        </div>
+        {{/coursesadded}}
+        {{/canenrolcourse}}
+        {{/issiteadmin}}
+        <div class="pull-left">
+            <b>{{#str}}cost{{/str}}:</b> Rs. {{cost}}/-
+        </div>
+        {{# userview}}
+        {{# mycompletionstatus }}
+            <span class="pull-right mt-15 mb-10 semestercomplition completed">{{# str}} semestercompleted, local_program {{/ str}}</span>
+        {{/ mycompletionstatus }}
+        {{# myinprogressstatus }}
+            <span class="pull-right mt-15 mb-10 semestercomplition inprogress">{{# str}} semesterinprogress, local_program {{/ str}}</span>
+        {{/ myinprogressstatus }}
+        {{/ userview}}
+            <div class="w-full pull-left semester_description">{{{description}}}</div>
+    <div class="local_program-semisters_wrap">
+        {{# curriculumsemesters }}
+        <div class="w-full pull-left lpcourse_content pt-10 pb-10" id = "lpcourse_content{{semesterid}}">
+            <div class="col-md-12 col-sm-12 col-xs-12 p-0 mt-2 semestercourse_list {{ coursecompletionstatus }}">
+                <div class='d-flex flex-row flex-wrap w-full pull-left semcontentlist{{# semesters}} semabove{{/ semesters}}' {{# semesters}}data-toggle="collapse" {{# userview }} data-target="{{#ccyearfirstsem}}#semcollapse_{{semesterid}}{{/ccyearfirstsem}}{{#parentsemcmplstatus}}#semcollapse_{{semesterid}}{{/parentsemcmplstatus}}"{{/ userview }} {{^ userview }} data-target="#semcollapse_{{semesterid}}"{{/ userview }}  aria-expanded="false" aria-controls="semcollapse_{{semesterid}}"{{/ semesters}} id="semcontentlist{{semesterid}}">
+                    <div class="col-md-5 col-sm-12 col-xs-12 semestercourse_left">
+                        <div class="w-full pull-left p-10">
+                            <h5 class="coursename mb-0 ml-15px">{{! <span class="course_icon mr-15px">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                </span> }}{{{ semester }}}
+                            </h5>
+                        </div>
+                    </div>
+
+                {{> local_program/coursesessionblock }}
+                
+                {{#canmanagefaculty}}
+                                    <div class="w-full pull-right ml-15px text-right m-b-2">
+                                    <a href="javascript:void(0)" title = "{{#str}}addclassroom, local_program {{/ str }}" class="btn btn-sm addclassroom" onclick="(function(e){ require('local_program/ajaxforms').init({contextid:{{ contextid }}, component:'local_program', callback:'curriculum_manageclassroom_form', form_status:0, plugintype: 'local_program', pluginname: 'addclassroom', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, programid: {{programid}}, ccses_action: 'class_sessions', semesterid : {{semesterid}} }) })(event)" style = "margin-top: 10px;margin-right: 10px">Create classroom</a>
+                                </div>
+                    <!-- {{#cancreatesession}}
+                        <a href="{{cfg.wwwroot}}/local/program/sessions.php?ccses_action=semsessions&programid={{ programid }}&ccid={{ curriculumid }}&yearid={{ yearid }}&semesterid={{ semesterid }}" class="singlebutton">{{#str}}createsession, local_program {{/ str }}</a>
+                    {{/cancreatesession}} -->
+                    {{/canmanagefaculty}}
+                    </div>
+                    <!-- {{#myinprogressstatus}}
+                        <a href="{{cfg.wwwroot}}/local/program/sessions.php?ccses_action=semsessions&programid={{ programid }}&ccid={{ curriculumid }}&yearid={{ yearid }}&semesterid={{ semesterid }}" class="singlebutton"><button>Sessions</button></a>
+                    {{/myinprogressstatus}} -->
+                <div class="courseslist col-md-12 p-0 {{# semesters}}collapse{{/ semesters}}" {{# semesters}} id="semcollapse_{{semesterid}}" {{/ semesters}}>
+                    {{#courses}}
+                    <div class='col-md-4 pull-left mt-15 courselist'>
+                        <div class="coursenamesub">
+                            <div class='w-full pull-left p-5px'>
+                                <a href="{{cfg.wwwroot}}/course/view.php?id={{courseid}}&programcourse={{ programid }}" target="_blank" class="courssubeurl h5 font-weight-bold{{# istrainer}} {{^ trainerenrolstatus }} anchor-disabled {{/ trainerenrolstatus }}{{/ istrainer}}" title="{{# istrainer}}{{^ trainerenrolstatus }}You are not enrolled to this course{{/ trainerenrolstatus }}{{/ istrainer}}">{{course}}</a>
+                            </div>
+                            <div class='w-full pull-left'>
+                                <div class='col-md-5 p-5px pull-right text-xs-right course_actions'>
+                                    <!-- {{#canmanagefaculty}}
+                                    {{#cancreatesession}}
+                                        <a href="{{cfg.wwwroot}}/local/program/sessions.php?ccses_action=coursesessions&bclcid={{ cc_courseid }}&programid={{ programid }}&ccid={{ curriculumid }}&yearid={{ yearid }}&semesterid={{ semesterid }}&courseid={{ courseid }}" class="singlebutton">{{#str}}createsession, local_program {{/ str }}</a>
+                                    {{/cancreatesession}}
+                                    {{/canmanagefaculty}} -->
+
+                                    <!-- {{#myinprogressstatus}}
+                                        <a href="{{cfg.wwwroot}}/local/program/sessions.php?ccses_action=coursesessions&bclcid={{ cc_courseid }}&programid={{ programid }}&ccid={{ curriculumid }}&yearid={{ yearid }}&semesterid={{ semesterid }}&courseid={{ courseid }}" class="singlebutton"><button>Sessions</button></a>
+                                    {{/myinprogressstatus}} -->
+
+                                    {{#canremovecourse}}
+                                    <a class="unassign_course" onclick="(function(e){ require('local_program/program').unassignCourses({action:'unassign_course', programid: {{ programid }}, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, semesterid : {{semesterid}}, courseid: {{courseid}} }) })(event)" href="javascript:void(0)"><i class="fa fa-trash" aria-hidden="true" title="Un-assign" aria-label="Delete"></i></a>
+                                    {{/canremovecourse}}
+
+                                    {{#canmanagefaculty}}
+                                    <a href="javascript:void(0)" title = "{{#str}}addfaculty, local_program {{/ str }}" class="addfaculty" onclick="(function(e){ require('local_program/ajaxforms').init({contextid:{{ contextid }}, component:'local_program', callback:'curriculum_managefaculty_form', form_status:0, plugintype: 'local_program', pluginname: 'addfaculty', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, programid: {{programid}}, semesterid : {{semesterid}}, courseid: {{courseid}} }) })(event)"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                                    {{/canmanagefaculty}}
+                                    {{#canmanagefaculty}}
+                                    <a title = "{{#str}}viewfaculty, local_program {{/ str }}" href="{{cfg.wwwroot}}/local/program/coursefaculty.php?yearid={{yearid}}&semesterid={{semesterid}}&courseid={{courseid}}" class="viewfaculty" ><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                    {{/canmanagefaculty}}
+                                    {{#canimportcoursecontent}}
+                                    {{^importstatus}}
+                                    <a title="{{#str}}import_course_content, local_program {{/ str }}" href="{{cfg.wwwroot}}/local/program/importcourse.php?cid={{courseid}}&curriculumid={{curriculumid}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                    {{/importstatus}}
+                                    {{/canimportcoursecontent}}
+                                    {{# coursetype }}
+                                        {{^ completioncriteria}}
+                                            {{# canaddcourse }}
+                                                <span class='text-danger' title='Please set completion criteria' id='notifycompletion{{courseid}}'><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                                             {{/ canaddcourse }}
+                                        {{/ completioncriteria}}
+                                    {{/ coursetype }}
+                                    {{^ coursetype }}
+                                        <span class='text-danger' title='Please set completion criteria' id='notifycompletion{{courseid}}' style='display:none;'><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                                    {{/ coursetype }}
+                                </div>
+                                <div class='col-md-7 pull-left p-5px'>
+                                    {{# candoactions}}
+                                    {{# canaddcourse }}
+                                    <span><span>Switch To</span><span class="mr-5px ml-5px">:</span></span>
+                                    <span><label class="switch">
+                                            <input type="checkbox" {{# coursetype }} checked {{/ coursetype }} id="switch_course_{{courseid}}" value="{{courseid}}"  onclick="(function(e){ require('local_program/ajaxforms').course_switch({courseid:{{ courseid }} }) })(event)">
+                                            <span class="slider round"><span class='switch_course'></span></span>
+                                        </label></span>
+                                    {{/ canaddcourse }}
+                                    {{/ candoactions }}
+                                   {{!  <span class="switch_type">
+                                        <label class="switch">
+                                            <input class="switch-input" type="checkbox" id="switch_course'.$course->id.'" value="'.$course->id.'" "'.$select.'">
+                                            <span class="switch-label" data-on="Man" data-off="Opt"></span>
+                                            <span class="switch-handle"></span>
+                                        </label>
+                                    </span> }}
+                                </div>
+                            </div>
+                            {{^ canaddcourse }}
+                                <span class='courseswitchtype{{#coursetype}} mandatory{{/coursetype}}'>{{# coursetype }}{{# str}}mandatory, local_program{{/ str}}{{/ coursetype }}{{^ coursetype }}{{# str}}optional, local_program{{/ str}}{{/ coursetype}}</span>
+                            {{/ canaddcourse }}
+                        </div>
+                    </div>
+                        {{/courses}}
+                        {{#offlineclassrooms}}
+                            <div class='col-md-4 pull-left mt-15 courselist'>
+                                <div class="coursenamesub">
+                                    <div class='w-full pull-left p-5px'>
+                                        <a href="{{cfg.wwwroot}}/local/program/sessions.php?ccses_action=class_sessions&bclcid={{ cc_courseid }}&programid={{ programid }}&ccid={{ curriculumid }}&yearid={{ yearid }}&semesterid={{ semesterid }}&courseid={{ courseid }}" class="courssubeurl h5 font-weight-bold">{{ classname }}</a>
+                                        {{# canmanagefaculty }}
+                                        <span class="classroomdoticon"><i class="fa fa-ellipsis-h options"></i></span>
+                                        {{/ canmanagefaculty }}
+                                    </div>
+                                    <div class='w-full pull-left'>
+                                        <div class='col-md-6 p-5px pull-right text-xs-right course_actions'>
+                                            <span class='courseswitchtype{{#coursetype}} mandatory{{/coursetype}}'></span>
+                                        </div>
+                                    </div>
+                                    {{#cancreatesession}}
+                                        <a href="{{cfg.wwwroot}}/local/program/sessions.php?ccses_action=class_sessions&bclcid={{ cc_courseid }}&programid={{ programid }}&ccid={{ curriculumid }}&yearid={{ yearid }}&semesterid={{ semesterid }}&courseid={{ courseid }}" class="singlebutton"><button>{{#str}}createsession, local_program {{/ str }}</button></a>
+                                    {{/cancreatesession}}
+                                    {{^cancreatesession}}
+                                        <a href="{{cfg.wwwroot}}/local/program/sessions.php?ccses_action=class_sessions&bclcid={{ cc_courseid }}&programid={{ programid }}&ccid={{ curriculumid }}&yearid={{ yearid }}&semesterid={{ semesterid }}&courseid={{ courseid }}" class="singlebutton"><button>View Sessions</button></a>
+                                    {{/cancreatesession}}   
+                                </div>
+                                {{# canmanagefaculty }}
+                                <div class="col-md-2 col-xs-12 semestercourse_right xs-mt-10 text-md-center">
+                                    
+                                            <span class="add-del-sem md-pb-15">
+                                                <a href="javascript:void(0)" title = "{{#str}}addfaculty, local_program {{/ str }}" class="addfaculty" onclick="(function(e){ require('local_program/ajaxforms').init({contextid:{{ contextid }}, component:'local_program', callback:'curriculum_manageclassroom_form', form_status:0, plugintype: 'local_program', pluginname: 'addclassroom', id:{{ cc_courseid }}, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, programid: {{programid}}, semesterid : {{semesterid}} }) })(event)"><i class="icon fa fa-cog fa-fw" title="Edit Classroom"></i></a>
+                                                <a href="javascript:void(0)"  class="delsemester" onclick="(function(e){ require('local_program/program').deleteConfirm({action:'deleteclassroom', id: {{ cc_courseid }}, count:{{attendancecount}}, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, programid: {{programid}}, semesterid : {{semesterid}}, classname: '{{classname}}' }) })(event)">
+                                                    <i class="icon fa fa-trash fa-fw"title="{{#str}}deleteclassroom, local_program {{/ str }}"></i>
+                                                </a>
+                                            </span>
+                                </div>
+                                {{/ canmanagefaculty }}
+                            </div>
+                        {{/offlineclassrooms}}
+                    {{#canaddcourse}}
+                    <div class='w-full pull-right text-xs-right ml-15px mr-15px'>
+                        <a href="javascript:void(0)" class="btn btn-sm addcourse" onclick="(function(e){ require('local_program/ajaxforms').init({contextid:{{ contextid }}, component:'local_program', callback:'course_form', form_status:0, plugintype: 'local_program', pluginname: 'addcourse', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, semesterid: {{semesterid}}, programid: {{programid}} }) })(event)">{{#str}}addcourse, local_program {{/ str }}</a>
+                    </div>
+                    {{/canaddcourse}}
+                </div>
+            </div>
+        </div>
+        {{/ curriculumsemesters }}
+        {{^ curriculumsemesters }}
+            <div class="w-full pull-left alert alert-info text-xs-center m-15">{{#str}} noaddedsemesters, local_program {{/ str }}</div>
+        {{/ curriculumsemesters }}
+    </div>
+    {{/ curriculumsemesteryears }}
+</div>
+{{# js }}
+if($('.tab-content .local_program-semisters_wrap .lpcourse_content:first-child .courseslist').hasClass('collapse')){
+    $('.tab-content .local_program-semisters_wrap .lpcourse_content:first-child .courseslist').removeClass('collapse').addClass('collapse in');
+}
+{{/ js }}

@@ -1,0 +1,32 @@
+fieldset#id_settingsheader {
+    clear: both;
+}
+.help-btn {
+    margin-left: 5px;
+}
+.table-wrapper {
+	width: 100%;
+	display: inline-block;
+	overflow: auto;
+}
+@media(max-width: 480px){
+	body .filepicker-filelist .filepicker-container {
+	    padding-top: 70px;
+	}
+}
+
+a#masterdatabackbutton {
+    background-color: #17a2b8;
+    color: #fff;
+    border-color: #17a2b8!important;
+    border-radius: .25rem;
+    border: 1px;
+    padding: 2px 5px;
+}
+#page-local-programs-help table {
+    border: 1px solid #000 !important;
+}
+#page-local-programs-help table tbody td {
+    text-align: left !important;
+    padding: 5px;
+}

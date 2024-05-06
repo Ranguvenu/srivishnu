@@ -1,0 +1,92 @@
+.block-region .block_program_courselist .card-body .card-title {
+    display: none !important;
+}
+.editing .block-region .block_program_courselist .card-body .card-title {
+    display: block !important;
+}
+#page-my-index .block_program_courselist .card-block .content {padding-top: 1.5rem;padding-bottom: .25rem;}
+#page-my-index .block_program_courselist .card-block {
+    padding-top: 1.25rem;
+}
+.Cp-flexi-container {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.Cprcontainer {
+    color: #fff;
+    border-radius: .25rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .25rem 0px;
+    flex-flow: row wrap;
+}
+.Cprcount {
+    font-size: 18px;
+    margin-left: .5rem;
+    font-weight: 500;
+}
+.Cprhdr {
+    margin-bottom: 1rem;
+    color: #4a4747;
+}
+.cppad {
+    width: 100%;
+    text-align: center;
+    border-radius: .25rem;
+    padding: .4rem 1rem;
+}
+.mbottom-2 {margin-bottom: 1.75rem;}
+.Cpenrol {
+    background: -moz-linear-gradient(140deg, rgba(0,114,135,1) 0%, rgba(1,170,209,1) 70%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,114,135,1)), color-stop(100%, rgba(1,170,209,1)));
+    background: -webkit-linear-gradient(140deg, rgba(0,114,135,1) 0%, rgba(1,170,209,1) 70%);
+    background: -o-linear-gradient(140deg, rgba(0,114,135,1) 0%, rgba(1,170,209,1) 70%);
+    background: -ms-linear-gradient(140deg, rgba(0,114,135,1) 0%, rgba(1,170,209,1) 70%);
+    background: linear-gradient(140deg, rgba(0,114,135,1) 0%, rgba(1,170,209,1) 70%);
+}
+.Cpinp {
+    background: -moz-linear-gradient(140deg, rgba(125, 95, 245,1) 0%, rgba(153, 135, 247,1) 70%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(125, 95, 245,1)), color-stop(100%, rgba(153, 135, 247,1)));
+    background: -webkit-linear-gradient(140deg, rgba(125, 95, 245,1) 0%, rgba(153, 135, 247,1) 70%);
+    background: -o-linear-gradient(140deg, rgba(125, 95, 245,1) 0%, rgba(153, 135, 247,1) 70%);
+    background: -ms-linear-gradient(140deg, rgba(125, 95, 245,1) 0%, rgba(153, 135, 247,1) 70%);
+    background: linear-gradient(140deg, rgba(125, 95, 245,1) 0%, rgba(153, 135, 247,1) 70%);
+}
+.Cpcomp {
+    background: -moz-linear-gradient(140deg, rgba(84, 115, 221,1) 0%, rgba(67, 139, 224,1) 70%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(84, 115, 221,1)), color-stop(100%, rgba(67, 139, 224,1)));
+    background: -webkit-linear-gradient(140deg, rgba(84, 115, 221,1) 0%, rgba(67, 139, 224,1) 70%);
+    background: -o-linear-gradient(140deg, rgba(84, 115, 221,1) 0%, rgba(67, 139, 224,1) 70%);
+    background: -ms-linear-gradient(140deg, rgba(84, 115, 221,1) 0%, rgba(67, 139, 224,1) 70%);
+    background: linear-gradient(140deg, rgba(84, 115, 221,1) 0%, rgba(67, 139, 224,1) 70%);
+}
+.block_program_courselist .card-block {
+    /*background-color: #f2f2f2;*/
+}
+/*.pagelayout-studentdashboard #page.container-fluid {background-color: #fff;}*/
+.pagelayout-studentdashboard .block.block_program_courselist {border:none !important;}
+@media (min-width: 768px) {
+    #block-region-facrightreg .block_program_courselist,
+    #block-region-sturightreg .block_program_courselist {
+        height: calc(100% - 1rem);
+    }
+}
+@media (min-width: 1024px) {
+    .Cprcontainer {
+        width: 31.33%;
+    }
+    .cppad {
+        padding: 1.2rem 0.5rem;
+    }
+}
+@media (max-width: 767px) {
+    .Cp-flexi-container {
+        justify-content: center;
+    }
+    .Cprcontainer {
+        width: 100%;
+    }
+}

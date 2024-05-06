@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<report version="2021051704.12"><visible><![CDATA[1]]></visible>
+<name><![CDATA[Gradable Activity Courses]]></name>
+<summary><![CDATA[]]></summary>
+<type><![CDATA[statistics]]></type>
+<components><![CDATA[YToyOntzOjk6ImN1c3RvbXNxbCI7YToxOntzOjY6ImNvbmZpZyI7Tzo4OiJzdGRDbGFzcyI6MTE6e3M6NDoibmFtZSI7czoyNToiR3JhZGFibGUrQWN0aXZpdHkrQ291cnNlcyI7czo0OiJ0eXBlIjtzOjEwOiJzdGF0aXN0aWNzIjtzOjg6InF1ZXJ5c3FsIjtzOjE3NzA6IlNFTEVDVCtDT05DQVQlMjglMjclM0NhK2hyZWYlM0QlMjIlMjUlMjVXV1dST09UJTI1JTI1JTJGYmxvY2tzJTJGbGVhcm5lcnNjcmlwdCUyRnZpZXdyZXBvcnQucGhwJTNGaWQlM0QlMjUlMjVSRVBPUlRJRCUyNSUyNSUyMiUzRSUyNyUyQytDT1VOVCUyOERJU1RJTkNUK2NvbmNhdCUyOGMuaWQlMkMlMjctJTI3JTJDdS5pZCUyOSUyOSUyQyslMjclM0MlMkZhJTNFJTI3JTI5KytBUyslMjJBY3RpdmUrQ291cnNlcytCWStHcmFkYWJsZStBY3Rpdml0aWVzJTIyKyUwRCUwQUZST00rcHJlZml4X3VzZXIrdSslMEQlMEFKT0lOK3ByZWZpeF9yb2xlX2Fzc2lnbm1lbnRzK3JhK09OK3JhLnVzZXJpZCslM0QrdS5pZCslMEQlMEFKT0lOK3ByZWZpeF9yb2xlK3IrT04rci5pZCslM0QrcmEucm9sZWlkK0FORCtyLnNob3J0bmFtZSslM0QrJTI3ZmFjdWx0eSUyNyslMEQlMEFKT0lOK3ByZWZpeF9jb250ZXh0K2N0eCtPTitjdHguaWQrJTNEK3JhLmNvbnRleHRpZCtBTkQrY3R4LmNvbnRleHRsZXZlbCslM0QrNTArJTBEJTBBSk9JTitwcmVmaXhfY291cnNlK2MrT04rYy5pZCslM0QrY3R4Lmluc3RhbmNlaWQrJTBEJTBBTEVGVCtKT0lOK3ByZWZpeF9sb2NhbF9jY19zZW1lc3Rlcl9jb3Vyc2VzK2xjYytPTitsY2MuY291cnNlaWQrJTNEK2MuaWQrJTBEJTBBTEVGVCtKT0lOK3ByZWZpeF9sb2NhbF9jb3N0Y2VudGVyK2xjK09OK2xjLmlkKyUzRCt1Lm9wZW5fY29zdGNlbnRlcmlkK0FORCtsYy5wYXJlbnRpZCslM0QrMCUwRCUwQUxFRlQrSk9JTitwcmVmaXhfbG9jYWxfY29zdGNlbnRlcitsY28rT04rbGNvLnBhcmVudGlkKyUzRCtsYy5pZCtBTkQrbGNvLmlkKyUzRCtjLm9wZW5fZGVwYXJ0bWVudGlkK0FORCtsY28udW5pdl9kZXB0X3N0YXR1cyslM0QrMCslMEQlMEFMRUZUK0pPSU4rcHJlZml4X2xvY2FsX3Byb2dyYW0rbHArT04rbHAuaWQrJTNEK2xjYy5wcm9ncmFtaWQrJTBEJTBBSk9JTitwcmVmaXhfbG9nc3RvcmVfc3RhbmRhcmRfbG9nK2xzbCtPTitsc2wudXNlcmlkKyUzRCt1LmlkK0FORCtsc2wuY291cnNlaWQrJTNEK2N0eC5pbnN0YW5jZWlkK0FORCtsc2wuYWN0aW9uKyUzRCslMjdjcmVhdGVkJTI3K0FORCtsc2wudGFyZ2V0KyUzRCslMjdncmFkZV9pdGVtJTI3KyUwRCUwQUpPSU4rcHJlZml4X2dyYWRlX2l0ZW1zK2dpK09OK2dpLmNvdXJzZWlkKyUzRCtjLmlkK0FORCtnaS5pdGVtdHlwZSslM0QrJTI3bW9kJTI3K0FORCtnaS5pZCslM0QrbHNsLm9iamVjdGlkJTBEJTBBV0hFUkUrMSUzRDErQU5EK2MudmlzaWJsZSslM0QxK0FORCslMjhjLm9wZW5fcGFyZW50Y291cnNlaWQrJTIxJTNEKzArT1IrJTI4Yy5vcGVuX3BhcmVudGNvdXJzZWlkKyUzRCswK0FORCtjLmZvcnB1cmNoYXNlaW5kaXZpZHVhbGx5KyUzRCsyJTI5JTI5K0FORCtGUk9NX1VOSVhUSU1FJTI4bHNsLnRpbWVjcmVhdGVkJTJDKyUyNyUyNVktJTI1bS0lMjVkJTI3JTI5KyUzRSslMjhjdXJkYXRlJTI4JTI5Ky0raW50ZXJ2YWwrOTArZGF5JTI5KyslMEQlMEElMjUlMjVST0xFV0lTRSUyNSUyNSsrJTI1JTI1RklMVEVSX0NPTExFR0UlM0FsYy5pZCUyNSUyNSslMjUlMjVGSUxURVJfREVQQVJUTUVOVCUzQWxjby5pZCUyNSUyNSslMjUlMjVGSUxURVJfUFJPR1JBTSUzQWxwLmlkJTI1JTI1KyUyNSUyNUZJTFRFUl9DT1VSU0VTJTNBYy5pZCUyNSUyNSslMjUlMjVGSUxURVJfRkFDVUxUWSUzQXUuaWQlMjUlMjUrQU5EK2xzbC50aW1lY3JlYXRlZCtCRVRXRUVOKyUyNSUyNUxTX1NUQVJUREFURSUyNSUyNStBTkQrJTI1JTI1TFNfRU5EREFURSUyNSUyNSI7czoxMToiZGVzY3JpcHRpb24iO2E6Mjp7czo0OiJ0ZXh0IjtzOjA6IiI7czo2OiJmb3JtYXQiO3M6MToiMSI7fXM6NjoiZ2xvYmFsIjtzOjE6IjEiO3M6MjoiaWQiO2k6NDI7czo4OiJjb3Vyc2VpZCI7aToxO3M6MzU6Im1mb3JtX2lzZXhwYW5kZWRfaWRfYWR2YW5jZWRvcHRpb25zIjtpOjA7czoxMjoic3VibWl0YnV0dG9uIjtzOjQ6Ik5leHQiO3M6MTI6ImRpc2FibGV0YWJsZSI7aTowO3M6Nzoic3VtbWFyeSI7czowOiIiO319czoxMToicGVybWlzc2lvbnMiO2E6Mjp7czo2OiJjb25maWciO086ODoic3RkQ2xhc3MiOjM6e3M6MTM6ImNvbmRpdGlvbmV4cHIiO3M6MzI6IiUyOGMxK29yK2MyK29yK2MzK29yK2M0K29yK2M1JTI5IjtzOjE0OiJjb25kaXRpb25leHByMSI7czowOiIiO3M6MTQ6ImNvbmRpdGlvbmV4cHIyIjtzOjMyOiIlMjhjMStvcitjMitvcitjMytvcitjNCtvcitjNSUyOSI7fXM6ODoiZWxlbWVudHMiO2E6NTp7aTowO2E6NTp7czoyOiJpZCI7czoxNToiNVVXeFZLRWdoYmszNFNMIjtzOjg6ImZvcm1kYXRhIjtPOjg6InN0ZENsYXNzIjozOntzOjEyOiJjb250ZXh0bGV2ZWwiO3M6MjoiMTAiO3M6Njoicm9sZWlkIjtzOjE6IjkiO3M6MTI6InN1Ym1pdGJ1dHRvbiI7czozOiJBZGQiO31zOjEwOiJwbHVnaW5uYW1lIjtzOjEyOiJyb2xlaW5jb3Vyc2UiO3M6MTQ6InBsdWdpbmZ1bGxuYW1lIjtzOjMxOiJVc2VyK3dpdGgrdGhlK3NlbGVjdGVkK3JvbGUlMkZzIjtzOjc6InN1bW1hcnkiO3M6Mjg6ImNvbGxlZ2VhZG1pbithdCtTeXN0ZW0rbGV2ZWwiO31pOjE7YTo1OntzOjI6ImlkIjtzOjE1OiJJWnI3Y0lWUjlHZmNBWHciO3M6ODoiZm9ybWRhdGEiO086ODoic3RkQ2xhc3MiOjM6e3M6MTI6ImNvbnRleHRsZXZlbCI7czoyOiIxMCI7czo2OiJyb2xlaWQiO3M6MjoiMTAiO3M6MTI6InN1Ym1pdGJ1dHRvbiI7czozOiJBZGQiO31zOjEwOiJwbHVnaW5uYW1lIjtzOjEyOiJyb2xlaW5jb3Vyc2UiO3M6MTQ6InBsdWdpbmZ1bGxuYW1lIjtzOjMxOiJVc2VyK3dpdGgrdGhlK3NlbGVjdGVkK3JvbGUlMkZzIjtzOjc6InN1bW1hcnkiO3M6MzE6ImRlcGFydG1lbnRhZG1pbithdCtTeXN0ZW0rbGV2ZWwiO31pOjI7YTo1OntzOjI6ImlkIjtzOjE1OiJIMXhvNW1nN2NsdmJjalQiO3M6ODoiZm9ybWRhdGEiO086ODoic3RkQ2xhc3MiOjM6e3M6MTI6ImNvbnRleHRsZXZlbCI7czoyOiIxMCI7czo2OiJyb2xlaWQiO3M6MjoiMTEiO3M6MTI6InN1Ym1pdGJ1dHRvbiI7czozOiJBZGQiO31zOjEwOiJwbHVnaW5uYW1lIjtzOjEyOiJyb2xlaW5jb3Vyc2UiO3M6MTQ6InBsdWdpbmZ1bGxuYW1lIjtzOjMxOiJVc2VyK3dpdGgrdGhlK3NlbGVjdGVkK3JvbGUlMkZzIjtzOjc6InN1bW1hcnkiO3M6MjM6ImZhY3VsdHkrYXQrU3lzdGVtK2xldmVsIjt9aTozO2E6NTp7czoyOiJpZCI7czoxNToiTnZHS281T2tkSkI2S0VaIjtzOjg6ImZvcm1kYXRhIjtPOjg6InN0ZENsYXNzIjozOntzOjEyOiJjb250ZXh0bGV2ZWwiO3M6MjoiMTAiO3M6Njoicm9sZWlkIjtzOjI6IjEzIjtzOjEyOiJzdWJtaXRidXR0b24iO3M6MzoiQWRkIjt9czoxMDoicGx1Z2lubmFtZSI7czoxMjoicm9sZWluY291cnNlIjtzOjE0OiJwbHVnaW5mdWxsbmFtZSI7czozMToiVXNlcit3aXRoK3RoZStzZWxlY3RlZCtyb2xlJTJGcyI7czo3OiJzdW1tYXJ5IjtzOjE5OiJob2QrYXQrU3lzdGVtK2xldmVsIjt9aTo0O2E6NTp7czoyOiJpZCI7czoxNToiZ21XZkdiR1lZTFVQZVNhIjtzOjg6ImZvcm1kYXRhIjtPOjg6InN0ZENsYXNzIjozOntzOjEyOiJjb250ZXh0bGV2ZWwiO3M6MjoiMTAiO3M6Njoicm9sZWlkIjtzOjI6IjE0IjtzOjEyOiJzdWJtaXRidXR0b24iO3M6MzoiQWRkIjt9czoxMDoicGx1Z2lubmFtZSI7czoxMjoicm9sZWluY291cnNlIjtzOjE0OiJwbHVnaW5mdWxsbmFtZSI7czozMToiVXNlcit3aXRoK3RoZStzZWxlY3RlZCtyb2xlJTJGcyI7czo3OiJzdW1tYXJ5IjtzOjI1OiJwcmluY2lwYWwrYXQrU3lzdGVtK2xldmVsIjt9fX19]]></components>
+<export><![CDATA[]]></export>
+<global><![CDATA[1]]></global>
+<lastexecutiontime><![CDATA[1]]></lastexecutiontime>
+<disabletable><![CDATA[0]]></disabletable>
+<instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-second]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346624]]></timecreated>
+<timemodified><![CDATA[1687346624]]></timemodified>
+<title><![CDATA[Active Courses By Gradable Activities]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[313091505]]></logo>
+<tilescolourpicker><![CDATA[a5cc3d]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position><instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard-collegeadmin_10]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-second]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346624]]></timecreated>
+<timemodified><![CDATA[1687346624]]></timemodified>
+<title><![CDATA[Gradable Activity Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[600802344]]></logo>
+<tilescolourpicker><![CDATA[a5cc3d]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position><instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard-departmentadmin_10]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-second]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346624]]></timecreated>
+<timemodified><![CDATA[1687346624]]></timemodified>
+<title><![CDATA[Gradable Activity Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[159001952]]></logo>
+<tilescolourpicker><![CDATA[a5cc3d]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position><instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard-principal_10]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-second]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346624]]></timecreated>
+<timemodified><![CDATA[1687346624]]></timemodified>
+<title><![CDATA[Gradable Activity Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[125191894]]></logo>
+<tilescolourpicker><![CDATA[a5cc3d]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position><instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard-hod_10]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-second]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346624]]></timecreated>
+<timemodified><![CDATA[1687346624]]></timemodified>
+<title><![CDATA[Gradable Activity Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[411375448]]></logo>
+<tilescolourpicker><![CDATA[a5cc3d]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position></report>

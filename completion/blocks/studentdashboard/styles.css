@@ -1,0 +1,217 @@
+.userpic_db {
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	/*border: 5px solid;*/
+	width: 110px;
+	height: 110px;
+  position: relative;
+}
+.block_studentdashboard .user-profile-data-group {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-flow: row nowrap;
+    margin-bottom: 1rem;
+}
+.block_studentdashboard .userdetails-label {
+    min-width: 137px;
+    color: #727d83;
+    font-weight: 500;
+}
+.block_studentdashboard .userdetails-label .fa {
+    color: #1f71a3;
+    font-size: 15px;
+}
+.block_studentdashboard .userdetails-label .lable-radiate {
+    background-color: #d9e2e9;
+    border-radius: 30px;
+    padding: 0px 8px 0px 8px;
+    margin-right: 0rem;
+    white-space: nowrap;
+    /*min-width: 110px;
+    display: inline-block;
+    margin-right: 5px;*/
+}
+.userdetails-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #078792;
+    text-align: left;
+}
+.sep-colon {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.userdetails-label-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #4a4747;
+}
+.block_studentdashboard .content {display: block;padding: 1.25rem !important;}
+.st-viewmore-link {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    width: 60px;
+    height: 50px;
+    background-color: #ebf5f6;
+    border-radius: 5rem 0 1rem 0;
+}
+.st-viewmore-link .viewmore_link {
+    width: 30px;
+    font-size: 16px;
+    height: 30px;
+    display: inline-block;
+    background-color: #0f5f60;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+    margin-top: 13px;
+    margin-right: 8px;
+    color: #fff;
+}
+.viewmore_link, .viewmore_link:hover,.viewmore_link:focus,.viewmore_link:visited {color: #196cb7;}
+.student-name {text-transform: uppercase;font-weight: 600;margin-top: .5rem; text-align: center;color: #808080;}
+.user-profile-data-main-group{max-width: 100%; margin:auto;}
+#page-my-index .block.block_studentdashboard .card-block {padding-bottom: 0;}
+.welcome-user-txt {
+    color: #bdbdbd;
+}
+.block-region .block.block_studentdashboard .card-title {
+    background-color: transparent;
+    background-image: none;
+    position: relative;
+    padding: 0px !important;
+}
+.student-profile-container {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.student-lightarrow-container {
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    top: -15px;
+    bottom: -14px;
+    border: 3px solid #d0f8e0;
+    border-radius: 50%;
+}
+.student-thickarrow-container {
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #46dc82;
+    left: -15px;
+    right: -15px;
+    top: -15px;
+    bottom: -15px;
+    border-left: none;
+    border-top: none;
+    transform: rotate(-45deg);
+}
+
+#page-my-index .block_studentdashboard {
+    /*border: 1px solid #ccc;*/
+}
+.editing .block_studentdashboard .card-title .st-student-strip {
+    position: static;
+    padding: inherit;
+    color: inherit;
+    background-color: inherit;
+}
+.editing .block-region .block.block_studentdashboard .card-title {
+    padding: 10px 20px !important;
+}
+.editing .block-region .block.block_studentdashboard .block-controls.header {
+    position: relative;
+    z-index: 1;
+}
+.block .user-profile-data-row {
+    margin-bottom: 2rem;
+    padding: 0px;
+}
+.block_studentdashboard .user-profile-data-container {
+    display: flex;
+}
+.pagelayout-studentdashboard .block_facultydashboard {display: none;}
+
+.block-region .block_studentdashboard .card-body .card-title {
+    display: none !important;
+}
+.editing .block-region .block_studentdashboard .card-body .card-title {
+    display: block !important;
+}
+/*.pagelayout-studentdashboard #page.container-fluid {background-color: #fff;}*/
+.pagelayout-studentdashboard .block.block_studentdashboard {border:none !important;}
+.block_studentdashboard .card-block {
+    /*background-color: #f2f2f2;*/
+}
+.block_studentdashboard .userdb-profile-pic {
+    min-width: 130px;
+    text-align: center;
+}
+.block_studentdashboard .userdb-profile-pic {
+    margin-top: 1.5rem;
+}
+.block_studentdashboard .user-profile-data-main-group {
+    margin-top: 1.7rem;
+}
+@media(min-width: 1024px){
+    .block_studentdashboard .userdb-profile-container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .block_studentdashboard .userdb-profile-pic, .block_studentdashboard .user-profile-data-container {
+        flex-basis: 0%;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .block_studentdashboard .userdb-profile-pic {max-width: 200px;}
+    .block_studentdashboard .user-profile-data-container {
+        width: -webkit-calc(100% - 210px);
+        width: -moz-calc(100% - 210px);
+        width: -o-calc(100% - 210px);
+        width: calc(100% - 210px);
+        margin-left: 1.5rem;
+    }
+    .block_studentdashboard .user-profile-data-group {flex-wrap: nowrap;}
+    aside#block-region-sturightreg .block_program_courselist .card-block {
+        min-height: 255px;
+    }
+    aside#block-region-stuleftreg .block_studentdashboard .card-block {
+        min-height: 268px;
+    }
+}
+@media (min-width: 1400px) {
+    .block_studentdashboard .user-profile-data-container {
+        margin-left: 3.5rem;
+    }
+}
+@media(max-width: 1199px) and (min-width: 1024px) {
+    .block_studentdashboard .userdb-profile-pic {
+        max-width: 170px;
+    }
+}
+@media(max-width: 992px) and (min-width: 768px) {
+	.user-profile-data-container .user-profile-data-row {width: 100%; max-width: 100%;}
+}
+@media(max-width: 767px){
+    .user-profile-data-main-group{max-width: 100%;}
+    .block_studentdashboard .userdetails-label .lable-radiate {
+        margin-right: 0px;
+    }
+}
+  @media(max-width: 543px){
+  	.userdb-profile-pic{width: 100%; margin: auto;text-align: center;margin-bottom: 10px;}
+    .st-viewmore-link{
+        float: right;
+        position: relative;
+        margin-right: -1.25rem;
+      }
+  }
+  .card-body .card-title {
+    margin-bottom: 0px !important;
+}

@@ -1,0 +1,61 @@
+<div class="col-md-5 semestercourse_middle col-12 text-md-center">
+    {{#candoactions}}
+    {{# canaddcourse }}
+	&nbsp;
+       <!-- <a href="javascript:void(0)" class="addcourse" onclick="(function(e){ require('local_program/ajaxforms').init({contextid:{{ contextid }}, component:'local_program', callback:'course_form', form_status:0, plugintype: 'local_program', pluginname: 'addcourse', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, semesterid: {{semesterid}}, programid: {{programid}} }) })(event)">{{#str}}addcourse, local_program {{/ str }}</a>-->
+    {{/ canaddcourse }}
+    {{/candoactions}}
+<!--         {{#courses}}
+            <div><a href="{{cfg.wwwroot}}/course/view.php?id={{courseid}}">{{course}}</a></div>
+        {{/courses}} -->
+    {{^ canaddcourse }}
+    <div class="w-full pull-left session_details">
+        {{# signupid }}
+        <div class="w-full pull-left schedule_details xs-mt-10px">
+            <span class="pull-left session_icon" title = "{{#str}} sessionschedule, local_program {{/ str }}">
+                <i class="fa fa-calendar mr-10px" aria-hidden="true"></i>
+            </span>
+            <span class="pull-left sessiontime">
+                {{#userdate}} {{timestart}}, %d %b %Y{{/userdate}} at {{#userdate}} {{timestart}}, %I:%M %p {{/userdate}} to {{#userdate}} {{timefinish}}, %I:%M %p {{/userdate}}
+            </span>
+        </div>
+        <div class="w-full pull-left session_location">
+            <span class="pull-left sessionlocation" title = "{{#str}} sessionlocation, local_program {{/ str }}">
+                <i class="fa fa-map-marker pull-left mr-15px" aria-hidden="true"></i>
+                <span class="pull-left sessionroom"> {{ roomname }}, {{ location }} </span>
+            </span>
+        </div>
+        {{/ signupid }}
+        {{^ sessionenabled }}
+        {{^ userview }}
+
+        {{/ userview }}
+        {{/ sessionenabled }}
+    </div>
+    {{/ canaddcourse }}
+</div>
+<div class="col-md-2 col-12 semestercourse_right xs-mt-10px text-md-center">
+    {{#candoactions}}
+        {{# caneditsemester }}
+            <span class="add-del-sem md-pb-15px">
+                {{#caneditcurrentsemester}}
+                <a href="javascript:void(0)" class="addsemester" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:{{ contextid }}, component:'local_curriculum', callback:'curriculum_managesemester_form', form_status:0, plugintype: 'local_curriculum', pluginname: 'addsemester', id:{{semesterid}}, curriculumid: {{ curriculumid }}, yearid: {{yearid}} }) })(event)"><i class="icon fa fa-cog fa-fw"title="{{#str}}editsemester, local_curriculum {{/ str }}"></i></a>
+                <a href="javascript:void(0)"  class="delsemester" onclick="(function(e){ require('local_curriculum/ajaxforms').deleteConfirm({action:'deletesemester', id: {{ semesterid }}, curriculumid: {{ curriculumid }}, yearid: {{yearid}} }) })(event)">
+                    <i class="icon fa fa-trash fa-fw"title="{{#str}}deletesemester, local_curriculum {{/ str }}"></i>
+                </a>
+                {{/caneditcurrentsemester}}
+            </span>
+        {{/ caneditsemester }}
+    {{/candoactions}}
+    {{^ canremovecourse }}
+    {{# userview }}
+    <div class='text-right'>
+        <span class='course_status_tag'>
+            {{# coursecompletionstatus }}
+                <span class="course_status completed">{{ coursecompletionstatus }}</span>
+            {{/ coursecompletionstatus }}
+        </span>
+    </div>
+    {{/ userview }}
+    {{/ canremovecourse }}
+</div>

@@ -1,0 +1,44 @@
+{{!
+    This file is part of eAbyas
+    Copyright eAbyas Info Solutons Pvt Ltd, India
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    
+    @author eabyas  <info@eabyas.in>
+}}
+<div style="width: 100%; margin: 10px 0; font-weight: bold; overflow: auto;color: #82152C;font-family: SourceSansPro-Semibold;">{{programname}}</div>
+<div>
+    {{# enabletable}}
+        <table class="generaltable">
+            <thead>
+                <tr>
+                    <th>{{# str}}subject, block_myprogram{{/ str}}</th>
+                    <th>{{# str}}instructor, block_myprogram{{/ str}}</th>
+                    <th>{{# str}}launch, block_myprogram{{/ str}}</th>
+                </tr>
+            </thead>
+            <tbody>   
+            {{# courses}}
+                <tr>
+                    <td>{{coursename}}</td>
+                    <td>{{instructorname}}</td>
+                    <td>
+                        <a class="launchbutton" href="{{config.wwwroot}}/course/view.php?id={{courseid}}">
+                            {{# str}} launch, block_myprogram {{/ str}}
+                        </a>
+                    </td>
+                </tr>
+
+            {{/ courses}}
+            </tbody>
+        </table>
+    {{/ enabletable}}
+</div>

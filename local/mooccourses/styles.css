@@ -1,0 +1,102 @@
+#block_quizzes .disablecertificatelink {
+    cursor: not-allowed !important;
+}
+
+#block_quizzes .wrapper{
+  text-align: center !important;
+  background-color: #e7e7e7;
+  padding: 8px 0px 5px;
+} 
+
+#block_quizzes .wrapper ul{
+    display: inline-block !important;
+    margin: 0;
+    padding: 0;
+    min-width: 302px;
+    border-bottom: 0px !important;
+    /* For IE, the outcast */
+    zoom:1;
+    display: inline;
+}
+#block_quizzes .ui-tabs-panel {
+    background-color: #fff;
+}
+#block_quizzes .wrapper li{
+    float: left;
+}
+#page-local-mooccourses-index .course_extended_menu_list {
+    top: -20px;
+}
+#page-local-mooccourses-index #region-main .card.card-block {
+    overflow: visible;
+}
+body#page-local-mooccourses-index select.form-control:not([size]):not([multiple]) {
+    height: 20px !important;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+/*a#extended_menu_createcourses, a {
+    cursor: pointer;
+}*/
+body#page-local-mooccourses-index #viewsoldcourses .enrolstudent_tomooccourse {
+    cursor: pointer;
+}
+#page-local-mooccourses-courseenrol #region-main button, #page-local-mooccourses-courseenrol #region-main input[type=button], #page-local-mooccourses-courseenrol #addcontrols input[type=submit], #page-local-mooccourses-courseenrol #removecontrols input[type=submit] {
+    border: none;
+}
+#page-local-mooccourses-courseenrol button.custom_btn.btn.remove.btn-default, #page-local-mooccourses-courseenrol button.custom_btn.btn.move.btn-default {
+    margin: 2% 2%;
+    width: 100%;
+}
+#page-local-mooccourses-courseenrol .box3.col-md-2.actions {
+     margin-top: 0; 
+     margin-bottom: 15px; 
+}
+body#page-local-mooccourses-affiliatecourses table#assigningrole td#buttonscell {
+    width: 23.33%;
+}
+@media (min-width: 768px){
+    #page-local-mooccourses-courseenrol .box3.col-md-2.actions {
+         margin-top: 220px; 
+    }
+}
+body#page-local-mooccourses-affiliatecourses table#assigningrole td#existingcell select[size],
+body#page-local-mooccourses-affiliatecourses table#assigningrole td#potentialcell select[multiple] {
+    max-height: 400px;
+}
+body#page-local-mooccourses-affiliatecourses table#assigningrole td#existingcell,
+body#page-local-mooccourses-affiliatecourses table#assigningrole td#potentialcell {
+    width: 38.33% !important;
+}
+#page-local-mooccourses-index section#region-main {
+    overflow: visible;
+}
+#page-local-mooccourses-index .nav.nav-tabs {
+    clear: both;
+}
+#page-local-mooccourses-index .nav .nav-link.active, 
+#page-local-mooccourses-index .nav .nav-link.active:hover,
+#page-local-mooccourses-index .nav .nav-link:hover {
+    border-top-color: transparent;
+}
+#page-local-mooccourses-courseenrol button.custom_btn.btn.remove.btn-default, 
+#page-local-mooccourses-courseenrol button.custom_btn.btn.move.btn-default {
+    margin: 2% 0;
+    width: 100%;
+    font-size: inherit;
+    padding: .285rem .4rem;
+}
+
+#page-local-mooccourses-index .course_extended_menu_list .fa.fa-users:before {
+    content: "\f093";
+    transform: rotate(90deg);
+    display: block;
+}
+#page-local-mooccourses-index #viewsoldcourses tr td a:last-child .fa.fa-users:before {
+    content: "\f093";
+    transform: rotate(90deg);
+    display: block;
+}
+#page-local-mooccourses-index #viewsoldcourses tr td a:first-child .fa.fa-users:before {
+    content: "\f2bd";
+}

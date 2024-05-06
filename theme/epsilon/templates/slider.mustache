@@ -1,0 +1,50 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    @copyright 2018 eAbyas Info Solutons Pvt Ltd, India
+    @author    eAbyas  <info@eAbyas.in>
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Carousel Slider.
+}}
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        {{# img1_url}}
+            <div class="carousel-item active">
+                <img class="s1" src="{{img1_url}}" alt="{{# str }}slider1, theme_epsilon{{/ str}}">
+            </div>
+        {{/ img1_url}}
+        {{# img2_url}}
+            <div class="carousel-item">
+                <img class="s1" src="{{img2_url}}" alt="{{# str }}slider2, theme_epsilon{{/ str}}">
+            </div>
+        {{/ img2_url}}
+        {{# img3_url}}
+            <div class="carousel-item">
+                <img class="s1" src="{{img3_url}}" alt="{{# str }}slider3, theme_epsilon{{/ str}}">
+            </div>
+        {{/ img3_url}}
+        {{# img4_url}}
+            <div class="carousel-item">
+                <img class="s1" src="{{img4_url}}" alt="{{# str }}slider4, theme_epsilon{{/ str}}">
+            </div>
+        {{/ img4_url}}
+        {{# img5_url}}
+            <div class="carousel-item">
+                <img class="s1" src="{{img5_url}}" alt="{{# str }}slider5, theme_epsilon{{/ str}}">
+            </div>
+        {{/ img5_url}}
+    </div>
+</div>

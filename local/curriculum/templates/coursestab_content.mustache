@@ -1,0 +1,107 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<div class="curriculum_courses">
+	{{# cancreatesemester }}
+		<div class="pull-right">
+			<a title="{{#str}}addsemester, local_program {{/ str }}" class="course_extended_menu_itemlink" href="javascript:void(0)" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:1, component:'local_curriculum', callback:'curriculum_managesemester_form', form_status:0, plugintype: 'local', pluginname: 'curriculum_addsemester', id: 0, curriculumid:{{curriculumid}}  }) })(event)">
+				<i class="icon fa fa-tags fa-fw" aria-hidden="true" aria-label="" title="{{#str}}addsemester, local_program {{/ str }}"></i>
+	        </a>
+		</div>
+	{{/ cancreatesemester }}
+	<div class="lp_course_sortorder w-full pull-left" >
+		{{# curriculumsemesters}}
+		<div class = "w-full pull-left lpcourses">
+			<div class="">
+				{{semester}}
+				{{# caneditsemester }}
+					<div class="pull-right">
+						<a title="{{#str}}addsemester, local_program {{/ str }}" class="course_extended_menu_itemlink" href="javascript:void(0)" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:1, component:'local_curriculum', callback:'curriculum_managesemester_form', form_status:0, plugintype: 'local', pluginname: 'curriculum_addsemester', id: {{semesterid}}, curriculumid:{{curriculumid}}  }) })(event)">
+							edit
+				        </a>
+					</div>
+				{{/ caneditsemester }}
+				{{# candeletesemester }}
+					<div class="pull-right">
+						<a title="{{#str}}addsemester, local_program {{/ str }}" class="course_extended_menu_itemlink" href="javascript:void(0)" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:1, component:'local_curriculum', callback:'curriculum_managesemester_form', form_status:0, plugintype: 'local', pluginname: 'curriculum_addsemester', id: {{semesterid}}, curriculumid:{{curriculumid}}  }) })(event)">
+							delete
+				        </a>
+					</div>
+				{{/ candeletesemester }}
+                {{# canaddcourse }}
+				<div class="pull-right">
+					<a href="javascript:void(0)" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:{{ contextid }}, component:'local_curriculum', callback:'course_form', form_status:0, plugintype: 'local_curriculum', pluginname: 'course', id:0, ccid: {{ curriculumid }}, semesterid: {{semesterid}} }) })(event)"><button class="btn btn-primary">{{#str}}addcourse, local_program {{/ str }}</button></a>
+				</div>
+                {{/ canaddcourse }}
+			</div>
+			<div class="col-md-12 col-sm-12 col-12 p-0 lpcourses_container" id = "course_info_{{ semesterid }}">
+				<div class="vertical_brdr"></div>
+				{{# courses}}
+					<div class="w-full pull-left lpcourse_content mt-15px mb-15px">
+						<div class="col-md-3 col-sm-12 col-12 p-0 course_progress_container">
+							<div class="w-full pull-left middlline_div"></div>
+							<div class="w-full pull-left middlline"></div>
+							<div class="course_progress">
+								<div class="lpcourse_progress progress-chart-container m-b-1">
+								   <div class="progress-doughnut">
+								        <div class="progress-text has-percent">{{ progress }}%</div>
+								        <div class="progress-indicator">
+								            <svg xmlns="http://www.w3.org/2000/svg">
+								                <g>
+								                    <title aria-hidden="true">{{ progress }}</title>
+								                    <circle class="circle percent-{{ progress }}"
+								                        r="27.5"
+							                            cx="35"
+							                            cy="35"/>
+								                </g>
+								            </svg>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-12 col-12 p-0 lpcourseslist">
+							<div class="w-full pull-right actions">
+                                {{# canremovecourse }}
+                                    <a class="pull-right" id="unassign_course_{{bcsemestercourseid}}" onclick="(function(e){ require('local_curriculum/curriculum_views').unassignCourses({action:'unassign_course', bclcid:{{bcsemestercourseid}}, semesterid:{{semesterid}}, ccid:{{curriculumid}} }) })(event)" href="javascript:void(0)"><i class="icon fa fa-trash fa-fw" aria-hidden="true" title="Un-assign" aria-label="Delete"></i></a>
+                                {{/ canremovecourse }}
+                                {{# canmanagecourse }}
+                                    <span class="switch_type">
+                                        <label class="switch">
+                                            <input class="switch-input" type="checkbox" id="next_val{{bcsemestercourseid}}" value="{{bcsemestercourseid}}" >
+                                            <span class="switch-label" data-on="Man" data-off="Opt"></span>
+                                            <span class="switch-handle"></span>
+                                        </label>
+                                        <input type="hidden" value="{{bcsemestercourseid}}" id="courseid{{bcsemestercourseid}}" name="row[]">
+                                    </span>
+                                {{/ canmanagecourse }}
+                            </div>
+							{{> local_program/courseblock }}
+						</div>
+						    {{> local_program/coursesessionblock }}
+						{{# cmpltd_class }}
+						<div class="col-md-4 col-sm-12 col-12">
+							<div class='completed'><span class='cmplt_icon {{cmpltd_class}}'><i class='fa fa-check' aria-hidden='true'></i></span><span cmplt_date>{{{ date }}}</span></div>
+						</div>
+						{{/ cmpltd_class }}
+					</div>
+				{{/ courses }}
+					<span class="lp_dot"></span>
+				</div>
+		</div>
+		{{/ curriculumsemesters}}
+	</div>
+</div>

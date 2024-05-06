@@ -1,0 +1,123 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}    
+
+<div class="col-md-12 col-sm-12 col-12 dept_content">
+        <span class="sideline"></span>
+            <div class="col-md-12 col-sm-12 col-12 deptimg_container">
+                <div class="dept_topcontent">
+                    <span class="connent_line"></span>
+                    <div class="col-md-9 col-sm-9 col-9 dept_topleft"><h4 title="{{departmentfullname}}">{{ departmentnamecut }}</h4></div>
+                    <div class="col-md-3 col-sm-3 col-3 dept_topright p-0">
+                          <div class="pull-right showoptions{{{ deptid }}} actionicons">
+                            <span  class="pull-right showoptions" data-action="showoptions{{{ deptid }}}" onmouseenter="(function(e){ require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{deptid}}' }) })(event)" onmouseleave="(function(e){require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{deptid}}' }) })(event)"><i class="fa fa-ellipsis-h options"></i>
+                            </span>
+                            <ul class="col-md-12 col-sm-12 col-12 p-0 options_container" id = "showoptions{{{ deptid }}}">
+                            {{# deptdelete}}
+                            <li>
+                                <a href="javascript:void(0)" title ="{{# str}} delete {{/str}}"  onclick = "(function(e){ require('local_costcenter/costcenterdatatables').costcenterDelete({action:'deletecostcenter', id: {{{ deptid }}} ,confirm: {{{deptstatus}}} ,actionstatus:'Confirmation', actionstatusmsg:'{{{ deptdel_confirmationmsg }}}' }) })(event)"><i class="fa fa-trash fa-fw" aria-hidden="true" title="Delete" aria-label="Delete"></i></a>
+                            </li>
+                            {{/ deptdelete}}
+
+                            
+                            {{^ deptdelete}}
+                                {{#type}}
+                                <li>
+                                    <a href="javascript:void(0)" title ="{{# str}} delete {{/str}}"  onclick = "(function(e){ require('local_departments/newdepartment').messageConfirm({title:'confirm',message:'confirmmessageusers',component:'local_colleges' }) })(event)"><i class="fa fa-trash fa-fw" aria-hidden="true" title="Delete" aria-label="Delete"></i></a>
+                                </li>
+                                {{/type}}
+                                {{^type}}
+                                <li>
+                                    <a href="javascript:void(0)" title ="{{# str}} delete {{/str}}"  onclick = "(function(e){ require('local_departments/newdepartment').messageConfirm({title:'confirm',message:'confirmmessage',component:'local_departments' }) })(event)"><i class="fa fa-trash fa-fw" aria-hidden="true" title="" aria-label="Delete"></i></a>
+                                </li>
+                                {{/type}}
+                            {{/ deptdelete}}
+                            
+
+                          <!--   {{# depthide}}
+                            <li>
+                                <a href="javascript:void(0)" title ="{{# str}} inactive {{/str}}" onclick = "(function(e){ require('local_costcenter/newcostcenter').costcenterStatus({action:'updatecostcenter', id: {{{deptid}}} ,confirm: {{{deptstatus}}} ,actionstatus:'Confirmation', actionstatusmsg:'{{{deptaction_message}}}' }) })(event)"><i class="fa fa-eye"></i></a>
+                            </li>
+                            {{/ depthide}}
+                            {{# deptshow}}
+                            <li>
+                                <a href="javascript:void(0)" title ="{{# str}} active {{/str}}" onclick = "(function(e){ require('local_costcenter/newcostcenter').costcenterStatus({action:'updatecostcenter', id: {{{deptid}}} ,confirm: {{{deptstatus}}} ,actionstatus:'Confirmation', actionstatusmsg:'{{{deptaction_message}}}' }) })(event)"><i class="fa fa-eye-slash"></i></a>
+                            </li>
+                            {{/ deptshow}} -->
+                            {{# deptedit}}
+                            <li>
+                            {{#type}}
+                                     <a href="javascript:void(0)" title="{{# str}} edit {{/str}}" onclick="(function(e){ require('local_colleges/newcollege').init({selector:'createcategorymodal',
+                    contextid:1, id:{{deptid}},underuniversity:{{recordid}} }) })(event)"><i class="fa fa-cog fa-fw" title="Edit"></i></a>
+                            {{/type}}
+
+                            {{^type}}
+                                   <a href="javascript:void(0)" title="{{# str}} edit {{/str}}" onclick="(function(e){ require('local_departments/newdepartment').init({selector:'createcategorymodal',
+                            contextid:1, categoryid:{{deptid}},underuniversity:{{recordid}} }) })(event)"><i class="fa fa-cog fa-fw" title="Edit"></i></a>
+                            {{/type}}
+
+
+
+                            </li>
+                            {{/ deptedit}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12 dept_btmcontent">
+                <div class="w-full pull-left mt-5px mb-5px dept_details dept_users">
+                    <div class="col-md-5 col-sm-12 col-12 deptdetails_left">
+                        <span class="pull-left pr-10px userscolor"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+                        <span class="details_string pull-left">Users</span>
+                        <span class="pull-right details_count userscolor">{{ totalusers }}</span>
+                    </div> 
+                    <div class="col-md-7 col-sm-12 col-12 deptdetails_right">
+                        <span class="col-md-6 pull-left inforight"><i class="fa fa-user-o pr-5px pull-left activeicon" aria-hidden="true"></i>
+                            <span class="lable_name pull-left">Active<span class="label_colon pull-right mr-5px">:</span></span><span class="userscolor">{{ activeusercount }}</span>
+                        </span>
+
+                         <span class="col-md-6 pull-left"><i class="fa fa-user-times pr-5px pull-left inactiveicon" aria-hidden="true"></i><span class="lable_name pull-left">Inactive<span class="label_colon pull-right mr-5px">:</span></span><span class="userscolor">{{ inactiveusercount }}</span></span>
+                    </div>
+                </div>
+                <div class="w-full pull-left mt-5px mb-5px dept_details dept_courses">
+                    <div class="col-md-5 col-sm-12 col-12 deptdetails_left">
+                        <span class="pull-left pr-10px coursescolor"><i class="fa fa-book" aria-hidden="true"></i></span>
+                        <span class="details_string pull-left">Courses</span>
+                        <span class="pull-right details_count coursescolor">{{ coursecount }}</span>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 deptdetails_right">
+                        <span class="col-md-6 pull-left inforight"><i class="fa fa-user-o pr-5px pull-left activeicon" aria-hidden="true"></i>
+                            <span class="lable_name pull-left">Active<span class="label_colon pull-right mr-5px">:</span></span><span class="coursescolor">{{ activecoursecount }}</span>
+                        </span>
+
+                         <span class="col-md-6 pull-left"><i class="fa fa-user-times pr-5px pull-left inactiveicon" aria-hidden="true"></i><span class="lable_name pull-left">Inactive<span class="label_colon pull-right mr-5px">:</span></span><span class="coursescolor">{{ inactivecoursecount }}</span></span>
+                    </div>
+                </div>
+                <div class="w-full pull-left mt-5px mb-5px dept_details dept_programs">
+                    <div class="col-md-5 col-sm-12 col-12 deptdetails_left">
+                        <span class="pull-left pr-10px programscolor"><span class="fa fa-tasks"></span></span>
+                        <span class="details_string pull-left">Programs</span>
+                        <span class="pull-right details_count programscolor">{{ allprogramcount }}</span>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 deptdetails_right">
+                        <span class="col-md-6 pull-left inforight"><i class="fa fa-user-o pr-5px pull-left activeicon" aria-hidden="true"></i><span class="lable_name pull-left">Active<span class="label_colon pull-right mr-5px">:</span></span><span class="programscolor">{{ activeprogramcount }}</span></span>
+
+                         <span class="col-md-6 pull-left"><i class="fa fa-user-times pr-5px pull-left inactiveicon" aria-hidden="true"></i><span class="lable_name pull-left">Inactive<span class="label_colon pull-right mr-5px">:</span></span><span class="programscolor">{{ inactiveprogramcount }}</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>

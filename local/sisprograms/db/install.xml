@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <XMLDB PATH="local/sisprograms/db" VERSION="20130110" COMMENT="XMLDB file for Moodle local/programs">
+    <TABLES>
+      <TABLE NAME="local_sisprograms" COMMENT="">
+        <FIELDS>
+          <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="fullname"/>
+          <FIELD NAME="fullname" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="id" NEXT="programcode"/>
+          <FIELD NAME="programcode" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="fullname" NEXT="shortname"/>
+		      <FIELD NAME="shortname" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="programcode" NEXT="costcenterid"/>
+          <FIELD NAME="costcenterid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="shortname" NEXT="description"/>
+		      <FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false" PREVIOUS="costcenterid" NEXT="type"/>
+          <FIELD NAME="type" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="description" NEXT="duration"/>
+          <FIELD NAME="duration" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="type" NEXT="visible"/>
+          <FIELD NAME="runningfromyear" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="duration" NEXT="visible"/>
+          <FIELD NAME="visible" TYPE="int" LENGTH="1" NOTNULL="false" DEFAULT="1" SEQUENCE="false" PREVIOUS="type" NEXT="timecreated"/>    
+          <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="visible" NEXT="usercreated"/>
+          <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="timecreated" NEXT="usermodified"/>
+          <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="usercreated" NEXT="timemodified"/>
+		      <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="usermodified"/>
+        </FIELDS>
+        <KEYS>
+          <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+        </KEYS>
+      </TABLE>
+
+      <TABLE NAME="local_sisonlinecourses" COMMENT="">
+        <FIELDS>
+          <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="coursecode"/>
+          <FIELD NAME="coursecode" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="id" NEXT="courseid"/>
+          <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="coursecode" NEXT="programid"/>
+          <FIELD NAME="programid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="courseid" NEXT="programcode"/>
+          <FIELD NAME="programcode" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="programid" NEXT="costcenterid"/>
+          <FIELD NAME="costcenterid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="programcode" NEXT="shoolname"/>
+          <FIELD NAME="shoolname" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="costcenterid" NEXT="coursetype"/>
+          <FIELD NAME="coursetype" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="shoolname" NEXT="sissourceid"/>
+          <FIELD NAME="sissourceid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="coursetype" NEXT="timecreated"/>    
+          <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="sissourceid" NEXT="usercreated"/>
+          <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="timecreated" NEXT="usermodified"/>
+          <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="usercreated" NEXT="timemodified"/>
+          <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="usermodified" NEXT="smbid"/>
+          <FIELD NAME="smbid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="timemodified" NEXT="examid"/>
+          <FIELD NAME="examid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="smbid"/>
+        </FIELDS>
+        <KEYS>
+          <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+        </KEYS>
+      </TABLE>
+
+
+      <TABLE NAME="local_sisuserdata" COMMENT="">
+        <FIELDS>
+          <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="coursename"/>
+          <FIELD NAME="sisprnid" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="id" NEXT="costcenterid"/>
+          <FIELD NAME="costcenterid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="costcenterid" NEXT="mdluserid"/>
+          <FIELD NAME="mdluserid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="costcenterid" NEXT="dob"/>
+          <FIELD NAME="dob" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="mdluserid" NEXT="gender"/>
+          <FIELD NAME="gender" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" PREVIOUS="dob" NEXT="timecreated"/>
+          <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="gender" NEXT="usercreated"/>
+          <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="timecreated" NEXT="usermodified"/>
+          <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" PREVIOUS="usercreated" NEXT="timemodified"/>
+          <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="usermodified"/>
+        </FIELDS>
+        <KEYS>
+          <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+        </KEYS>
+      </TABLE>
+
+      <TABLE NAME="local_courseenrolments" COMMENT="">
+        <FIELDS>
+          <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+          <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" />
+          <FIELD NAME="coursename" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" />
+          <FIELD NAME="programid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" />
+          <FIELD NAME="programname" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" />
+          <FIELD NAME="mdluserid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" />
+          <FIELD NAME="sisuserid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" />
+          <FIELD NAME="costcenterid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+          <FIELD NAME="schoolname" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" />
+          <FIELD NAME="roleid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" />
+          <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" />
+          <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" />
+          <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" />
+          <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+        </FIELDS>
+        <KEYS>
+          <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+        </KEYS>
+      </TABLE>
+
+      <TABLE NAME="local_sissyncerrors" COMMENT="table holds errors caused during upload enrolment sync">
+        <FIELDS>
+          <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+          <FIELD NAME="error" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+          <FIELD NAME="date_created" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+          <FIELD NAME="modified_by" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+          <FIELD NAME="mandatory_fields" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+          <FIELD NAME="email" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+          <FIELD NAME="idnumber" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+          <FIELD NAME="firstname" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+          <FIELD NAME="lastname" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+        </FIELDS>
+        <KEYS>
+          <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        </KEYS>
+      </TABLE>
+           <TABLE NAME="local_sisexams" COMMENT="table for Exam list">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="smbid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="branchid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="examcode" TYPE="char" LENGTH="225" NOTNULL="true" DEFAULT="NULL" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="examname" TYPE="char" LENGTH="225" NOTNULL="true" DEFAULT="NULL" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="sequence" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" UNSIGNED="true" SEQUENCE="false"/>
+	    <FIELD NAME="university" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+      
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+     
+    </TABLE>
+
+  <TABLE NAME="local_sisbranches" COMMENT="table for Branches list">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="smbid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="branchid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" UNSIGNED="true" SEQUENCE="false"/>
+		<FIELD NAME="universityid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="branchcode" TYPE="char" LENGTH="225" NOTNULL="true" DEFAULT="NULL" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="branchname" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="activestat" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+	    <FIELD NAME="university" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+      
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+     
+    </TABLE>
+
+    </TABLES>
+  </XMLDB>

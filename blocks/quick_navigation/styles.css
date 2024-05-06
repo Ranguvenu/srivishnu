@@ -1,0 +1,87 @@
+#page-my-index .block.block_quick_navigation {
+    background-color: transparent;
+    border: none;
+}
+#page-my-index .block.block_quick_navigation .card-body.p-3 {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.block.block_quick_navigation .quick_nav{
+    margin: 0px;
+    padding: 0px;
+    width: 80%;
+    float: left;
+    display: flex;
+    flex-flow: row wrap;
+}
+.block.block_quick_navigation .quick_nav_list_wrapper{
+    width: 24%;
+    float: left;
+    margin: 0px 0.5% 0px 0.5%;
+    display: flex;
+}
+.block.block_quick_navigation .list_wrapper {
+    color: #fff;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    transition: all 0.8s ease;
+    border-radius: 4px;
+}
+.block.block_quick_navigation .list_wrapper:hover{
+    transform: scale(0.9);
+}
+.block.block_quick_navigation .green_block{
+    background: #91cf76;
+}
+.block.block_quick_navigation .blue_block{
+    background: #609bc4;
+}
+.block.block_quick_navigation .pink_block{
+    background: #d581b4;
+}
+.block.block_quick_navigation .cyan_block{
+    background: #00AAA9;
+}
+.block.block_quick_navigation .list_wrapper a{
+    color: #fff !important;
+}
+.block.block_quick_navigation .top_content{
+    padding: 15px 15px 10px 15px;
+    line-height: 25px;
+}
+.block.block_quick_navigation .top_content .quick_links_icon, .block.block_quick_navigation .top_content .quick_links_count{
+    font-size: 1.33rem;
+}
+.block.block_quick_navigation .list_wrapper .quick_link{
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+.block.block_quick_navigation .top_content .quick_links_count {
+    font-weight: 500;
+}
+.block.block_quick_navigation .program_icon{
+    background-image: url([[pix:theme_epsilon|scheme_icons/bcschemefff]]);
+    width: 21px;
+    height: 25px;
+    background-repeat: no-repeat;
+    float: left;
+    background-size: 100% 100%;
+}
+#page-my-index .block.block_quick_navigation .card-text.content {
+    padding: 0px;
+    margin-top: 0px !important;
+}
+@media(min-width: 768px) and (max-width: 1110px) {
+	.block.block_quick_navigation .list_wrapper .quick_link {
+	    font-size: 0.9rem;
+	}
+    .block.block_quick_navigation .quick_nav{width: 100%;}
+	.block.block_quick_navigation .list_wrapper {min-height: 90px;}
+}
+@media(max-width: 767px) {
+    .block.block_quick_navigation .quick_nav{width: 100%;}
+	.block.block_quick_navigation .quick_nav_list_wrapper {
+	    width: 100%;
+	    margin: 0px;
+	}
+}

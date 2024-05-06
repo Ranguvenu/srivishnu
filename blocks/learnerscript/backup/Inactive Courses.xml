@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<report version="2021051704.12"><visible><![CDATA[1]]></visible>
+<name><![CDATA[Inactive Courses]]></name>
+<summary><![CDATA[]]></summary>
+<type><![CDATA[statistics]]></type>
+<components><![CDATA[YToyOntzOjk6ImN1c3RvbXNxbCI7YToxOntzOjY6ImNvbmZpZyI7Tzo4OiJzdGRDbGFzcyI6MTE6e3M6NDoibmFtZSI7czoxNjoiSW5hY3RpdmUrQ291cnNlcyI7czo0OiJ0eXBlIjtzOjEwOiJzdGF0aXN0aWNzIjtzOjg6InF1ZXJ5c3FsIjtzOjE1MDU6IlNFTEVDVCtDT05DQVQlMjglMjclM0NhK2hyZWYlM0QlMjIlMjUlMjVXV1dST09UJTI1JTI1JTJGYmxvY2tzJTJGbGVhcm5lcnNjcmlwdCUyRnZpZXdyZXBvcnQucGhwJTNGaWQlM0QlMjUlMjVSRVBPUlRJRCUyNSUyNSUyMiUzRSUyNyUyQytDT1VOVCUyOERJU1RJTkNUK2NvbmNhdCUyOGMuaWQlMkMlMjctJTI3JTJDdS5pZCUyOSUyOSUyQyslMjclM0MlMkZhJTNFJTI3JTI5KytBUyslMjdJbmFjdGl2ZStDb3Vyc2VzJTI3JTBEJTBBRlJPTStwcmVmaXhfbG9nc3RvcmVfc3RhbmRhcmRfbG9nK2xzbCslMEQlMEFKT0lOK3ByZWZpeF9jb3Vyc2UrYytPTitjLmlkJTNEbHNsLmNvdXJzZWlkK0FORCtjLnZpc2libGUlM0QxKyUwRCUwQUpPSU4rcHJlZml4X3VzZXIrdStPTit1LmlkJTNEbHNsLnVzZXJpZCtBTkQrdS5kZWxldGVkJTNEMCtBTkQrdS5jb25maXJtZWQlM0QxKyUwRCUwQUpPSU4rcHJlZml4X3JvbGVfYXNzaWdubWVudHMrcmErT04rcmEudXNlcmlkJTNEdS5pZCslMEQlMEFKT0lOK3ByZWZpeF9yb2xlK3IrT04rci5pZCUzRHJhLnJvbGVpZCtBTkQrci5zaG9ydG5hbWUlM0QlMjdmYWN1bHR5JTI3JTBEJTBBTEVGVCtKT0lOK3ByZWZpeF9sb2NhbF9jY19zZW1lc3Rlcl9jb3Vyc2VzK2xjYytPTitsY2MuY291cnNlaWQlM0RjLmlkKyUwRCUwQUxFRlQrSk9JTitwcmVmaXhfbG9jYWxfY29zdGNlbnRlcitsYytPTitsYy5pZCUzRGMub3Blbl9jb3N0Y2VudGVyaWQrQU5EK2xjLnBhcmVudGlkJTNEMCUwRCUwQUxFRlQrSk9JTitwcmVmaXhfbG9jYWxfY29zdGNlbnRlcitsY28rT04rbGNvLnBhcmVudGlkKyUzRCtsYy5pZCtBTkQrbGNvLmlkKyUzRCtjLm9wZW5fZGVwYXJ0bWVudGlkK0FORCtsY28udW5pdl9kZXB0X3N0YXR1cyslM0QrMCUwRCUwQUxFRlQrSk9JTitwcmVmaXhfbG9jYWxfcHJvZ3JhbStscCtPTitscC5pZCUzRGxjYy5wcm9ncmFtaWQrKyUwRCUwQVdIRVJFK2xzbC5hY3Rpb24lM0QlMjdjcmVhdGVkJTI3QU5EKyUyOGMub3Blbl9wYXJlbnRjb3Vyc2VpZCslMjElM0QrMCtPUislMjhjLm9wZW5fcGFyZW50Y291cnNlaWQrJTNEKzArQU5EK2MuZm9ycHVyY2hhc2VpbmRpdmlkdWFsbHkrJTNEKzIlMjklMjkrQU5EK2xzbC50YXJnZXQlM0QlMjdjb3Vyc2VfbW9kdWxlJTI3QU5EK0ZST01fVU5JWFRJTUUlMjhsc2wudGltZWNyZWF0ZWQlMkMlMjclMjVZLSUyNW0tJTI1ZCUyNyUyOSUzQyUyOGN1cmRhdGUlMjglMjktaW50ZXJ2YWwrOTArZGF5JTI5KyUyNSUyNVJPTEVXSVNFJTI1JTI1KyslMjUlMjVGSUxURVJfQ09MTEVHRSUzQWxjLmlkJTI1JTI1KyUyNSUyNUZJTFRFUl9ERVBBUlRNRU5UJTNBbGNvLmlkJTI1JTI1KyUyNSUyNUZJTFRFUl9QUk9HUkFNJTNBbHAuaWQlMjUlMjUrJTI1JTI1RklMVEVSX0NPVVJTRVMlM0FjLmlkJTI1JTI1KyUyNSUyNUZJTFRFUl9GQUNVTFRZJTNBdS5pZCUyNSUyNStBTkQrbHNsLnRpbWVjcmVhdGVkK0JFVFdFRU4rJTI1JTI1TFNfU1RBUlREQVRFJTI1JTI1K0FORCslMjUlMjVMU19FTkREQVRFJTI1JTI1IjtzOjExOiJkZXNjcmlwdGlvbiI7YToyOntzOjQ6InRleHQiO3M6MDoiIjtzOjY6ImZvcm1hdCI7czoxOiIxIjt9czo2OiJnbG9iYWwiO3M6MToiMSI7czoyOiJpZCI7aTo0NTtzOjg6ImNvdXJzZWlkIjtpOjE7czozNToibWZvcm1faXNleHBhbmRlZF9pZF9hZHZhbmNlZG9wdGlvbnMiO2k6MDtzOjEyOiJzdWJtaXRidXR0b24iO3M6NDoiTmV4dCI7czoxMjoiZGlzYWJsZXRhYmxlIjtpOjA7czo3OiJzdW1tYXJ5IjtzOjA6IiI7fX1zOjExOiJwZXJtaXNzaW9ucyI7YToyOntzOjY6ImNvbmZpZyI7Tzo4OiJzdGRDbGFzcyI6Mzp7czoxMzoiY29uZGl0aW9uZXhwciI7czozMjoiJTI4YzErb3IrYzIrb3IrYzMrb3IrYzQrb3IrYzUlMjkiO3M6MTQ6ImNvbmRpdGlvbmV4cHIxIjtzOjA6IiI7czoxNDoiY29uZGl0aW9uZXhwcjIiO3M6MzI6IiUyOGMxK29yK2MyK29yK2MzK29yK2M0K29yK2M1JTI5Ijt9czo4OiJlbGVtZW50cyI7YTo1OntpOjA7YTo1OntzOjI6ImlkIjtzOjE1OiJMYUFMendZOXRzYzFVWUQiO3M6ODoiZm9ybWRhdGEiO086ODoic3RkQ2xhc3MiOjM6e3M6MTI6ImNvbnRleHRsZXZlbCI7czoyOiIxMCI7czo2OiJyb2xlaWQiO3M6MToiOSI7czoxMjoic3VibWl0YnV0dG9uIjtzOjM6IkFkZCI7fXM6MTA6InBsdWdpbm5hbWUiO3M6MTI6InJvbGVpbmNvdXJzZSI7czoxNDoicGx1Z2luZnVsbG5hbWUiO3M6MzE6IlVzZXIrd2l0aCt0aGUrc2VsZWN0ZWQrcm9sZSUyRnMiO3M6Nzoic3VtbWFyeSI7czoyODoiY29sbGVnZWFkbWluK2F0K1N5c3RlbStsZXZlbCI7fWk6MTthOjU6e3M6MjoiaWQiO3M6MTU6ImgwNE04U2lJVmpDeUZiZCI7czo4OiJmb3JtZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mzp7czoxMjoiY29udGV4dGxldmVsIjtzOjI6IjEwIjtzOjY6InJvbGVpZCI7czoyOiIxMSI7czoxMjoic3VibWl0YnV0dG9uIjtzOjM6IkFkZCI7fXM6MTA6InBsdWdpbm5hbWUiO3M6MTI6InJvbGVpbmNvdXJzZSI7czoxNDoicGx1Z2luZnVsbG5hbWUiO3M6MzE6IlVzZXIrd2l0aCt0aGUrc2VsZWN0ZWQrcm9sZSUyRnMiO3M6Nzoic3VtbWFyeSI7czoyMzoiZmFjdWx0eSthdCtTeXN0ZW0rbGV2ZWwiO31pOjI7YTo1OntzOjI6ImlkIjtzOjE1OiJCQ3RSU2pzTFNBTFlxYXQiO3M6ODoiZm9ybWRhdGEiO086ODoic3RkQ2xhc3MiOjM6e3M6MTI6ImNvbnRleHRsZXZlbCI7czoyOiIxMCI7czo2OiJyb2xlaWQiO3M6MjoiMTAiO3M6MTI6InN1Ym1pdGJ1dHRvbiI7czozOiJBZGQiO31zOjEwOiJwbHVnaW5uYW1lIjtzOjEyOiJyb2xlaW5jb3Vyc2UiO3M6MTQ6InBsdWdpbmZ1bGxuYW1lIjtzOjMxOiJVc2VyK3dpdGgrdGhlK3NlbGVjdGVkK3JvbGUlMkZzIjtzOjc6InN1bW1hcnkiO3M6MzE6ImRlcGFydG1lbnRhZG1pbithdCtTeXN0ZW0rbGV2ZWwiO31pOjM7YTo1OntzOjI6ImlkIjtzOjE1OiIxOHZYSTFaQVFRRFV0SE0iO3M6ODoiZm9ybWRhdGEiO086ODoic3RkQ2xhc3MiOjM6e3M6MTI6ImNvbnRleHRsZXZlbCI7czoyOiIxMCI7czo2OiJyb2xlaWQiO3M6MjoiMTMiO3M6MTI6InN1Ym1pdGJ1dHRvbiI7czozOiJBZGQiO31zOjEwOiJwbHVnaW5uYW1lIjtzOjEyOiJyb2xlaW5jb3Vyc2UiO3M6MTQ6InBsdWdpbmZ1bGxuYW1lIjtzOjMxOiJVc2VyK3dpdGgrdGhlK3NlbGVjdGVkK3JvbGUlMkZzIjtzOjc6InN1bW1hcnkiO3M6MTk6ImhvZCthdCtTeXN0ZW0rbGV2ZWwiO31pOjQ7YTo1OntzOjI6ImlkIjtzOjE1OiJPWFVYOWlPb0dWdDBUejEiO3M6ODoiZm9ybWRhdGEiO086ODoic3RkQ2xhc3MiOjM6e3M6MTI6ImNvbnRleHRsZXZlbCI7czoyOiIxMCI7czo2OiJyb2xlaWQiO3M6MjoiMTQiO3M6MTI6InN1Ym1pdGJ1dHRvbiI7czozOiJBZGQiO31zOjEwOiJwbHVnaW5uYW1lIjtzOjEyOiJyb2xlaW5jb3Vyc2UiO3M6MTQ6InBsdWdpbmZ1bGxuYW1lIjtzOjMxOiJVc2VyK3dpdGgrdGhlK3NlbGVjdGVkK3JvbGUlMkZzIjtzOjc6InN1bW1hcnkiO3M6MjU6InByaW5jaXBhbCthdCtTeXN0ZW0rbGV2ZWwiO319fX0=]]></components>
+<export><![CDATA[]]></export>
+<global><![CDATA[1]]></global>
+<lastexecutiontime><![CDATA[2]]></lastexecutiontime>
+<disabletable><![CDATA[0]]></disabletable>
+<instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-third]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346625]]></timecreated>
+<timemodified><![CDATA[1687346625]]></timemodified>
+<title><![CDATA[Inactive Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[797603185]]></logo>
+<tilescolourpicker><![CDATA[a4238c]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position><instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard-collegeadmin_10]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-third]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346625]]></timecreated>
+<timemodified><![CDATA[1687346625]]></timemodified>
+<title><![CDATA[Inactive Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[740522698]]></logo>
+<tilescolourpicker><![CDATA[a4238c]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position><instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard-departmentadmin_10]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-third]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346625]]></timecreated>
+<timemodified><![CDATA[1687346625]]></timemodified>
+<title><![CDATA[Inactive Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[550774574]]></logo>
+<tilescolourpicker><![CDATA[a4238c]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position><instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard-principal_10]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-third]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346626]]></timecreated>
+<timemodified><![CDATA[1687346626]]></timemodified>
+<title><![CDATA[Inactive Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[236110032]]></logo>
+<tilescolourpicker><![CDATA[a4238c]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position><instance version="2021051704.12"><blockname><![CDATA[reporttiles]]></blockname>
+<parentcontextid><![CDATA[1]]></parentcontextid>
+<showinsubcontexts><![CDATA[0]]></showinsubcontexts>
+<requiredbytheme><![CDATA[0]]></requiredbytheme>
+<pagetypepattern><![CDATA[blocks-reportdashboard-dashboard-hod_10]]></pagetypepattern>
+<subpagepattern><![CDATA[VishnuLearning]]></subpagepattern>
+<defaultregion><![CDATA[reportdb-third]]></defaultregion>
+<defaultweight><![CDATA[0]]></defaultweight>
+<timecreated><![CDATA[1687346626]]></timecreated>
+<timemodified><![CDATA[1687346626]]></timemodified>
+<title><![CDATA[Inactive Courses]]></title>
+<reportcontenttype><![CDATA[]]></reportcontenttype>
+<reporttype><![CDATA[table]]></reporttype>
+<logo><![CDATA[245918298]]></logo>
+<tilescolourpicker><![CDATA[a4238c]]></tilescolourpicker>
+<tileformat><![CDATA[fill]]></tileformat>
+<reportduration><![CDATA[all]]></reportduration>
+<tilescolour><![CDATA[000000]]></tilescolour>
+<url><![CDATA[]]></url>
+</instance><position version="2021051704.12"></position></report>

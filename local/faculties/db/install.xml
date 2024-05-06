@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <XMLDB PATH="local/faculties/db" VERSION="20130514" COMMENT="XMLDB file for Moodle local/faculties">
+    <TABLES>
+      <TABLE NAME="local_faculties" COMMENT="faculties" NEXT="">
+        <FIELDS>
+          <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="fullname"/>
+          <FIELD NAME="facultyname" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="facultycode"/>
+          <FIELD NAME="facultycode" TYPE="text" LENGTH="25" NOTNULL="true" SEQUENCE="false" PREVIOUS="facultyname" NEXT="university"/>
+          <FIELD NAME="university" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" PREVIOUS="facultycode" NEXT="board"/>
+          <FIELD NAME="board" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="university" NEXT="description"/>
+          <FIELD NAME="description" TYPE="text" NOTNULL="true" SEQUENCE="false" />
+          <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+          <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+          <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+          <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+          <FIELD NAME="smbid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="usermodified"/>
+        </FIELDS>
+        <KEYS>
+          <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+        </KEYS>
+      </TABLE>
+    </TABLES>
+  </XMLDB>

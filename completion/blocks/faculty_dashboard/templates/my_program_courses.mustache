@@ -1,0 +1,81 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+   
+}}
+    {{#response}}
+        {{#viewtypeCard}}
+        <div class="userdashboard_content {{{course_count_view}}}">
+        {{#records}}
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 courses_inprogress_slide {{subtab}} ctype_program">
+                <div class="bootcamp_container w-full pull-left" >
+                    <div class="col-md-12 pt-5px pb-5px programcontainer_top">
+                        <div class="w-full pull-left">
+                            <div class="myprograms_wrap">
+                                <ul class="w-full coursecontent list-unstyled pl-0 myprograms_content">
+                                    <li class="mb-5px programname">
+                                        <label>Name :</label>
+                                        <a href="{{{program_url}}}" title="{{{fullnametitle}}}" class="bootcamp_name"> {{{fullname}}}</a>
+                                    </li>
+                                    <li class="mb-5px programname">
+                                    <label>Duration :</label>
+                                        <span>{{duration}}</span>
+                                    </li>
+
+                                    <li class="mb-5px programname">
+                                    <label>Shortcode :</label>
+                                        <span>{{shortcode}}</span>
+                                    </li>
+
+                                    <li class="mb-5px programname">
+                                    <label>Level :</label>
+                                        <span>{{duration}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="w-full coursecontent second-coursecontent">
+                                <h5>My Courses</h5>
+                                <ul class="col-md-6 ul-second-course courses_wrap list-unstyled">
+                                    {{#programcourses}}
+                                        <li class="mb-5px mt-5px coursename">
+                                            <label>Course Name :</label>
+                                            <span>{{coursename}}</span>
+                                        </li>
+                                        <li class="mb-5px mt-5px coursename">
+                                            <label>Total Users :</label>
+                                            <span>{{enrolledusers}}</span>
+                                        </li>
+                                        <li class="mb-5px mt-5px coursename">
+                                            <a href="{{config.wwwroot}}/course/view.php?id={{courseid}}" class="btn btm-sm">Apply Now</a>
+                                        </li>
+                                    {{/programcourses}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        {{/records}}
+
+    </div>
+    {{/viewtypeCard}}
+{{/response}}
+
+
+

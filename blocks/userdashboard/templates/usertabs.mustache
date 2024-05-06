@@ -1,0 +1,170 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+
+<div id="myuserinfo" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+    <ul class="nav nav-tabs ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+
+    {{#programs_tab}}
+       <li class="user_tabs" role="tab" tabindex="0" aria-controls="ui-id-2" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" data-module="program_courses" data-status = 1>
+
+        <a class="ui-tabs-anchor active " data-toggle="tabajax"  href="javascript:void(0);"  role="presentation">
+            {{#str}}programs,block_userdashboard{{/str}}
+        </a>
+                               
+        </li>
+    {{/programs_tab }} 
+
+
+    {{#courses_tab }}
+       <li class="user_tabs" role="tab" tabindex="0" aria-controls="ui-id-2" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" data-module="elearning_courses" data-status = 2>
+
+
+        <a class="ui-tabs-anchor" data-toggle="tabajax"  href="javascript:void(0);"  role="presentation">
+            {{#str}}courses,block_userdashboard{{/str}}
+        </a>
+                               
+        </li>
+    {{/courses_tab }}  
+    
+</ul>
+
+<div class="userdashboard_filter_container">
+    <label>
+        <input id="userdashboard_filter" class="ml-10px dashboard_filter" type="text" name="filter_text" value="" onkeyup="(function(e){ require('block_userdashboard/userdashboardinit').serachname() })(event)">
+    </label>
+</div>
+
+<div id="myinneruserinfo" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+<ul class="nav nav-tabs ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+
+                
+   <li class="progressuser_tabs" role="tab" tabindex="0" aria-controls="ui-id-2" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" data-module="inprogress" data-status = 1>
+
+    <a class="ui-tabs-anchor active " data-toggle="tabajax"  href="javascript:void(0);"  role="presentation" id="inprogressinfo">
+        {{#str}}inprogress,block_userdashboard{{/str}}
+    </a>
+                           
+    </li>
+
+
+
+   <li class="progressuser_tabs" role="tab" tabindex="0" aria-controls="ui-id-2" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" data-module="completed" data-status = 2>
+
+
+    <a class="ui-tabs-anchor" data-toggle="tabajax"  href="javascript:void(0);"  role="presentation" id="completedinfo">
+        {{#str}}completed,block_userdashboard{{/str}}
+    </a>
+                           
+    </li>
+</ul>
+</div>
+<div class="py-3" id="programscontent">
+        <div class="tab-content pl-3 pr-3 pull-left w-100">
+            <div class="tab-pane active" id="program_courses_tab" role="tabpanel">
+            
+                 <div class="m-t-2" id="program_courses_tabdata" data-region="program_courses_tabdata-preview-container">
+                    <div data-region="program_courses_tabdata-count-container"></div>
+                    <div data-region="program_courses_tabdata-list-container" id ="program_coursesid"></div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="elearning_courses_tab" role="tabpanel">
+                <div class="m-t-2" id="elearning_courses_tabdata" data-region="elearning_courses-preview-container">
+                    <div data-region="elearning_courses_tabdata-count-container"></div>
+                    <div data-region="elearning_courses_tabdata-list-container" id ="elearning_coursesid"></div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+
+{{#js}}
+
+   
+    $('.progressuser_tabs').click(function(){
+    $("#userdashboard_filter").val('');
+        if($("#program_courses_tab").hasClass("active")){
+            var myusermodule = "program_courses";
+        }else if($("#elearning_courses_tab").hasClass("active")){
+            var myusermodule = "elearning_courses";
+        }
+        if(myusermodule){
+            $('#myinneruserinfo .ui-tabs-anchor').removeClass('active');
+            $(this).find('.ui-tabs-anchor').addClass('active');
+
+            var status = $(this).data('module');
+            var targetid = myusermodule+'_tabdata';
+
+            var options = {targetID: targetid,
+                        templateName: 'block_userdashboard/my_'+myusermodule,
+                        methodName: 'block_userdashboard_data_for_'+myusermodule,
+                        perPage: 5,
+                        cardClass: 'col-md-6 col-12',
+                        viewType: 'card'};
+            var dataoptions = {tabname: myusermodule,contextid: 1 };
+            var filterdata = {status:status};
+            require(['local_costcenter/cardPaginate'], function(cardPaginate) {
+                cardPaginate.reload(options, dataoptions,filterdata);
+            });
+        }
+        
+    });
+
+    $('.user_tabs').click(function(){
+    $("#userdashboard_filter").val('');
+        var myusermodule = $(this).data('module');
+        $('.ui-tabs-anchor').removeClass('active');
+        $(this).find('.ui-tabs-anchor').addClass('active');
+
+        $('#completedinfo').removeClass('active');
+        $('#inprogressinfo').addClass('active');
+    
+        $("#myuserinfo .tab-pane").removeClass('active');
+        $("#"+myusermodule+'_tab').addClass('active');
+        var status = $(this).data('status');
+
+        var targetid = myusermodule+'_tabdata';
+
+        var options = {targetID: targetid,
+                    templateName: 'block_userdashboard/my_'+myusermodule,
+                    methodName: 'block_userdashboard_data_for_'+myusermodule,
+                    perPage: 5,
+                    cardClass: 'col-md-6 col-12',
+                    viewType: 'card'};
+        var dataoptions = {tabname: myusermodule,contextid: 1 };
+        var filterdata = {status: 'inprogress'};
+
+        for(i = 1; i<=2; i++){
+            if(status != i){
+                switch(i){
+                    case 1:
+                        $("#program_coursesid").empty();
+                    break;
+                    case 2:
+                        $("#elearning_coursesid").empty();
+                    break;
+                }
+            }
+        }
+
+        require(['local_costcenter/cardPaginate'], function(cardPaginate) {
+            cardPaginate.reload(options, dataoptions,filterdata);
+        });
+    });
+
+{{/js}}

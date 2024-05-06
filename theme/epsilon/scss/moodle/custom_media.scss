@@ -1,0 +1,374 @@
+/*custom media queries for the responsive fixes for TheOpenLMS*/
+@media(min-width: 2000px){
+	#page{max-width: 1800px;}
+}
+@media only screen and (max-width: 1600px) and (min-width: 1200px)  {
+    aside#block-region-layerone_two{
+        padding-left:0px;
+    }
+
+    aside#block-region-layertwo_one, aside#block-region-layertwo_three{
+        padding-right:0px;
+    }
+}
+@media (min-width: 1400px) {
+    .modal.openLMStransition, .modal-lg {
+        max-width: 1000px;
+    }
+}
+@media(min-width: 1200px) and (max-width: 1400px){
+    body#page-my-index .openLMStransition.local_users .modal-body .col-md-3{
+        width: 24%;
+        padding: 0px;
+    }
+    body#page-my-index .openLMStransition.local_users .modal-body .col-md-9{
+        width: 73%;
+    }
+    .modal.openLMStransition{
+        max-width: 1000px;
+    }
+    .modal-lg {
+        max-width: 1000px;
+    }
+}
+@media (max-width: 1275px){
+    .bootstrap-duallistbox-container .box3.col-md-2 #user_unassign_all, 
+    .bootstrap-duallistbox-container .box3.col-md-2 #user_assign_all {white-space: initial;}
+}
+@media (min-width:1200px){
+    body#page-my-index .openLMStransition.local_users .modal-body .form-group>div.col-md-3 {
+        padding: 0px;
+    }
+    body#page-my-index .openLMStransition.local_users .modal-body .form-group > div.col-md-9 .fm-empty-container {
+        padding-top: 66px;
+    }
+    body#page-course-view-topics #region-main-settings-menu>div {
+        top: 100%;
+        right: 0;
+        margin-top: 1rem;
+        box-shadow: none;
+        outline: none;
+    }
+    #page-enrol-manual-manage section#region-main .card.card-block {
+        overflow: hidden;
+    }
+}
+@media (max-width: 1217px){
+    #filters_form #mform1 .autocomplete input {
+        position: relative;
+    }
+    #filters_form #mform1 .autocomplete .form-autocomplete-downarrow {
+        position: absolute;
+        top: 11px;
+    }
+}
+@media (max-width: 1199px){
+    body#page-course-view-topics #region-main-settings-menu>div {
+        top: 0px;
+        right: 393px;
+        margin-top: 0px;
+    }
+}
+@media (min-width:1024px) {
+    body .yui3-panel {
+        /*max-width: 600px;*/
+        /*left: 26% !important;*/
+        /*width: 600px !important;*/
+        margin: 10px auto !important;
+        outline: 0;
+    }    
+}
+@media (max-width:1023px) {
+    body .yui3-panel {
+        /*max-width: 80%;
+        left: 10% !important;
+        width: 80% !important;*/
+        margin: 10px auto !important;
+        outline: 0;
+    }    
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    body .block-region .card-block .card-title {
+        font-size: 1.0rem;
+    }
+}
+@media(min-width: 576px){
+    .modchoosercontainer .optionscontainer .option, .modchoosercontainer .searchresultitemscontainer .option {
+        flex-basis: calc(50% - .5rem);
+    }
+}
+@media(min-width: 992px){
+    .course_extended_menu_list {top: 54px;}
+    body#page-grade-export-ods-index .course_extended_menu_list {
+        top: 87px;
+    }
+    .modchoosercontainer .optionscontainer .option, .modchoosercontainer .searchresultitemscontainer .option {
+        flex-basis: calc(16.66% - .5rem);
+    }
+}
+@media(max-width: 991px){
+    .modal.openLMStransition{width: 100%;right: 100% !important;}
+    .modal.openLMStransition.show{right: 0% !important;}
+    .modal.openLMStransition .modal-dialog{max-width: inherit;}
+    .openLMStransition .form_status .form_status_list{width: 100% !important;}
+    .course_extended_menu_itemlink .icon, .course_extended_menu_list .dropdown-toggle .icon {font-size: 18px;padding: 5px;width: 22px;height: 22px;line-height: 22px;}
+    body.path-local-classroom .course_extended_menu_itemlink .icon {padding: 5px;}
+    body#page-local-classroom-index .course_extended_menu_list .createiconchild {right: -22px;top: 14px;font-size: 14px;}
+    body#page-course-view-topics #region-main-settings-menu>div {
+        top: 0px;
+        right: 285px;
+        margin-top: 0px;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px){
+    #filters_form #mform1{
+        width: 90%;
+    }
+}
+@media(min-width:914px) and (max-width: 1217px){
+    #filters_form #mform1 .autocomplete .form-autocomplete-downarrow {
+        left: 100%;
+        position: relative;
+        top: -1.5em;
+    }
+    #filters_form #mform1 .autocomplete input {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+@media(max-width: 980px){
+	.leftmenu_navigator{max-width: inherit;}
+	.customLeftMemubtn{
+        display:block;
+        margin: 11px 4px;
+    }
+    .customLeftMemubtn button.m-r-1.btn-secondary {
+        margin-right: 0px !important;
+        line-height: 25px;
+    }
+    #nav-drawer {
+        display: none;
+    }  
+    .left_sidebar {
+        display: none;
+    }
+    body.drawer-open-left #nav-drawer {
+        display: block !important;
+        width: 100%;
+    }
+    body {
+        margin-left: 0px !important;
+    }
+}
+@media (max-width: 913px){
+    #filters_form #mform1 .autocomplete input {
+        position: relative;
+    }
+    #filters_form #mform1 .autocomplete .form-autocomplete-downarrow {
+        position: relative;
+        left: 90%;
+        top: -1.5em;
+    }
+}
+@media (min-width: 768px) and (max-width:818px){
+    a#prev-activity-link, a#next-activity-link{
+        font-size: 12px;
+    }
+}
+@media (min-width: 768px){
+    .path-local-forum #region-main.col-md-9 {
+        float: left;
+        width: 75%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .path-local-forum .inblock.col-md-3 {
+        float: left;
+        width: 25%;
+        padding-right: 0px;
+    }
+    .dataTables_filter input[type=search]{min-width: inherit;}
+}
+@media(max-width: 768px){
+	body .dataTables_wrapper .dataTable{box-shadow: none;-webkit-box-shadow: none;}
+}
+@media(max-width: 767px){
+	body .course_extended_menu_list{position: static;top: inherit;right: inherit;}
+    .course_extended_menu_list li{margin-bottom: 5px;}
+    .course_extended_menu_itemlink .icon,
+    .course_extended_menu_list .dropdown-toggle .icon{
+        font-size: 20px;
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+    }
+    .modal.openLMStransition{
+        width: 100%;
+    }
+    #sidepre-blocks {
+        width: 100%;
+        right: -100%;
+    }
+    .drawer-open-right #sidepre-blocks{padding-top: 60px;}
+    .drawer-open-right #sidepreopen-control{
+        right: 10px;
+        z-index: 2000;
+        top: 90px;
+    }
+    body#page-my-index .openLMStransition.local_users .modal-body .form-group:nth-child(odd) {
+        float: left;
+    }
+    body#page-my-index .openLMStransition.local_users .modal-body .form-group {
+        width: 100%;
+        float: left;
+        margin-left: 1%;
+        margin-right: 0px;
+        min-height: 70px;
+    }
+    .mform .form-inline input[type=text].form-control{max-width: 200px;min-width: 200px;}
+    .mform .form-inline select.custom-select{max-width: 200px;min-width: 200px;}
+    .fdate_time_selector select.custom-select {min-width: initial !important;}
+    #filters_form_inner  form .form-group.fitem{
+        display: inherit;
+    }
+    #filters_form .mform .form-inline input[type=text].form-control{
+        min-width: inherit;
+    }
+    #filters_form .mform .form-inline .form-control{
+        min-width: inherit;
+    }
+    #filters_form #mform1 .form-group {
+        width: 100%; 
+    }
+	body#page-mod-quiz-attempt #region-main div[role='main']+.m-t-2.m-b-1 {
+		display: inline-block;
+		width: 100%;
+	}
+    header.navbar a.has-logo {
+        min-width: 100%;
+    }
+    body header.pos-f-t {position: static;max-height: inherit;}
+    body.drawer-open-left #nav-drawer,
+    .drawer-open-left .nav-drawer-overlay{top: 119px;}
+    body #page {margin-top: 0px;}
+    #filters_form #mform1 .form-group.fitem.form-submit {
+        margin-bottom: 3px;
+    }
+    header.navbar .user_nav_container, header.navbar .zoom-icons {
+        display: none;
+    }
+    body#page-course-view-topics #region-main-settings-menu>div {
+        top: 2px;
+        right: 16px;
+        margin-top: 0px;
+    }
+}
+@media(min-width: 641px) {
+    body .dataTables_wrapper.no-footer .dataTables_length {
+        float: left;
+    }
+    body .dataTables_wrapper .dataTables_filter {
+        float: right;
+    }
+}
+@media (max-width: 645px){
+    .que .content {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+    }
+	.que .info {
+		width: 100%;
+	}
+}
+@media (min-width: 545px) and (max-width: 767px){
+    body#page-my-index .openLMStransition.local_users .modal-body .form-group>div.col-md-3 {
+        width: 27%;
+    }
+}
+@media (max-width:544px){
+    body#page-my-index .openLMStransition.local_users .modal-body .form-group > div {
+        float: left;
+        width: 100%;
+    }
+	body#page-course-view-toggletop .ctopics.topics .section .activity .contentwithoutlink .no-overflow iframe {
+		width: 100%;
+		height: 100%;
+	}
+    .form-autocomplete-multiple [role=listitem] {
+        white-space: normal;
+    }
+    .dataTables_wrapper.no-footer .dataTables_length label {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+@media(max-width: 543px){
+   .openLMStransition .fdate_time_selector .form-group.fitem {
+        width: initial;
+        float: left;
+        margin-right: 7px;
+    }
+	body .openLMStransition .form_status .form_status_listitem.active:first-child .form_status_listitem_link:before {
+		border-right: 0px;
+	}
+	.navbar .popover-region .popover-region-container {
+		z-index: 2;
+	}
+    body .filepicker-filelist .filepicker-container, body .filemanager.fm-noitems .fm-empty-container {
+        padding-top: 70px;
+    }
+}
+@media (max-width: 424px){
+    .dropdown-menu-right {
+        right: -90px;
+    }
+    .editor_atto_content {
+        min-width: inherit !important;
+    }
+}
+@media (max-width: 520px){
+	body #page {margin-top: 10px;}
+    body .logo{display: block;text-align: center;}
+    .mform fieldset#id_general {
+        clear: both;
+    }
+    .mform fieldset#id_general .filepicker-filelist .filepicker-container {
+        padding-top: 71px;
+    }
+    /*header.navbar .action-menu .userpicture{width: 50px;height: 50px;}*/
+}
+
+@media(max-width: 425px){
+	body #page.container-fluid{padding: 0px 15px;}
+    body #page.container-fluid #page-content.row {
+        /*margin-left: 0px;
+        margin-right: 0px;*/
+    }
+    header.navbar .popover-region, .navbar .usermenu, .navbar .zoom-icons, header.navbar .user_nav_container {
+        margin: 10px 2px;
+    }
+    .customLeftMemubtn {margin: 11px 2px;}
+    header.navbar .navbar-nav .nav-link {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .dataTables_filter input[type=search] {min-width: 100%;width: 100%;}
+    header.navbar .action-menu .dropdown.d-inline.open .dropdown-menu {
+        right: 0px;
+        left: auto;
+    }
+}
+@media(min-width: 361px) and (max-width: 425px){
+	header#page-header>.col-xs-12>.card {
+		margin: 0 0rem 2rem;
+	}
+}
+@media(min-width: 320px) and (max-width: 360px){
+	header#page-header .card{margin: 0 0rem 2rem !important;}
+}
+@media (max-width: 320px){
+    header.navbar-light{
+        max-width: 320px;
+    }
+}

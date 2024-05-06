@@ -1,0 +1,130 @@
+<div class="tab-content">
+    {{# curriculumsemesteryears }}
+    {{#candoactions}}
+        {{# cancreatesemester }}
+        <div class="pull-right ml-15px">
+            <a href="javascript:void(0)" class="btn btn-sm addsemester" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:{{ contextid }}, component:'local_curriculum', callback:'curriculum_managesemester_form', form_status:0, plugintype: 'local_curriculum', pluginname: 'addsemester', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}/*, programid: {{programid}}*/ }) })(event)">{{#str}}addsemester, local_curriculum {{/ str }}</a>
+        </div>
+        {{/ cancreatesemester }}
+       {{/candoactions}}
+        {{#canenrolcourse}}
+        {{#coursesadded}}
+        <div class="pull-right ml-15px">
+            <a href="javascript:void(0)" class="btn btn-sm addstudent" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:{{ contextid }}, component:'local_curriculum', callback:'curriculum_managestudent_form', form_status:0, plugintype: 'local_curriculum', pluginname: 'addstudent', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}/*, programid: {{programid}} */}) })(event)">{{#str}}addstudent, local_curriculum {{/ str }}</a>
+        </div>
+        <div class="pull-right ml-15px">
+            <a href="{{cfg.wwwroot}}/local/curriculum/users.php?ccid={{curriculumid}}&yearid={{yearid}}" class="btn btn-sm viewstudents" >{{#str}}viewstudents, local_curriculum {{/ str }}</a>
+        </div>
+        {{/coursesadded}}
+        {{/canenrolcourse}}
+
+        <div class="pull-left">
+            <b>{{#str}}cost{{/str}}:</b> Rs. {{cost}}/-
+        </div>
+        {{# userview}}
+        {{# mycompletionstatus }}
+            <span class="pull-right mt-15px mb-10px semestercomplition completed">{{# str}} semestercompleted, local_curriculum {{/ str}}</span>
+        {{/ mycompletionstatus }}
+        {{# myinprogressstatus }}
+            <span class="pull-right mt-15px mb-10px semestercomplition inprogress">{{# str}} semesterinprogress, local_curriculum {{/ str}}</span>
+        {{/ myinprogressstatus }}
+        {{/ userview}}
+            <div class="w-full pull-left semester_description">{{{description}}}</div>
+    <div class="local_program-semisters_wrap">
+        {{# curriculumsemesters }}
+        <div class="w-full pull-left lpcourse_content pt-10px pb-10px" id = "lpcourse_content{{semesterid}}">
+            <div class="col-md-12 col-sm-12 col-12 p-0 semestercourse_list {{ coursecompletionstatus }}">
+                <div class='w-full pull-left semcontentlist{{# semesters}} semabove{{/ semesters}}' {{# semesters}}data-toggle="collapse" data-target="#semcollapse_{{semesterid}}" aria-expanded="false" aria-controls="semcollapse_{{semesterid}}"{{/ semesters}} id="semcontentlist{{semesterid}}">
+                    <div class="col-md-5 col-sm-12 col-12 semestercourse_left">
+                        <div class="w-full pull-left p-10px">
+                            <h5 class="coursename mb-0 ml-15px">{{! <span class="course_icon mr-15px">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                </span> }}{{{ semester }}}
+                            </h5>
+                        </div>
+                    </div>
+                {{> local_curriculum/coursesessionblock }}
+                </div>
+                <div class="{{# semesters}}collapse{{/semesters}} courseslist col-md-12 p-0" {{# semesters}} id="semcollapse_{{semesterid}}" {{/ semesters}}>
+                    {{#courses}}
+                    <div class='col-md-4 pull-left mt-15px courselist'>
+                        <div class="coursenamesub">
+                            <div class='w-full pull-left p-5px'>
+                                <a href="{{cfg.wwwroot}}/course/view.php?id={{courseid}}" target="_blank" class="courssubeurl h5 font-weight-bold">{{course}}</a>
+                            </div>
+                            <div class='w-full pull-left'>
+                                <div class='col-md-6 p-5px pull-right text-right course_actions'>
+                                    {{#canremovecourse}}
+                                    <a class="unassign_course" onclick="(function(e){ require('local_curriculum/ajaxforms').unassignCourses({action:'unassign_course', curriculumid: {{ curriculumid }}, yearid: {{yearid}}, semesterid : {{semesterid}}, courseid: {{courseid}} }) })(event)" href="javascript:void(0)"><i class="fa fa-trash" aria-hidden="true" title="Un-assign" aria-label="Delete"></i></a>
+                                    {{/canremovecourse}}
+                                   
+                                    {{#canaddfaculty}}
+                                    <a href="javascript:void(0)" title = "{{#str}}addfaculty, local_curriculum {{/ str }}" class="addfaculty" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:{{ contextid }}, component:'local_curriculum', callback:'curriculum_managefaculty_form', form_status:0, plugintype: 'local_curriculum', pluginname: 'addfaculty', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, /*programid: {{programid}},*/ semesterid : {{semesterid}}, courseid: {{courseid}} }) })(event)"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                                    {{/canaddfaculty}}
+                                    {{#canmanagefaculty}}
+
+                                    <a title = "{{#str}}viewfaculty, local_curriculum {{/ str }}" href="{{cfg.wwwroot}}/local/curriculum/coursefaculty.php?yearid={{yearid}}&semesterid={{semesterid}}&courseid={{courseid}}" class="viewfaculty" ><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                    {{/canmanagefaculty}}
+                                    {{#canimportcoursecontent}}
+                                    {{^importstatus}}
+                                    <a title="{{#str}}import_course_content, local_curriculum {{/ str }}" href="{{cfg.wwwroot}}/local/curriculum/importcourse.php?cid={{courseid}}&curriculumid={{curriculumid}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                    {{/importstatus}}
+                                    {{/canimportcoursecontent}}
+                                    {{# coursetype }}
+                                        {{^ completioncriteria}}
+                                            {{# canaddcourse }}
+                                                <span class='text-danger' title='Please set completion criteria' id='notifycompletion{{courseid}}'><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                                             {{/ canaddcourse }}
+                                        {{/ completioncriteria}}
+                                    {{/ coursetype }}
+                                    {{^ coursetype }}
+                                        <span class='text-danger' title='Please set completion criteria' id='notifycompletion{{courseid}}' style='display:none;'><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                                    {{/ coursetype }}
+                                </div>
+                                <div class='col-md-6 pull-left p-5px'>
+                                    {{# candoactions}}
+                                    {{# canaddcourse }}
+                                    <span><span>Switch To</span><span class="mr-5px ml-5px">:</span></span>
+                                    <span><label class="switch">
+                                            <input type="checkbox" {{# coursetype }} checked {{/ coursetype }} id="switch_course_{{courseid}}" value="{{courseid}}"  onclick="(function(e){ require('local_curriculum/ajaxforms').course_switch({courseid:{{ courseid }} }) })(event)">
+                                            <span class="slider round"><span class='switch_course'></span></span>
+                                        </label></span>
+                                    {{/ canaddcourse }}
+                                    {{/ candoactions }}
+                                   {{!  <span class="switch_type">                                      
+                                        <label class="switch">
+                                            <input class="switch-input" type="checkbox" id="switch_course'.$course->id.'" value="'.$course->id.'" "'.$select.'">
+                                            <span class="switch-label" data-on="Man" data-off="Opt"></span> 
+                                            <span class="switch-handle"></span> 
+                                        </label>
+                                    </span> }}
+                                </div>
+                            </div>
+                            {{^ canaddcourse }}
+                                <span class='courseswitchtype{{#coursetype}} mandatory{{/coursetype}}'>{{# coursetype }}{{# str}}mandatory, local_curriculum{{/ str}}{{/ coursetype }}{{^ coursetype }}{{# str}}optional, local_curriculum{{/ str}}{{/ coursetype}}</span>
+                            {{/ canaddcourse }}
+                        </div>
+                    </div>
+                        {{/courses}}
+                        {{#candoactions}}
+                    {{# canaddcourse }}
+                    <div class='w-full pull-right text-right ml-15px mr-15px'>
+                        <a href="javascript:void(0)" class="btn btn-sm addcourse" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:{{ contextid }}, component:'local_curriculum', callback:'course_form', form_status:0, plugintype: 'local_curriculum', pluginname: 'addcourse', id:0, curriculumid: {{ curriculumid }}, yearid: {{yearid}}, semesterid: {{semesterid}}, programid: {{programid}} }) })(event)">{{#str}}addcourse, local_curriculum {{/ str }}</a>
+                    </div>
+                    {{/ canaddcourse }}
+                    {{/candoactions}}
+                </div>
+            </div>
+        </div>
+        {{/ curriculumsemesters }}
+        {{^ curriculumsemesters }}
+            <div class="w-full pull-left alert alert-info text-xs-center m-15px">{{#str}} noaddedsemesters, local_curriculum {{/ str }}</div>
+        {{/ curriculumsemesters }}
+    </div>
+    {{/ curriculumsemesteryears }}
+</div>
+{{# js }}
+if($('.tab-content .local_program-semisters_wrap .lpcourse_content:first-child .courseslist').hasClass('collapse')){
+    $('.tab-content .local_program-semisters_wrap .lpcourse_content:first-child .courseslist').removeClass('collapse').addClass('collapse in');
+}
+{{/ js }}

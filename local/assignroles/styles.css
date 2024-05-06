@@ -1,0 +1,23 @@
+
+/*div#fitem_id_roleid,
+div#fitem_id_contextid,
+div#fitem_id_deptid,
+div#fitem_id_deptname{
+    display: none;
+}*/
+body.path-local-assignroles table.dataTable thead th,
+body.path-local-assignroles table.dataTable thead td {
+    padding: 10px 10px !important;
+}
+body#page-local-assignroles-index table#local_assign_role thead th,
+body#page-local-assignroles-index table#local_assign_role tbody td {
+    text-align: center !important;
+}
+body#page-local-assignroles-index table#local_assign_role thead th:first-child,
+body#page-local-assignroles-index table#local_assign_role tbody td:first-child {
+    text-align: left !important;
+}
+#page-admin-roles-assign #popup_user_paginate {
+    float: right;
+    text-align: right;
+}

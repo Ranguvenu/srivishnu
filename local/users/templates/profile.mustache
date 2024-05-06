@@ -1,0 +1,68 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<div class="col-lg-12 col-md-12 p-0">
+    <div class="col-lg-12 col-md-12 pl-0">
+        <div class="card">
+            <div class="user_gen_info w-full pull-left">
+                <div class="general_info text-xs-center">
+                    
+                    <div class="general_info_container">
+                        <h5 class="text-xs-center text-center"><span>Welcome</span> <span class="welcome_text">{{ username }}</span></h5>
+                        <div class="row">                        
+                            <div class="col-lg-4 col-md-4 pl-0 userimage-container text-center">
+                            <div>{{{ userimage }}}</div>
+                            <div class="m-10px">
+                                {{# capabilityedit}}
+                                    <a href="javascript:void(0)" data-value="{{{userid}}}" class="edit_icon mr-5px mt-5px" title="Edit Profile" onclick='(function(e){ require("local_users/newuser").init({selector:"createusermodal", context:1, id:{{{userid}}}, form_status:0,employee:{{open_employee}} }) })(event)'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                {{/ capabilityedit}}
+                                
+                                <a href="{{messagesurl}}" class="message mr-5px mt-5px" title="Messages"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                {{# loginasurl}}
+                                    <a href="{{{loginasurl}}}" class="edit_icon mr-5px mt-5px" title="{{#str}}loginas{{/str}}"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                                {{/ loginasurl}}
+                            </div>
+
+                            <div><span>Role: {{rolename}}</span></br><span>{{ user_email }}</span></div>
+                            
+                        </div>
+                    
+                        <div class="col-lg-4 col-md-4 col-sm-12 user_info_left">
+                            <div class="top_counts_container">
+                                <ul class="allcounts_list w-full pull-left">
+                                    <li>
+                                        <div>
+                                            <span class="totalcounts">{{ coursescount }}</span>
+                                            <span class="counts_data">Courses</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="programscount">
+                                            <span class="totalcounts">{{ programscount }}</span>
+                                            <span class="counts_data">Programs</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{> local_users/userprofiletabs }}        

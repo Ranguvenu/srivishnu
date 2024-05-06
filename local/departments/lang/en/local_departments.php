@@ -1,0 +1,25 @@
+<?php
+$string['pluginname'] = 'Departments';
+$string['editdepartment'] = 'Update Department';
+$string['adddepartment'] = 'Create Department';
+$string['departmentname'] = 'Department Name';
+$string['idnumbercoursedep'] = 'Department Shortcode';
+$string['managedepartments'] = 'Manage Departments';
+$string['createdepartment'] = 'Create Department';
+$string['leftmenu_browsedepartments'] = 'Manage Departments';
+$string['department'] = 'Department';
+$string['departmentidnumbertaken'] = 'Department Shortcode already exists';
+$string['selectfaculty'] = 'Select Faculties';
+$string['facultyname'] = 'Faculty Name';
+$string['departmentalreadyexists'] = 'Department Shortcode already exists under this University and Faculty combination';
+$string['universityname'] = 'University Name';
+$string['actions'] = 'Actions';
+$string['click'] = 'Continue';
+$string['spacesnotallowed'] = 'Spaces are not allowed.Please enter valid value.';
+$string['emptyuniversity'] = 'Please select University';
+$string['emptyfaculties'] = 'Please select Faculties';
+$string['emptydepartmentname'] = 'Please enter Department Name';
+$string['faculties'] = 'Faculties';
+$string['emptydepartmentidnumber'] = 'Please enter Department Shortcode';
+$string['confirm'] = 'Alert !';
+$string['confirmmessage'] = 'Users or Courses or programs are created under this depertment';

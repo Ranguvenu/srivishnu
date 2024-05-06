@@ -1,0 +1,108 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page navbar.
+}}
+<nav class="fixed-top navbar navbar-light bg-white navbar-expand moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+
+        <a href="{{{ config.wwwroot }}}" class="{{^ output.should_display_main_logo }}navbar-brand {{/ output.should_display_main_logo }} {{# output.should_display_main_logo }}has-logo{{/ output.should_display_main_logo }}
+            {{^ output.should_display_main_logo }}
+                hidden-sm-down
+            {{/ output.should_display_main_logo }}
+                ">
+            {{# output.should_display_main_logo }}
+                <img class="logo" src="{{{output.get_custom_logo}}}" alt="{{sitename}}" />
+                
+            {{/ output.should_display_main_logo }}
+            {{^ output.should_display_main_logo }}
+                <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
+            {{/ output.should_display_main_logo }}
+        </a>
+        <div data-region="drawer-toggle" class="mr-3  customLeftMemubtn">
+            <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-light bg-gray" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">{{#pix}}i/menubars{{/pix}}<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></button>
+        </div>
+        <ul class="navbar-nav d-none d-md-flex">
+            <!-- custom_menu -->
+            {{{ output.custom_menu }}}
+            <!-- page_heading_menu -->
+            {{{ output.page_heading_menu }}}
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="d-none d-lg-block">
+                {{{ output.search_box }}}
+            </li>
+            <li class="">
+                <div class="zoom-icons pull-right">
+                    <span class="zoom_icons_container" >
+                        <a class="text_zoomin" title="Zoom Out" onclick = 'textzoom(10);' href="javascript:void(0);">A</a>
+                        <a class="text_zoom" title="Zoom Normal" onclick = 'textzoom(14);' href="javascript:void(0);">A</a>
+                        <a class="text_zoomout" title="Zoom In" onclick = 'textzoom(16);' href="javascript:void(0);">A</a>
+                    </span>
+                </div>
+            </li>
+            <li class="nav-item">
+                {{{ output.user_nav_header_menu }}}
+            </li>
+            <!-- navbar_plugin_output -->
+            <li class="nav-item">
+                {{{ output.navbar_plugin_output }}}
+            </li>
+            <!-- user_menu -->
+            <li class="nav-item d-flex align-items-center">
+                {{{ output.user_menu }}}
+            </li>
+        </ul>
+        <!-- search_box -->
+</nav>
+
+<script type="text/javascript">
+        function textzoom(fontsize){
+            var fz, p_elements, element;
+            element = document.getElementsByTagName("body")[0];
+            // p_elements = document.getElementsByTagName("p")[0];
+            
+            switch(fontsize) {
+                case 10 :
+                    // fz = element.style.fontSize = fontsize+"px";
+                    // p_elements.style.fontSize = fontsize+"px";
+                    element.className += " zoom"+fontsize;
+                    element.classList.remove("zoom14");
+                    element.classList.remove("zoom16");
+                    console.log(fz);
+                    break;
+                case 14 :
+                    // fz = element.style.fontSize = fontsize+"px";
+                    // p_elements.style.fontSize = fontsize+"px";
+                    element.className += " zoom"+fontsize;
+                    element.classList.remove("zoom10");
+                    element.classList.remove("zoom16");
+                    // element.className += " zoom"+fontsize;
+                    console.log(fz);
+                    break;
+                case 16 :
+                    // fz = element.style.fontSize = fontsize+"px";
+                    // p_elements.style.fontSize = fontsize+"px";
+                    element.className += " zoom"+fontsize;
+                    element.classList.remove("zoom10");
+                    element.classList.remove("zoom14");
+                    console.log(fz);
+                    break;
+            }            
+        }
+</script>
+
+

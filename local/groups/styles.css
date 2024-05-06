@@ -1,0 +1,56 @@
+/*#page-local-groups-assign .box3.col-md-2.actions{
+	padding-top: 210px;
+}*/
+#page-local-groups-assign button.custom_btn.btn.remove.btn-default,
+#page-local-groups-assign button.custom_btn.btn.move.btn-default{
+      /*margin: 2% 2%;
+      width: 100%;*/
+      font-size: 13px;
+}
+#page-local-groups-assign .dual_select option{
+    padding: 5px;
+}
+#page-local-groups-assign .singlebutton {
+    margin-top: 3px;
+}
+#cohorts tbody td a:first-of-type>.icon, 
+#cohorts tbody td span:first-of-type>.icon{
+	margin-left: 0px;
+}
+form#searchcohortquery input#cohort_search_q {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+table#viewgroups thead th:last-child, table#viewgroups tbody td:last-child {
+    min-width: 110px;
+}
+#listofusers tbody.empty {
+    display: none;
+}
+table#viewgroups .fa-user-plus:before {
+    content: "\f2c0";
+}
+table#viewgroups .fa-users:before {
+    content: "\f2ce";
+}
+@media(max-width: 767px){
+	#page-local-groups-assign .box3.col-md-2.actions{
+		padding-top: 0px;
+	}
+}
+body#page-local-groups-index select.form-control:not([size]):not([multiple]) {
+    height: 20px !important;
+    box-sizing: content-box;
+}
+.msgdisplay{
+  padding-left: 40%;
+}
+#page-local-groups-index #region-main .card.card-block {
+    overflow: visible;
+}
+#page-local-groups-index .course_extended_menu_list {
+    top: -20px;
+}
+#page-local-groups-assign section#region-main {
+    overflow: visible;
+}

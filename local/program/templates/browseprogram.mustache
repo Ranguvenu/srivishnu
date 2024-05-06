@@ -1,0 +1,127 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<div class="curriculum_container w-full pull-left mb-15 {{curriculumstatusclass}} {{# hide_show}}
+                        {{# show}} inactive_curriculum {{/ show}} {{/ hide_show}}">
+    <div class="col-md-12 p-0 curriculumname_status">
+        <span class="curriculumicon_container"><img src ="{{{ curriculumicon }}}" class="curriculumicon"></span>
+        <div class="pull-left curriculum_name">
+            <a href="view.php?ccid={{curriculumid}}" class="class_name" title = "{{ curriculum }}">{{ curriculumname }}</a>
+        </div>
+        <div class="pull-right showoptions{{curriculumid}} actionicons">
+            {{# action}}
+    		{{# mouse_overicon}}
+                <span  class="pull-right showoptions" data-action="showoptions{{curriculumid}}" onmouseenter="(function(e){ require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{curriculumid}}' }) })(event)" onmouseleave="(function(e){require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{curriculumid}}' }) })(event)">
+                <i class="fa fa-ellipsis-h options" aria-hidden="true" title="" aria-label=""></i></span>
+             {{/ mouse_overicon}}
+                <ul class="options_container" id="showoptions{{curriculumid}}">
+                    {{# cannotdelete}}
+                    <li>
+                        <a title="Course backup" href="javascript:void(0)" alt = "{{# str}} delete {{/ str}}"
+                            title = "{{# str}} delete {{/ str}}" onclick="(function(e){ require('local_program/program').deleteConfirm({action:'cannotdeletecurriculum', id: {{ curriculumid }}, curriculumid: {{ curriculumid }}, curriculumname: '{{ curriculumname }}'}) })(event)"><i class="fa fa-trash fa-fw" aria-hidden="true" aria-label="" title = "{{# str}} delete {{/ str}}"></i></a>
+                    </li>
+                    {{/ cannotdelete}}
+                    {{# delete}}
+                    <li>
+                        <a title="Course backup" href="javascript:void(0)" alt = "{{# str}} delete {{/ str}}"
+                            title = "{{# str}} delete {{/ str}}" onclick="(function(e){ require('local_program/program').deleteConfirm({action:'deletecurriculum', id: {{ curriculumid }}, curriculumid: {{ curriculumid }}, curriculumname: '{{ curriculumname }}'}) })(event)"><i class="fa fa-trash fa-fw" aria-hidden="true" aria-label="" title = "{{# str}} delete {{/ str}}"></i></a>
+                    </li>
+                    {{/ delete}}
+
+    				{{# edit}}
+                    <li>
+                        <a title="User enrollments" href="javascript:void(0)" title = "{{# str}} edit {{/str}}" onclick="(function(e){ require('local_program/ajaxforms').init({contextid:1, component:'local_program', callback:'program_form', form_status:0, plugintype: 'local', pluginname: 'program', id: {{ curriculumid }} }) })(event)"><i class="fa fa-cog fa-fw" aria-hidden="true" aria-label="" title = "{{# str}} edit {{/str}}"></i>
+                        </a>
+                    </li>
+                    {{/ edit}}
+    				{{# assignusers}}
+                    <li>
+                        <a href="{{ assignusersurl }}"><i class="fa fa-users fa-fw" aria-hidden="true" title ="Assign Users"></i></a>
+                    </li>
+                    {{/ assignusers}}
+
+                    {{# hide_show}}
+                        {{# hide}}
+                            <li>
+                                <a href="{{ configpath }}/local/program/index.php?id={{ curriculumid }}&amp;hide={{ hide }}"><i class="fa fa-eye fa-fw " aria-hidden="true" title="Hide" aria-label="Hide"></i></a>
+                            </li>
+                        {{/ hide}}
+                        {{# show}}
+                            <li>
+                                <a href="{{ configpath }}/local/program/index.php?id={{ curriculumid }}&amp;show={{ show }}"><i class="fa fa-eye-slash fa-fw " aria-hidden="true" title="Show" aria-label="Show"></i></a>
+                            </li>
+                        {{/ show}}
+                    {{/ hide_show}}
+
+		            {{# curriculumcompletionstatus}}
+                        <li>
+                            <a href="#"><i class="fa fa-check-circle-o" aria-hidden="true" aria-label="" title ="Completed"></i></a>
+                        </li>
+                    {{/ curriculumcompletionstatus}}
+                </ul>
+            {{/ action}}
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 pt-5 pl-15 pr-15 pb-15 dataContainer">
+        <div class="datacontent pull-left">
+            <div class="description {{^ isdescription }} nodescription {{/ isdescription }}">
+                {{# isdescription}}
+                    {{^ descriptionstring}}
+                        <p class="text-muted" title="{{{ description }}}">{{{ description }}}</p>
+                    {{/ descriptionstring }}
+                    {{# descriptionstring}}
+                        <p class="text-muted" title="{{{ description }}}">{{ descriptionstring }}...</p>
+                    {{/ descriptionstring }}
+                {{/ isdescription}}
+                {{^ isdescription }}
+                    <p class="alert alert-info text-xs-center">{{#str}}nocoursedesc, local_courses{{/str}}</p>
+                {{/ isdescription }}
+            </div>
+            <div class="dataContainer col-md-12 p-0">
+                <div class="col-md-8 p-0 dataContainer_left">
+                    <p class="w-full pull-left contentlist">
+                        <span class="bcleftlable_name text-muted">{{# str}} program, local_program {{/ str }}
+                            <span class="text-muted pull-right mr-5">:</span>
+                        </span>
+                        <span class="bc_value" title="{{ program }}"><b>{{ programname }}</b></span>
+                    </p>
+
+                    <p class="w-full pull-left contentlist">
+                        <span class="bcleftlable_name text-muted">{{# str}} shortname, local_program {{/ str }}
+                            <span class="text-muted pull-right mr-5">:</span>
+                        </span>
+                        <span class="bc_value" title="{{ shortname }}"><b>{{ bcshortname }}</b></span>
+                    </p>
+                </div>
+                <div class="col-md-4 p-0 dataContainer_left">
+                    <p class="w-full pull-left contentlist">
+                        <span class="lable_name text-muted">{{# str}} enrolled, local_program {{/ str }}
+                            <span class="text-muted pull-right mr-5">:</span>
+                        </span>
+                        <span class="bc_value"><b>{{ enrolled_users }}</b></span>
+                    </p>
+
+                    <p class="w-full pull-left contentlist">
+                        <span class="lable_name text-muted">{{# str}} completed, local_program {{/ str }}
+                            <span class="text-muted pull-right mr-5">:</span>
+                        </span>
+                        <span class="bc_value" title="Completed"><b>{{ completed_users }}</b></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

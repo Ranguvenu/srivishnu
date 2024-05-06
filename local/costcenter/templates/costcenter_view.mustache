@@ -1,0 +1,228 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<div class="costcenter_container w-full pull-left">
+    <div class="col-md-12 costcenter_content p-0 {{# show}}inactive{{/ show}}">
+        <div class="col-md-3 orgimg_container">
+            <div class="content_left"><!-- <i class="fas dept_img fa-university"></i> -->
+            <h4 class="org_name" title="{{orgname}}">{{ orgnamecut }}</h4>
+            <div class="pull-right showoptions{{{ recordid }}} actionicons ">
+                <span  class="pull-right showoptions" data-action="showoptions{{{ recordid }}}" onmouseenter="(function(e){ require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{recordid}}' }) })(event)" onmouseleave="(function(e){require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{recordid}}' }) })(event)"><i class="fa fa-ellipsis-h options"></i>
+                </span>
+                <ul class="col-md-12 col-sm-12 col-12 p-0 options_container" id="showoptions{{{recordid}}}">
+                    {{# delete}}
+                    <li>
+                        <a href="javascript:void(0)" title ="{{# str}} delete {{/str}}"  onclick = "(function(e){ require('local_costcenter/costcenterdatatables').costcenterDelete({action:'deletecostcenter', id: {{{ recordid }}} , parentid : {{{ parentid }}}, confirm: {{{status}}} ,actionstatus:'Confirmation', actionstatusmsg:'{{{ delete_message }}}' }) })(event)"><i class="fa fa-trash fa-fw" aria-hidden="true" title="Delete" aria-label="Delete"></i></a>
+                    </li>
+                    {{/ delete}}
+                    {{^delete}}
+                        <li>
+                            <a href="javascript:void(0)" title ="{{# str}} delete {{/str}}"  onclick = "(function(e){ require('local_departments/newdepartment').messageConfirm({title:'alert',message:'confirmmessage',component:'local_costcenter' }) })(event)"><i class="fa fa-trash fa-fw" aria-hidden="true" title="Delete" aria-label="Delete"></i></a>
+                        </li>
+                    {{/delete}}
+                     <!-- uncomment by revathi active/inactive in unversity starts -->
+                    {{# hide}}
+                    <li>
+                        <a href="javascript:void(0)" title ="{{# str}} inactive {{/str}}" onclick = "(function(e){ require('local_costcenter/newcostcenter').costcenterStatus({action:'updatecostcenter', id: {{{recordid}}} ,confirm: {{{status}}} ,actionstatus:'Confirmation', actionstatusmsg:'{{{action_message}}}' }) })(event)"><i class="fa fa-eye"></i></a>
+                    </li>
+                    {{/ hide}}
+                    {{# show}}
+                    <li>
+                        <a href="javascript:void(0)" title ="{{# str}} active {{/str}}" onclick = "(function(e){ require('local_costcenter/newcostcenter').costcenterStatus({action:'updatecostcenter', id: {{{recordid}}} ,confirm: {{{status}}} ,actionstatus:'Confirmation', actionstatusmsg:'{{{action_message}}}' }) })(event)"><i class="fa fa-eye-slash"></i></a>
+                    </li>
+                    {{/ show}}
+                    <!-- uncomment by revathi active/inactive in unversity ends -->
+                    {{# edit}}
+                    <li>
+                        <a href="javascript:void(0)" title="{{# str}} edit {{/str}}" onclick="(function(e){ require('local_costcenter/newcostcenter').init({selector:'createcostcentermodal', contextid:1, costcenterid:{{ recordid }}, parentid:{{ parentid }} }) })(event)"><i class="fa fa-cog fa-fw" title="Edit"></i></a>
+                    </li>
+                    {{/ edit}}
+                </ul>
+            </div>
+            <div class="left_info text-xs-center">
+                <span class="lable_align dept_string">University Departments & Affiliated Colleges</span><span class="dept_count"><a href="{{dept_count_link}}">{{deptcount}}</a></span>
+            </div>
+            <!-- <div class="left_info text-xs-center">
+                <span class="lable_align dept_string">Sub Colleges</span><span class="dept_count">{{subdeptcount}}</span>
+            </div> -->
+        </div>
+        </div>
+        <div class="col-md-9 col-sm-12 col-12 content_right p-0">
+            <!-- <div class="col-md-12 pl-0 content_right_top pr-0 pt-15px pb-15px"> -->
+                <!--Users Data -->
+                <div class="col-md-4 col-sm-6 col-12 pt-15px pb-15px">
+                    <div class=" details_content org_users">
+                        <span class="org_icon_container">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        </span>
+                        <div class="details_topcontent">
+                            <div class="col-md-9 col-sm-10 col-10 text-xs-center details_topleft">Users</div>
+                            <div class="col-md-3 col-sm-2 col-2 pull-right p-0 text-right details_topright">{{ totalusers }}</div>
+                        </div>
+                        <div class="details_btmcontent">
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-left">
+                                <i class="fa fa-user-o pull-left pr-5px activeicon" aria-hidden="true"></i>
+                                <span class="org_label pull-left">Active<span class="pull-right mr-5px">:</span></span><span>{{ activeusercount }}</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-right text-right">
+                                <i class="fa fa-user-times pr-5px inactiveicon" aria-hidden="true"></i>
+                                <span class="org_label">Inactive<span class="ml-5px mr-5px">:</span></span><span>{{ inactiveusercount }}</span>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+
+                <!-- Courses Data -->
+                <div class="col-md-4 col-sm-6 col-12 pt-15px pb-15px pl-0">
+                    <div class="details_content org_courses">
+                        <span class="org_icon_container">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                        </span>
+                        <div class="details_topcontent">
+                            <div class="col-md-9 col-sm-10 col-10 text-xs-center details_topleft">Courses</div>
+                            <div class="col-md-3 col-sm-2 col-2 pull-right p-0 text-right details_topright">{{ coursecount }}</div>
+                        </div>
+                        <div class="details_btmcontent">
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-left">
+                                <i class="fa fa-user-o pull-left pr-5px activeicon" aria-hidden="true"></i>
+                                <span class="org_label pull-left">Active<span class="pull-right mr-5px">:</span></span><span>{{ activecoursecount }}</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-right text-right">
+                                <i class="fa fa-user-times pr-5px inactiveicon" aria-hidden="true"></i>
+                                <span class="org_label">Inactive<span class="ml-5px mr-5px">:</span></span><span>{{ inactivecoursecount }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Plans Data -->
+                {{# lp_plugin_exist}}
+                <div class="col-md-4 col-sm-6 col-12 pt-15px pb-15px pl-0">
+                    <div class="details_content org_learningplans">
+                        <span class="org_icon_container">
+                            <i class="fa fa-map" aria-hidden="true"></i>
+                        </span>
+                        <div class="details_topcontent">
+                            <div class="col-md-9 col-sm-10 col-10 p-0 text-right details_topleft">Learning Plans</div>
+                            <div class="col-md-3 col-sm-2 col-2 pull-right p-0 text-right details_topright">{{ alllearningplans }}</div>
+                        </div>
+                        <div class="details_btmcontent">
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-left">
+                                <i class="fa fa-user-o pull-left pr-5px activeicon" aria-hidden="true"></i>
+                                <span class="pull-left org_label">Active<span class="pull-right mr-5px">:</span></span><span>{{ activelearningplans }}</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-right text-right">
+                                <i class="fa fa-user-times pr-5px inactiveicon" aria-hidden="true"></i>
+                                <span class="org_label">Inactive<span class="ml-5px mr-5px">:</span></span><span>{{ inactivelearningplans }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+            {{/ lp_plugin_exist}}
+            <!-- <div class="col-md-12 content_right_bottom pl-0 pr-0 pb-15px"> -->
+                <!--Classrooms Data -->
+                {{# classroom_plugin_exist }}
+                <div class="col-md-4 col-sm-6 col-12 pb-15px">
+                    <div class="details_content org_classrooms">
+                        <span class="org_icon_container">
+                            <!-- <i class="fa fa-map" aria-hidden="true" aria-label=""></i> -->
+                            <span class="classroom_icon_wrap"></span>
+                        </span>
+                        <div class="details_topcontent">
+                            <div class="col-md-9 col-sm-10 col-10 text-right details_topleft">Classrooms</div>
+                            <div class="col-md-3 col-sm-2 col-2 pull-right p-0 text-right details_topright">{{ allclassroomcount }}</div>
+                        </div>
+                        <div class="details_btmcontent">
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-left">
+                                <i class="fa fa-list-ul pull-left mt-5px pr-5px newicon" aria-hidden="true"></i>
+                                    <span class="pull-left org_label">New<span class="pull-right mr-5px">:</span></span><span>{{ newclassroomcount }}</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-right text-right">
+                                <i class="fa fa-lock mt-5px mr-5px pr-5px inactiveicon" aria-hidden="true"></i>
+                                    <span class="org_label">Cancelled<span class="ml-5px mr-5px">:</span></span><span>{{ cancelledclassroomcount }}</span>
+                            </div>
+                             <div class="col-md-5 col-sm-6 col-6 p-0 pull-left">
+                                <i class="fa fa-bullhorn pull-left mt-5px pr-5px activeicon" aria-hidden="true"></i><span class="pull-left org_label">Active<span class="pull-right mr-5px">:</span></span><span>{{ activeclassroomcount }}</span>
+                            </div>
+                            <div class="col-md-7 col-sm-6 col-6 p-0 pull-right text-right">
+                                <i class="fa fa-user-times pr-5px inactiveicon" aria-hidden="true"></i><span class="org_label">Completed<span class="ml-5px mr-5px">:</span></span><span>{{ completedclassroomcount }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/ classroom_plugin_exist }}
+
+                <!-- Programs Data-->
+                {{# program_plugin_exist}}
+                <div class="col-md-4 col-sm-6 col-12 pt-15px pb-15px pl-0">
+                    <div class="details_content org_programs">
+                        <span class="org_icon_container">
+                            <!-- <i class="fa fa-map" aria-hidden="true"></i> -->
+                            <i class="fa fa-tasks"></i>
+                        </span>
+                        <div class="details_topcontent">
+                            <div class="col-md-9 col-sm-10 col-10 text-xs-center details_topleft">Programs</div>
+                            <div class="col-md-3 col-sm-2 col-2 pull-right p-0 text-right details_topright">{{ allprogramcount }}</div>
+                        </div>
+                        <div class="details_btmcontent">
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-left">
+                                <i class="fa fa-user-o pull-left pr-5px activeicon" aria-hidden="true"></i><span class="pull-left org_label">Active<span class="pull-right mr-5px">:</span></span><span>{{ activeprogramcount }}</span>
+                                    
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-right text-right">
+                                <i class="fa fa-user-times pr-5px inactiveicon" aria-hidden="true"></i><span class="org_label">Inactive<span class="ml-5px mr-5px">:</span></span><span>{{ inactiveprogramcount }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/ program_plugin_exist}}
+
+                <!-- Certification Data -->
+                {{# certification_plugin_exist}}
+                <div class="col-md-4 col-sm-6 col-12 pb-15px pl-0">
+                    <div class="details_content org_certifications">
+                        <span class="org_icon_container">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        </span>
+                        <div class="details_topcontent">
+                            <div class="col-md-9 col-sm-10 col-10 p-0 text-right details_topleft">Certifications</div>
+                            <div class="col-md-3 col-sm-2 col-2 pull-right p-0 text-right details_topright">{{ allcertificationcount }}</div>
+                        </div>
+                        <div class="details_btmcontent">
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-left">
+                                <i class="fa fa-list-ul pull-left mt-5px pr-5px newicon" aria-hidden="true"></i>
+                                    <span class="pull-left org_label">New<span class="pull-right mr-5px">:</span></span><span>{{ newcertificationcount }}</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-right text-right">
+                                <i class="fa fa-lock mt-5px mr-5px pr-5px inactiveicon" aria-hidden="true"></i>
+                                    <span class="org_label">Cancelled<span class="ml-5px mr-5px">:</span></span><span>{{ cancelledcertificationcount }}</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-left">
+                                <i class="fa fa-bullhorn pull-left mt-5px pr-5px activeicon" aria-hidden="true"></i>
+                                    <span class="pull-left org_label">Active<span class="pull-right mr-5px">:</span></span><span>{{ activecertificationcount }}</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 p-0 pull-right text-right">
+                                <i class="fa fa-flag-o mt-5px pr-5px completeicon" aria-hidden="true"></i><span class="org_label">Completed<span class="ml-5px mr-5px">:</span></span><span>{{ completedcertificationcount }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/ certification_plugin_exist}}
+            <!-- </div> -->
+        </div>
+    </div>
+</div>

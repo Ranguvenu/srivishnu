@@ -1,0 +1,66 @@
+<div class='col-md-12 trainersview'>
+    <div class='col-md-4 p-10px program_details text-left'>
+        <span class='trainerview_headers'>Program Details<span class='ml-10px'>:</span></span>
+        <div class='w-full pull-left pt-15px pl-15px'>
+            <p class="m-0 w-full pull-left">
+                <span class="pull-left info_lable">Name<span class="pull-right ml-10px mr-10px">:</span> </span>
+                {{# curriculumid }}
+                    <span><a href='{{config.wwwroot}}/local/program/view.php?ccid={{curriculumid}}&prgid={{programid}}'>{{programname}}</a></span>
+                {{/ curriculumid }}
+                {{^ curriculumid }}
+                    <span>{{programname}}</span>
+                {{/ curriculumid }}
+            </p>
+            {{# programduration}}
+            <p class="m-0 w-full pull-left">
+                <span class="pull-left info_lable">Duration<span class="pull-right ml-10px mr-10px">:</span> </span>
+                <span>{{programduration}}</span>
+            </p>
+            {{/ programduration}}
+            {{# programyear}}
+            <p class="m-0 w-full pull-left">
+                <span class="pull-left info_lable">Year<span class="pull-right ml-10px mr-10px">:</span> </span>
+                <span>{{programyear}}</span>
+            </p>
+            {{/ programyear}}
+            {{# programshortcode}}
+            <p class="m-0 w-full pull-left">
+                <span class="pull-left info_lable">Shortcode<span class="pull-right ml-10px mr-10px">:</span> </span>
+                <span>{{programshortcode}}</span>
+            </p>
+            {{/ programshortcode}}
+            {{# programlevel}}
+            <p class="m-0 w-full pull-left">
+                <span class="pull-left info_lable">Level<span class="pull-right ml-10px mr-10px">:</span> </span>
+                <span>{{programlevel}}</span>
+            </p>
+            {{/ programlevel}}
+        </div>
+    </div>
+    <div class='col-md-8 p-10px pull-right coursedetails text-left'>
+        <span class='trainerview_headers'>Course Details<span class='ml-10px'>:</span></span>
+        {{# coursesenable}}
+        {{# courses}}
+            <div class='w-full mt-15px pull-left content'>
+                <div class='col-md-6 col-sm-6 col-12'>
+                    <p class="m-0 w-full pull-left">
+                        <span class="pull-left info_lable">Course Name</span>
+                        <span class="lblcollon"><span class="pull-left ml-10px mr-10px">:</span>{{coursename}}</span>
+                    </p>
+                </div>
+                <div class='m-0 col-md-3 col-sm-6 col-12 text-center'>
+                    <p class="m-0 w-full">
+                        <span>Total Users<span class="ml-10px mr-10px">:</span> </span>
+                        <span><a href='{{config.wwwroot}}/blocks/faculty_dashboard/usersview.php?id={{courseid}}' target='_blank'>{{enrolled_users_count}}</a></span>
+                    </p>
+                </div>
+                <div class='col-md-3 col-12 view-btn text-md-right '>
+                    <p class="w-full">
+                        <a class='btn course_viewbtn' href='{{config.wwwroot}}/course/view.php?id={{courseid}}' target='_blank'>View</a>
+                    </p>
+                </div>
+            </div>
+        {{/ courses}}
+        {{/ coursesenable}}
+    </div>
+</div>

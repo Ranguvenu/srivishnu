@@ -1,0 +1,85 @@
+<div class="course_contextmenu_extended">
+	<ul class="course_extended_menu_list">
+		{{# default_menu }}
+			<li>
+				{{# admin_default_menu }}
+					<div class="admin_default_menu">{{{default_menu}}}</div>
+				{{/ admin_default_menu }}
+				{{^ admin_default_menu }}
+					{{{default_menu}}}
+				{{/ admin_default_menu }}
+			</li>
+		{{/ default_menu }}
+        {{# programcourse }}
+                <li>
+                    <div class="editingon course_extended_menu_itemcontainer">
+                        <a title="{{# str }} back {{/ str}}" class="course_extended_menu_itemlink" href="{{ linkpath }}"><i class="icon fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+        {{/ programcourse }}
+		{{# userenrollment }}
+			<li>
+				<div class="coursebackup course_extended_menu_itemcontainer">
+                    <a title="User enrollments" class="course_extended_menu_itemlink" href="{{config.wwwroot}}/local/courses/courseenrol.php?id={{courseid}}&enrolid={{enrolid}}"><i class="icon fa fa-user fa-fw " aria-hidden="true"></i></a>
+                </div>
+			</li>
+           <!--   <mallikarjun> - ODL-645 added faculty enrol icon -- starts -->
+            <li>
+                <div class="coursebackup course_extended_menu_itemcontainer">
+                    <a title="Faculty enrollments" class="course_extended_menu_itemlink" href="{{config.wwwroot}}/local/mooccourses/courseenrol.php?id={{courseid}}&enrolid={{enrolid}}&costcenter={{costcenterid}}&roleid={{roleid}}">
+                        <i class="icon fa fa-user-plus fa-fw " aria-hidden="true"></i></a>
+                </div>
+            </li>
+            <!--  <mallikarjun> - ODL-645 added faculty enrol icon -- ends -->
+            <!-- <li>
+            	<div class="coursebackup course_extended_menu_itemcontainer">
+                	<a title="Bulk Enrollments" class="course_extended_menu_itemlink" href="{{config.wwwroot}}/local/courses/mass_enroll.php?id={{courseid}}"><i class="icon fa fa-users fa-fw " aria-hidden="true"></i></a>
+                </div>
+            </li> -->
+		{{/ userenrollment }}
+		{{# coursebackup}}
+            <li>
+            	<div class="coursebackup course_extended_menu_itemcontainer">
+                	<a title="{{# str }} coursebackup {{/ str }}" class="course_extended_menu_itemlink" href="{{config.wwwroot}}/backup/backup.php?id={{courseid}}"><i class="icon fa fa-download" aria-hidden="true"></i></a>
+                </div>
+            </li>
+		{{/ coursebackup}}
+		{{# course_complition }}	
+                <li>
+                	<div class="editingon course_extended_menu_itemcontainer">
+                        <a title="{{# str }} coursecompletion {{/ str}}" class="course_extended_menu_itemlink" href="{{config.wwwroot}}/course/completion.php?id={{courseid}}"><i class="icon fa fa-tags fa-fw" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+		{{/ course_complition }}
+		{{# course_reports }}
+                <li>
+                	<div class="editingon course_extended_menu_itemcontainer">
+                        <a title="{{# str }} reports {{/ str}}" class="course_extended_menu_itemlink" href="{{ config.wwwroot}}/grade/report/grader/index.php?id={{courseid}}"><i class="icon fa fa-bar-chart" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+		{{/ course_reports }}
+		{{# is_courseedit_icon }}
+                <li>
+                	<div class="courseedit course_extended_menu_itemcontainer">
+                        <a title="{{# str }} editcoursesettings {{/ str}}" class="course_extended_menu_itemlink createcoursemodal courseactions" data-action = "createcoursemodal" data-value = {{courseid}} href="javascript:void(0)" onclick="(function(e){ require('local_courses/courseAjaxform').init({contextid:{{categorycontextid}}, component: 'local_courses', callback:'custom_course_form', form_status:0, plugintype:'local', pluginname:'courses', forpurchaseindividually: {{forpurchaseindividually}},courseid: {{ courseid }} }) })(event)"><i class="icon fa fa-pencil" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+		{{/ is_courseedit_icon }}
+        <!--  <revathi> ODL-831 starts -->
+        <!-- {{^ is_courseedit_icon}}
+                <li>
+                    <div class="courseedit course_extended_menu_itemcontainer">
+                        <a title="{{# str }} editcoursesettings {{/ str}}" class="course_extended_menu_itemlink createcoursemodal courseactions" data-action = "createcoursemodal" data-value = {{courseid}} href="javascript:void(0)" onclick="(function(e){ require('local_mooccourses/courseAjaxform').init({contextid:{{categorycontextid}}, component: 'local_mooccourses', callback:'custom_mooccourse_form', form_status:0, plugintype:'local', pluginname:'mooccourses', courseid: {{ courseid }} }) })(event)"><i class="icon fa fa-pencil" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+        {{/ is_courseedit_icon}} -->
+        <!--  <revathi> ODL-831 ends -->
+		{{# allow_editing }}
+                <li>
+                	<div class="editingon course_extended_menu_itemcontainer text-xs-center">
+                        <a title="Turn edit {{ useredit }}" class="course_extended_menu_itemlink" href="{{{editing_url}}}"><i class="icon fa fa-power-off" aria-hidden="true" aria-label=""></i></a>
+                    </div>
+                </li>
+		{{/ allow_editing }}
+	</ul>
+</div>

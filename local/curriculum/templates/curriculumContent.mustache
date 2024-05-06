@@ -1,0 +1,148 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+
+    <ul class="course_extended_menu_list">
+         {{# assignusers}}
+<!--         <li>
+            <div class="courseedit course_extended_menu_itemcontainer">
+                <a title="Assign Users" class="course_extended_menu_itemlink" href="{{ assignusersurl }}"><i class="icon fa fa-user-plus fa-fw" aria-hidden="true" title ="{{#str}}assignusers, local_program{{/str}}"></i></a>
+            </div>
+        </li> -->
+        <li>
+            <div class="courseedit course_extended_menu_itemcontainer">
+                <a title="{{# str}} curriculumusers, local_program {{/ str}}" class="course_extended_menu_itemlink" href="{{ cfg.wwwroot }}/local/curriculum/users.php?ccid={{curriculumid}}"><i class="icon fa fa-user" aria-hidden="true"></i></a>
+            </div>
+        </li>
+        {{/ assignusers}}
+<!--        {{# bulkenrollusers}}
+        <li>
+            <div class="courseedit course_extended_menu_itemcontainer">
+                <a title="{{# str}} bulk_enroll, local_program {{/ str}}" class="course_extended_menu_itemlink" href="{{ cfg.wwwroot }}/local/program/mass_enroll.php?id={{curriculumid}}"><i class="icon fa fa-users" aria-hidden="true"></i></a>
+            </div>
+        </li>
+        {{/ bulkenrollusers}} -->
+{{# action}}
+        <li>
+<!--             {{# cannotdelete}}
+            <div class="coursebackup course_extended_menu_itemcontainer">
+                <a title="Course backup" class="course_extended_menu_itemlink" href="javascript:void(0)" alt = "{{# str}} delete {{/ str}}"
+                title = "{{# str}} delete {{/ str}}" onclick="(function(e){ require('local_program/program').deleteConfirm({action:'cannotdeletecurriculum', id: {{ curriculumid }}, curriculumid: {{ curriculumid }},curriculumname:'{{curriculumname}}'}) })(event)"><i class="icon fa fa-times" aria-hidden="true" title = "{{# str}} delete {{/ str}}"></i></a>
+            </div>
+            {{/ cannotdelete}} -->
+            {{# delete}}
+            <!-- <div class="coursebackup course_extended_menu_itemcontainer">
+                <a title="Course backup" class="course_extended_menu_itemlink" href="javascript:void(0)" alt = "{{# str}} delete {{/ str}}"
+                    title = "{{# str}} delete {{/ str}}" onclick="(function(e){ require('local_curriculum/ajaxforms').deleteConfirm({action:'deletecurriculum', id: {{ curriculumid }}, curriculumid: {{ curriculumid }}}) })(event)"><i class="icon fa fa-times" aria-hidden="true" title = "{{# str}} delete {{/ str}}"></i></a>
+            </div> -->
+            {{/ delete}}
+        </li>
+        <li>
+            {{# edit}}
+          <!--   <div class="coursebackup course_extended_menu_itemcontainer">
+                <a title="User enrollments" class="course_extended_menu_itemlink" href="javascript:void(0)" title = "{{# str}} edit {{/str}}" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:1, component:'local_curriculum', callback:'curriculum_form', form_status:0, plugintype: 'local', pluginname: 'curriculum',id: {{ curriculumid }} }) })(event)"><i class="icon fa fa-cog fa-fw" aria-hidden="true" title = "{{# str}} edit {{/str}}"></i>
+                </a>
+            </div> -->
+            {{/ edit}}
+        </li>
+        <li>
+            {{# cancreatesemesteryear }}
+            <div class="pull-right">
+                <a title="{{#str}}addsemester, local_curriculum {{/ str }}" class="course_extended_menu_itemlink" href="javascript:void(0)" onclick="(function(e){ require('local_curriculum/ajaxforms').init({contextid:1, component:'local_curriculum', callback:'curriculum_manageyear_form', form_status:0, plugintype: 'local', pluginname: 'curriculum_addyear', id: 0, curriculumid:{{curriculumid}} }) })(event)">
+                    <i class="icon fa fa-tags fa-fw" aria-hidden="true" title="{{#str}}addyear, local_curriculum {{/ str }}"></i>
+                </a>
+            </div>
+            {{/ cancreatesemesteryear }}
+        </li>
+{{/ action}}
+    </ul>
+
+{{# curriculum}}
+<div class="curriculumview_container">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 classview_topcontent pl-0 pr-0">
+        <div class="curriculum_view_content w-full pull-left">
+            <div class="description w-full pull-left">
+                <p>Description:</p>
+                {{# isdescription}}
+                        <p class="more" title="{{{ isdescription }}}">{{ isdescription }}</p>
+                {{/ isdescription}}
+                {{^ isdescription }}
+                    <p class="alert alert-info text-xs-center">{{#str}}nocoursedesc, local_courses{{/str}}</p>
+                {{/ isdescription }}
+            </div>
+        </div>
+    </div>
+
+   <!--  <div class="col-12 col-sm-12 col-md-12 col-lg-12 classview_topcontent pl-0 pr-0">
+        <div class="curriculum_view_content w-full pull-left">
+            <div class="description w-full pull-left">
+                <div class="col-12 page-desc "> -->
+                <!--    Program Pre requisites: {{{ pre_requisites }}} -->
+                 <!-- </div>
+           </div>
+        </div>
+    </div> -->
+    <div class="curriculum_view_content w-full pull-left">
+        {{{ curriculumsemesteryears }}}
+    </div>
+</div>
+{{/ curriculum}}
+<style>
+    .morecontent span {
+    display: none;
+    }
+    .morelink {
+        display: block;
+    }
+</style>
+{{#js}}
+    $(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 150;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more >";
+    var lesstext = "Show less";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+{{/js}}

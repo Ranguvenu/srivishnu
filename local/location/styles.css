@@ -1,0 +1,86 @@
+#page-local-location-index .generaltable.dataTable.no-footer td img.iconsmall{
+	cursor: pointer;
+	padding:0 10px;
+}
+/*#page-local-location-index #local_institutes_wrapper #local_institutes_length{
+	display:none;
+}
+
+#page-local-location-room #local_rooms_wrapper #local_rooms_length{
+display:none;
+}*/
+#page-local-location-room .generaltable.dataTable.no-footer td img.iconsmall{
+	cursor: pointer;
+	padding:0 10px;
+}
+
+#page-local-location-index .course_extended_menu_list .createiconchild{
+	position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 22px;
+}
+#page-local-location-index .course_extended_menu_list, #page-local-location-room .course_extended_menu_list{
+	top: -20px;
+}
+#page-local-location-index #local_institutes_wrapper table#local_institutes {
+    min-width: 500px;
+}
+#page-local-location-index #region-main .card.card-block, #page-local-location-room #region-main .card.card-block{
+	overflow-x: visible;
+}
+/*body#page-local-location-room #local_rooms_filter{
+	float: left;
+}*/
+#local_institutes_wrapper,
+#local_rooms_wrapper {
+	width: 100%;
+	float: left;
+	/*overflow: auto;*/
+}
+#page-local-location-index .moodle-dialogue-confirm .moodle-dialogue {
+    top: 150px !important;
+}
+@media (max-width: 520px) {
+	body#page-local-location-index .moodle-dialogue-base .yui3-panel,
+	body#page-local-location-room .moodle-dialogue-base .moodle-dialogue-fullscreen {
+	    margin-top: 30px !important;
+	    margin-bottom: 30px !important;
+	    margin-left: 0px !important;
+	}
+	#local_institutes_wrapper, #local_rooms_wrapper {
+		overflow: auto;
+	}
+}
+#page-local-location-index #filters_form_inner form .form-group[data-groupname="buttonar"] .form-submit {
+    width: auto;
+    margin-right: 5px;
+}
+#page-local-location-room #filters_form_inner form .form-group[data-groupname="buttonar"] .form-submit {
+    width: auto;
+    margin-right: 5px;
+}
+#page-local-location-index select.form-control:not([size]):not([multiple]) {
+    height: 20px !important;
+}
+#page-local-location-room-index select.form-control:not([size]):not([multiple]) {
+    height: 20px !important;
+}
+body#page-local-location-index #local_institutes_wrapper{
+    top: 25px;
+}
+body#page-local-location-room #local_rooms_wrapper {
+    top: 25px;
+}
+#page-local-location-index section#region-main {
+    overflow: visible;
+}
+body#page-local-location-room section#region-main {
+    min-height: 24rem;
+}
+#page-local-location-room .d-nonelocation, #page-local-location-index .d-noneroom {
+	display: none;
+}
+#page-local-location-index #local_institutes_paginate {
+    padding-bottom: 15px;
+}

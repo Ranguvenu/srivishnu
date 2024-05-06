@@ -1,0 +1,40 @@
+<div class="userdb-profile-container">
+			<div class="userdb-profile-pic m-b-1">
+	    		<span class="student-profile-container">
+	    			{{{ userpicture }}}
+	    			<span class="student-lightarrow-container"></span>
+	    			<span class="student-thickarrow-container"></span>
+	    		</span>
+	    		<h4 class="student-name">{{username}}</h4>
+	    </div>
+	    <div class="user-profile-data-container">
+	    	<div class="user-profile-data-main-group">
+				<div class="col-md-12 user-profile-data-row">
+					<div class="user-profile-data-group">
+					  	<label class="userdetails-label"><i class="fa fa-user mr-5px" aria-hidden="true"></i><span class="lable-radiate">{{#str}} role, block_studentdashboard {{/str}}</span></label>
+					  	<span class="userdetails-label-info cursor_pointer" title="{{role}}">{{role}}</span>
+					</div>
+					<div class="user-profile-data-group">
+					  	<label class="userdetails-label"><i class="fa fa-envelope mr-5px" aria-hidden="true"></i><span class="lable-radiate">{{#str}} email, block_studentdashboard {{/str}}</span></label>
+					  	<span class="userdetails-label-info cursor_pointer" title="{{email}}">{{email}}</span>
+					</div>
+					<div class="user-profile-data-group">
+					  	<label class="userdetails-label"><i class="fa fa-building mr-5px" aria-hidden="true"></i><span class="lable-radiate">{{#str}} college, block_studentdashboard {{/str}}</span></label>
+					  	<span class="userdetails-label-info cursor_pointer" title="{{college}}">{{college}}</span>
+					</div>
+					<div class="user-profile-data-group">
+					  	<label class="userdetails-label"><i class="fa fa-university mr-5px" aria-hidden="true"></i><span class="lable-radiate">{{#str}} university, block_studentdashboard {{/str}}</span></label>
+					  	<span class="userdetails-label-info cursor_pointer" title="{{university}}">{{university}}</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<p class="text-right text-right st-viewmore-link m-y-0">
+		<b>
+			<a href="{{profilesrc}}" class="viewmore_link">
+				<i class="fa fa-chevron-right" aria-hidden="true"></i>
+			</a>
+		</b>
+	</p>

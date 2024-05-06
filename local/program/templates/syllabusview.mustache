@@ -1,0 +1,21 @@
+<div class='w-full pull-right text-xs-right'><a href = '{{config.wwwroot}}' class='btn'>Back</a></div>
+<div class='w-full pull-left'>
+    {{# syllabus}}
+    <div class='syllabus'>
+        <div class='years font-weight-bold'>{{yearnames}}</div>
+        <div>
+            {{# semesters}} 
+                <div class='semesters font-weight-bold'>{{semesternames}}</div>
+              <div>
+                {{# courses}} 
+                  <div class='courses'>{{coursenames}} </div>
+                {{/ courses}}
+                {{^courses}}<div class='nocourses'> No Courses to show in this Semester</div>{{/courses}}
+              </div>
+            {{/ semesters}}
+            {{^ semesters}}<div class='nosemesters'>No Semesters to show in this Year</div> {{/ semesters}}
+        </div>
+    </div>
+    {{/ syllabus}}
+</div>
+            

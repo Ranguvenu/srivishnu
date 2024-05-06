@@ -1,0 +1,1856 @@
+#page-local-curriculum-view .custom_header {
+  color: white;
+  background: repeating-linear-gradient( 45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px );
+  padding: 10px;
+  margin-bottom: 15px;
+}
+#page-local-curriculum-view .custom_header_tittle{
+  width: 50%;
+}
+#page-local-curriculum-view .custom_btn_dv{
+  float: right;
+  margin-top: -35px;
+}
+#page-local-curriculum-view .ui-dialog {
+    left: 36%!important;
+    top: 35%!important;
+    margin-left: -175px!important;
+    margin-top: -175px!important;
+}
+#page-local-curriculum-index #viewcurriculumprograms_paginate {
+    margin-bottom: 15px;
+}
+#page-local-curriculum-index a .icon {
+    color: #5867dd;
+}
+#viewcurriculumprograms thead th:nth-child(13) {
+    width: 84px !important;
+    float: left;
+    padding-top: 40px;
+}
+/*tabs css starts*/
+#page-local-curriculum-index .crstatus_tabs_list{
+    background-color: #dcecf9;
+    border-radius: 8px 8px 0px 0px;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs {
+  width: 75%;
+  margin: auto;
+  float: none;
+  line-height: 2.2rem;
+  border-bottom: none;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item {
+    width: 16%;
+    float: left;
+    /*border: 1px solid #ddd;*/
+    margin: 0px;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link {
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    color: #55595c;
+    border-bottom: 3px solid transparent;
+    /*background-color: #f3f3f5;*/
+}
+#viewcurriculums_paginate {
+    float: right;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .active.nav-link {
+    background: none;
+    /*cursor: default !important;*/
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .active.nav-link[aria-controls="allclasses"]{
+    border-bottom: 3px solid #3F51B5;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .active.nav-link[aria-controls="newclasses"]{
+    border-bottom: 3px solid #2f757d;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .active.nav-link[aria-controls="activeclasses"]{
+    border-bottom: 3px solid #1177d1;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .active.nav-link[aria-controls="holdclasses"]{
+    border-bottom: 3px solid #f7941d;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .active.nav-link[aria-controls="completedclasses"]{
+    border-bottom: 3px solid #0b9444;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .active.nav-link[aria-controls="cancelledclasses"]{
+    border-bottom: 3px solid #ec1b23;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link span.status_icon {
+    width: 22px;
+    float: left;
+    color: #fff;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 30px;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link span.status_icon i.fa {
+    float: left;
+    width: 21px;
+    color: #fff;
+    margin-top: 6px;
+    font-size: 12px;
+}
+/*tabs css ends*/
+
+/*
+ * ============> added by rizwana for curriculum view page starts
+ *
+ */
+#page-local-curriculum-index #viewcurriculums_wrapper .row:first-child {
+    padding: 0px 15px;
+}
+#page-local-curriculum-index #viewcurriculums .classesimg{
+  width: 100%;
+  height: 160px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+}
+#viewcurriculums, #viewcurriculums thead th, #viewcurriculums tbody td{
+  border: none;
+}
+#page-local-curriculum-index #viewcurriculums tbody tr{
+  background: none;
+}
+.dataContainer p{
+  font-size: 14px;
+}
+.dataContainer .dataContainer_left .bc_value {
+    display: flex;
+}
+.curriculum_actions a{
+    padding: 0px 12px;
+}
+#page-local-curriculum-index .bg_banner{
+    position: absolute;
+    padding: 0px 5px 0px;
+    top: 9px;
+    /*width: 25px;
+    height: 35px;
+    top: -3px;*/
+    right: 10%;
+    color:#fff;
+    /*background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;*/
+}
+.cr_statusicon {
+    /*float: left;*/
+    margin-top: 7px;
+    margin-right: 10px;
+    font-size: 17px !important;
+}
+#page-local-curriculum-index .classname_strip{
+   width: 85%;
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    background-color: #00adef;
+    padding: 2px 8px;
+    /* -webkit-clip-path: polygon(0 0,100% 0%,90% 100%,0 100%); */
+    /* clip-path: polygon(0 0,100% 0%,90% 100%,0 100%); */
+    -webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 0 99%);
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0 99%);
+    text-transform: capitalize;
+    color: #fff;
+    opacity: 0.9;
+}
+.classname_strip span{
+    width: 100%;
+    float: left;
+}
+.classname_strip .classname {
+    font-size: 16px;
+}
+.classname_strip .classcreated{
+    text-align: center;
+    font-size: 10px;
+}
+.classdate_strip {
+    width: 100%;
+    float: right;
+    position: absolute;
+    bottom: 0px;
+    background-color: #5b83bd;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+    opacity: .9;
+}
+.nocourses{
+    font-size: 12px;
+}
+.datacontent a:hover{
+   text-decoration:none;
+}
+.curriculumcontainer_btm {
+    border-top: 1px solid #ddd;
+    font-weight: 200;
+    border-radius: 0px 0px 16px 16px;
+    min-height: 85px;
+}
+.curriculumcontainer_btm .alert.alert-info {
+    color: #fff;
+}
+.curriculumcontainer_btm .alert.alert-info.no_trainers {
+    color: #31708f !important;
+}
+#page-local-curriculum-index #viewcurriculums  .trainer_header{
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    width: 100px;
+}
+#page-local-curriculum-index #viewcurriculums {
+    width: 100% !important;
+}
+#page-local-curriculum-index #viewcurriculums > thead {
+    display: none;
+}
+
+#page-local-curriculum-index #viewcurriculums_wrapper .row .col-sm-6:first-child {
+    display: none;
+}
+#viewcurriculums_filter{
+    float: left;
+}
+#viewcurriculums  .trainer_img {
+    border-radius: 50%;
+}
+#viewcurriculums .trainer_details {
+    width: 50%;
+    float: left;
+}
+#viewcurriculums .trainerdetails{
+    float: left;
+    display: inline-grid;
+}
+#viewcurriculums .dataContainer .moretrainers{
+    margin-top: -25px;
+    width: 55%;
+    float: right;
+}
+#viewcurriculums .viewmorelink{
+    padding: 8px 25px;
+    color: #fff;
+    webkit-clip-path: polygon(10% 0,100% 0%,100% 100%,0 100%);
+    clip-path: polygon(10% 0,100% 0%,100% 100%,0 100%);
+    background-color: #f26722;
+}
+#viewcurriculums .crcourseslist{
+    list-style: none;
+}
+#viewcurriculums .crcourseslist li:before{
+    content: "\f105";
+    font-family: fontAwesome;
+    float: left;
+    padding-right: 15px;
+    font-size: 16px;
+}
+#viewcurriculums .viewmorestrip{
+    padding: 0px 0px 25px;
+}
+#viewcurriculums .dataContainer .trainer_details .trainername{
+    width: 100%;
+    float: left;
+    font-size: 15px;
+}
+#viewcurriculums .dataContainer .trainer_details .trainerdesignation{
+    font-size: 11px;
+    width: 75%;
+    float: left;
+    margin-top: -3px;
+}
+#viewcurriculums .dataContainer .viewmorebtn{
+    padding: 2px 7px;
+    background-color: #00adef;
+    border: 1px solid #00adef;
+}
+#page-local-curriculum-index #curriculumcontent .alert.alert-info.noclasses {
+    margin-top: 20px;
+}
+#page-local-curriculum-index #viewcurriculums thead th{
+    display: none;
+}
+#page-local-curriculum-index .course_extended_menu_list{
+    top: -20px;
+}
+#page-local-curriculum-view .course_extended_menu_list{
+    top: -25px;
+}
+#viewcurriculums .coursesContainer{
+    min-height: 85px;
+    max-height: 85px;
+}
+body#page-local-curriculum-index .alert {
+    clear: both;
+}
+body#page-local-curriculum-affiliateprograms #region-main>.card.card-block {
+    overflow-x: inherit;
+}
+body#page-local-curriculum-affiliateprograms table#assigningrole td#existingcell select[size], 
+body#page-local-curriculum-affiliateprograms table#assigningrole td#potentialcell select[multiple] {
+    max-height: 400px;
+}
+/*
+ * ===========> added by rizwana for curriculum view page ends
+ *
+ */
+ body#page-local-curriculum-affiliateprograms table#assigningrole {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+body#page-local-curriculum-affiliateprograms table#assigningrole td#existingcell, 
+body#page-local-curriculum-affiliateprograms table#assigningrole td#potentialcell {
+    width: 38.33%;
+}
+body#page-local-curriculum-affiliateprograms table#assigningrole td#buttonscell {
+    width: 23.33%;
+}
+body#page-local-curriculum-affiliateprograms td#buttonscell {
+    padding-top: 210px;
+}
+body#page-local-curriculum-affiliateprograms td#buttonscell #addcontrols {
+    margin: auto; 
+}
+body#page-local-curriculum-affiliateprograms td#buttonscell #addcontrols input[type="submit"], 
+body#page-local-curriculum-affiliateprograms td#buttonscell #removecontrols input[type="submit"] {
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+}
+body#page-local-curriculum-affiliateprograms input#removeselect_searchtext, 
+body#page-local-curriculum-affiliateprograms input#addselect_searchtext {
+    margin-bottom: 3px;
+}
+/*class view page starts*/
+#page-local-curriculum-view .classviewimg{
+    width: 100%;
+    height: 270px;
+    border-radius: 12px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+#page-local-curriculum-view .classview_topcontent_right{
+    padding-left: 30px;
+}
+#page-local-curriculum-view .classname_strip{
+    width: 75%;
+    float: left;
+    position: absolute;
+    top: 25px;
+    background-color: #00adef;
+    padding: 2px 8px;
+    -webkit-clip-path: polygon(0 0,100% 0%,90% 100%,0 100%);
+    clip-path: polygon(0 0,100% 0%,90% 100%,0 100%);
+    text-transform: capitalize;
+    color: #fff;
+    opacity: .9;
+
+}
+#viewcurriculums .crcourseslist a {
+    font-size: 12px;
+    color: initial;
+}
+#page-local-curriculum-view .trainers_scroll span{
+    width: 100%;
+    float: left;
+}
+#page-local-curriculum-view .classname_strip .coursename{
+  font-size: 18px;
+}
+#page-local-curriculum-view .enrol_strip a {
+    color: #fff;
+}
+#page-local-curriculum-view .enrol_strip button{
+    background: none;
+    border:none;
+    padding: 0px;
+}
+#page-local-curriculum-view .enrol_strip button:before{
+    content: "\f044";
+    font-family: fontAwesome;
+    font-size: 25px;
+    vertical-align: middle;
+}
+#page-local-curriculum-view .enrol_strip {
+    width: 55%;
+    float: right;
+    position: absolute;
+    bottom: 25px;
+    right: 0px;
+    background-color: #00adef;
+    -webkit-clip-path: polygon(10% 0,100% 0%,100% 100%,0 100%);
+    clip-path: polygon(10% 0,100% 0%,100% 100%,0 100%);
+    text-align: center;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+#page-local-curriculum-view .enrol_strip .enroll i.fa{
+    font-size: 31px;
+    vertical-align: middle;
+}
+#page-local-curriculum-view .lable_name {
+    min-width: 180px;
+    float: left;
+}
+#page-local-curriculum-view .contentlist{
+    margin-bottom: 3px;
+}
+#page-local-curriculum-view .topcontent_right_middle{
+    /*margin-bottom: 15px;*/
+    font-size: 14px;
+}
+#page-local-curriculum-view .curriculumview_container .topcontent_right_bottom {
+    min-height: 70px;
+    max-height: 100px;
+}
+#page-local-curriculum-view .classdetails_left{
+    padding-left: 0px;
+    min-height: 80px;
+}
+#page-local-curriculum-view .classdetails_right{
+    border-left: 1px solid #ddd;
+}
+.topcontent_right_bottom{
+    height: 70px;
+    overflow: hidden;
+}
+#page-local-curriculum-view .trainerimg{
+    border-radius: 50%;
+}
+#page-local-curriculum-view .trainer-prev {
+    position: absolute;
+    left: 0;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 35px !important;
+    padding: 0 10px;
+    margin-left: -11px;
+    z-index: 1;
+    color: #ddd;
+}
+#page-local-curriculum-view .trainer-next {
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 35px !important;
+    padding: 0 10px;
+    margin-right: -10px;
+    z-index: 1;
+    color: #ddd;
+}
+#page-local-curriculum-view .createicon{
+    cursor: pointer;
+}
+#page-local-curriculum-view .createpopicon{
+    float: right;
+    position: absolute;
+    top: -20px;
+    right: 45px;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border-radius: 4px;
+    font-size: 25px;
+    padding: 8px 10px;
+    background-color: #e7e8ea;
+    cursor: pointer;
+    color: #f26723;
+}
+#page-local-curriculum-view .createpopicon.cr_usericon{
+    padding: 8px;
+}
+#page-local-curriculum-view .tab-content {
+    padding: 10px 15px;
+    position: relative;
+}
+#page-local-curriculum-view .tab-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#page-local-curriculum-view .nav-tabs .nav-item {
+    color: #55595c;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin: 0px 13px;
+    float: left;
+    min-width: 110px;
+}
+#viewcurriculumsessions_wrapper .row .col-sm-6:first-child{
+    display: none;
+}
+#page-local-curriculum-view table thead{
+    background-color: #2b2f3b;
+    color: #fff;
+}
+#page-local-curriculum-view table {
+    border: 1px solid #ddd;
+    min-width: 400px;
+}
+#page-local-curriculum-view table tbody td i.fa{
+    font-size: 17px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+#page-local-curriculum-view table thead tr th {
+    text-align: center;
+}
+#page-local-curriculum-view table tbody tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 8px;
+    text-align: center;
+}
+
+#page-local-curriculum-view table.dataTable thead tr th:first-child{
+    text-align: left !important;
+}
+#page-local-curriculum-view table.dataTable tbody tr td:first-child{
+    text-align: left !important;
+}
+#page-local-curriculum-view table tbody tr td:focus {
+    outline: none;
+}
+
+#page-local-curriculum-view .course_extended_menu_list li button{
+    background: #e7e8ea;
+    color: #f26723;
+    border: none;
+    padding: 9px 13px;
+}
+#page-local-curriculum-view #viewecurriculumcourses thead{
+    background-color: #2b2f3b;
+    color: #fff;
+}
+#page-local-curriculum-view .viewcurriculumusers {
+    display: inline-block;
+    float: right;
+    margin-bottom: 10px;
+}
+#page-local-curriculum-enrollusers .dual_select option{
+   padding: 5px;
+}
+/*class view page ends*/
+
+body#page-local-curriculum-attendance form#formattendance input[type="submit"] {
+    margin-right: 5px;
+}
+body#page-local-curriculum-index .course_extended_menu_list .sec_curriculum_icon{
+    position: absolute;
+    left: 19px;
+    top: 3px;
+    font-size: 18px;
+    color: #007b78;
+}
+.custom_curriculum_icon{
+    background-image: url('[[pix:theme_epsilon|scheme_icons/bcscheme1]]');
+    width: 25px;
+    height: 22px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    float: left;
+    -webkit-background-size: 50% 50%;
+    background-size: 50% 50%;
+    background-position: center;
+}
+.theme_scheme1 .custom_curriculum_icon,
+.organization_scheme1 .custom_curriculum_icon{
+    background-image: url('[[pix:theme_epsilon|scheme_icons/bcscheme1]]');
+}
+.theme_scheme2 .custom_curriculum_icon,
+.organization_scheme2 .custom_curriculum_icon{
+    background-image: url('[[pix:theme_epsilon|scheme_icons/bcscheme2]]');
+}
+.theme_scheme3 .custom_curriculum_icon,
+.organization_scheme3 .custom_curriculum_icon{
+    background-image: url('[[pix:theme_epsilon|scheme_icons/bcscheme3]]');
+}
+.theme_scheme4 .custom_curriculum_icon,
+.organization_scheme4 .custom_curriculum_icon{
+    background-image: url('[[pix:theme_epsilon|scheme_icons/bcscheme4]]');
+}
+.theme_scheme5 .custom_curriculum_icon,
+.organization_scheme5 .custom_curriculum_icon{
+    background-image: url('[[pix:theme_epsilon|scheme_icons/bcscheme5]]');
+}
+
+body#page-local-curriculum-index .course_extended_menu_list .createiconchild{
+    right: 2px;
+    top: 6px;
+    color: #5867dd;
+}
+@media screen and (min-width:0\0) {
+    body#page-local-curriculum-index .course_extended_menu_list .createiconchild {
+        right: 4px;
+        top: 41px;
+    }
+}
+@-moz-document url-prefix() {
+    /*body#page-local-curriculum-index .course_extended_menu_list .createiconchild {
+        right: 4px;
+        top: 41px;
+    }*/
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link[aria-controls="allclasses"] i.fa {
+    color: #3f51b5;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link[aria-controls="newclasses"] i.fa {
+    color: #2f757d;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link[aria-controls="activeclasses"] i.fa {
+    color: #1177d1;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link[aria-controls="holdclasses"] i.fa {
+    color: #f7941d;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link[aria-controls="cancelledclasses"] i.fa {
+    color: #ec1b23;
+}
+#page-local-curriculum-index #status_tabs .curriculum_tabs .nav-item .nav-link[aria-controls="completedclasses"] i.fa {
+    color: #0b9444;
+}
+#page-local-curriculum-index .curriculum_container:hover .actionicons{
+    visibility: visible;
+}
+#page-local-curriculum-index .actionicons{
+    visibility: hidden;
+}
+/*body#page-local-curriculum-index .actionicons.opened  .options_container{
+    top: -30px;
+    right: -22px;
+}
+body#page-local-curriculum-index .options_container:hover {
+    top: -30px;
+    right: -22px;
+}*/
+body#page-local-curriculum-index .curriculum_container.inactive_curriculum{
+    opacity: .5;
+}
+body#page-local-curriculum-index .actionicons.quick_actions_list3.opened .options_container{
+    top: -30px;
+    right: -25px;
+}
+body#page-local-curriculum-index .quick_actions_list3.options_container:hover{
+    top: -30px;
+    right: -25px;
+}
+body#page-local-curriculum-index #status_tabs .curriculum_container .curriculumname_status .options_container input[type=submit] {
+    background: none;
+    border: none;
+}
+body#page-local-curriculum-enrollusers #filters_form.collapsibleregion{
+    overflow: visible;
+}
+#page-local-curriculum-index #id_startdate_calendar,#page-local-curriculum-index #id_enddate_calendar,
+#page-local-curriculum-index #id_nomination_startdate_calendar,#page-local-curriculum-index #id_nomination_enddate_calendar,
+#page-local-curriculum-view #id_startdate_calendar,#page-local-curriculum-view #id_enddate_calendar,
+#page-local-curriculum-view #id_nomination_startdate_calendar,#page-local-curriculum-view #id_nomination_enddate_calendar,
+#page-local-curriculum-view #id_timestart_calendar,#page-local-curriculum-view #id_timefinish_calendar,
+#page-local-curriculum-view #id_timeopen_calendar,#page-local-curriculum-view #id_timeclose_calendar{
+    display: none !important;
+}
+#page-local-curriculum-view .cr_status_icon.cr_status_band{
+    position: absolute;
+    right: -4px;
+    text-align: center;
+    color: #fff;
+    min-height: 22px;
+    bottom: 25px;
+}
+#page-local-curriculum-view .cr_status_icon.cr_status_band .cr_status_strip{
+    background-color: #5b83bd;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 8px 0px;
+}
+#page-local-curriculum-view .cr_status_icon.cr_status_band .cr_status_strip:before{
+    font-family: FontAwesome;
+    margin-right: 15px;
+    font-size: 19px;
+    vertical-align: middle;
+}
+#page-local-curriculum-view .seats_icon{
+    line-height: 27px;
+}
+#page-local-curriculum-view .seat_img {
+    width: 16px;
+    height: 16px;
+    color: #444;
+    font-size: 16px;
+}
+#page-local-curriculum-view .seats_count {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.crseats_progress{
+    margin-top: 8px;
+}
+#page-local-curriculum-view .crseats_progress .progress{
+    height: 14px !important;
+    border-radius: 8px !important;
+    background-color: #1177d1 !important;
+}
+#page-local-curriculum-view .crseats_progress .progress .progress-bar-success{
+    background-color: #75c03d !important;
+}
+#page-local-curriculum-view .crseats_progress .progress .progress-bar{
+    line-height: 14px !important;
+}
+#page-local-curriculum-view .crseats_progress .progress .progress-bar-percent-value {
+    color: #fff;
+    padding-left: 10px;
+    text-align: center;
+}
+body#page-local-curriculum-index .anch {
+    width: 10%;
+    float: right;
+}
+body#page-local-curriculum-coursefaculty .card.card-block {
+    overflow: visible;
+}
+body#page-local-curriculum-coursefaculty .course_extended_menu_list {
+    top: -20px;
+}
+.add-del-sem {
+    display: block;
+}
+#page-local-curriculum-view .add-del-sem a.addsemester, 
+#page-local-curriculum-view .add-del-sem a.delsemester {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.program_filters #filters_form_inner form .form-group.fitem {
+    font-size: inherit;
+}
+.program_filters#filters_form #filters_form_inner #mform1 div[data-groupname] {
+    min-height: 40px;
+    margin-bottom: 0.5rem;
+}
+#page-local-curriculum-view .courssubeurl.h5 {
+    font-size: 0.9rem;
+}
+#page-local-curriculum-view .courseslist.in.collapse {
+    display: flex;
+    flex-flow: row wrap;
+}
+#page-local-curriculum-view .courseslist .courselist {
+    display: flex;
+    flex-flow: row wrap;
+}
+#page-local-curriculum-view .coursenamesub {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+/*media for curriculums starts*/
+@media(min-width: 1200px){
+    body .program_filters#filters_form #mform1 .autocomplete.form-group {
+        min-height: 48px;
+        margin-bottom: 0.5rem;
+    }
+}
+@media (max-width : 1250px) {
+    #page-local-curriculum-index #status_tabs .curriculum_tabs{
+        width: 100%;
+    }
+}
+@media (max-width : 1024px) {
+    #page-local-curriculum-view .classname_strip {
+       width: 90%;
+       -webkit-clip-path: none;
+       clip-path: none;
+    }
+    #page-local-curriculum-view .enrol_strip {
+        width: 90%
+    }
+    #page-local-curriculum-view .topcontent_right_middle{
+        font-size: 14px;
+    }
+    .path-local-curriculum .topcontent_right_bottom{height: inherit;}
+    #page-local-curriculum-view .lable_name {
+        min-width: 130px;
+        float: left;
+    }
+    body#page-local-curriculum-view #curriculummodulescontent{
+        overflow-x: auto;
+    }
+    body .coursenamesub .courssubeurl {
+        width: 95%;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1199px){
+    #page-local-curriculum-view .nav-tabs .nav-link.active, #page-local-curriculum-view .nav-tabs .nav-link.active:hover, #page-local-curriculum-view .nav-tabs .nav-link.active:focus{
+        margin-top: -12px;
+    }
+    #page-local-curriculum-view .curriculumview_tabscontainer .nav-tabs .nav-link{
+        margin-top: 0px;
+    }
+    #page-local-curriculum-view .showoptions{
+        margin-top: 10px;
+    }
+}
+@media (min-width: 893px) and (max-width: 1175px){
+    #page-local-curriculum-index .curriculum_container{
+        min-height: 321px;
+    }
+    #page-local-curriculum-index .curriculumicon_container{
+        display: none;
+    }
+}
+@media(min-width: 620px) and (max-width: 892px){
+    #page-local-curriculum-index #viewcurriculums tbody tr{
+        display: block;
+    }
+    #page-local-curriculum-index #viewcurriculums tbody tr td {
+        width: 50% !important;
+        float: left;
+        box-sizing: border-box;
+    }
+}
+@media (min-width: 620px) and (max-width: 770px){
+    #page-local-curriculum-index .curriculumicon_container{
+        display: none;
+    }
+}
+@media (min-width: 620px) and (max-width: 767px){
+    #page-local-curriculum-index .curriculum_container{min-height: 331px;}
+}
+@media (max-width: 689px){
+    #page-local-curriculum-index #status_tabs .curriculum_container .curriculumname_status .class_name{
+        font-size: 14px !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1259px){
+    .dataContainer .dataContainer_left {
+        width: 100%;
+        float: left;
+    }
+}
+@media (min-width: 768px) and (max-width: 1217px){
+    .program_filters#filters_form .mform .form-inline input[type=text].form-control {
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+    }
+}
+@media (max-width : 991px) {
+    #page-local-curriculum-view .classviewimg {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+}
+@media (min-width : 768px) and (max-width : 991px){
+  body#page-local-curriculum-session_enrolusers .bootstrap-duallistbox-container form#user_assign .buttons button.custom_btn,
+  body#page-local-curriculum-session_enrolusers .bootstrap-duallistbox-container form#user_un_assign .buttons button.custom_btn {
+    clear: both;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #page-local-curriculum-index .curriculum_container {
+    min-height: 322px;
+  }
+  body#page-local-curriculum-enrollusers .bootstrap-duallistbox-container .buttons button.custom_btn {
+    font-size: 12px;
+    padding: 1rem .5rem;
+    width: 46%;
+  }
+  body#page-local-curriculum-enrollusers .bootstrap-duallistbox-container .buttons button.custom_btn.remove,
+  body#page-local-curriculum-enrollusers .bootstrap-duallistbox-container .buttons button.custom_btn.btn.move {
+    width: 54%;
+  }
+}
+@media (min-width : 768px) {
+    #page-local-curriculum-view  .addcourse,.add-del-sem {
+        margin-top: 13px;
+    }
+    .program_filters#filters_form #mform1 .autocomplete.form-group {
+        min-height: 58px;
+    }
+}
+@media (max-width : 768px) {
+    #page-local-curriculum-index #status_tabs .curriculum_tabs {
+        width:100%;
+    }
+    #page-local-curriculum-index #viewcurriculums thead{
+        display: none;
+    }
+}
+@media (max-width : 767px) {
+    #page-local-curriculum-view .description {
+        min-height: inherit;
+        max-height: inherit;
+    }
+    #page-local-curriculum-view .classdetails_left {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    #page-local-curriculum-view .tab-content{padding: 10px 0px;}
+    #page-local-curriculum-view .classdetails_left {
+        margin: 15px 0px;
+        border-bottom: 1px solid #ddd;
+    }
+    #page-local-curriculum-view  .classdetails_right{
+        padding-left: 0px;
+    }
+    #page-local-curriculum-view .topcontent_right_bottom {
+        height: 150px;
+        overflow: hidden;
+    }
+    #page-local-curriculum-view .trainers_scroll_right{
+        padding-left: 10px;
+    }
+    #page-local-curriculum-view .classviewimg {
+        -webkit-background-size: 100%;
+        background-size: cover;
+    }
+    
+    #viewcurriculums .dataContainer .description{margin-top: 10px;}
+    #page-local-curriculum-view .createpopicon{position: static;}
+    #page-local-curriculum-view .classdetails_right{border-left: 0px;}
+    body.path-local-curriculum .nav-tabs.inner_tabs .nav-link {
+        border-bottom: 5px solid transparent;
+    }
+    #page-local-curriculum-view .addcourse{
+        margin-right: 5px;
+    }
+    body#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list .addsession_link,
+    body#page-local-curriculum-view .yearstabscontent_container .semestercourse_list .course_actions a .icon {
+      line-height: normal;
+    }
+    body#page-local-curriculum-view .nav-tabs .nav-link.active, body#page-local-curriculum-view .nav-tabs .nav-link.active:hover, body#page-local-curriculum-view .nav-tabs .nav-link.active:focus{
+      line-height: 17px!important;  
+    }
+    #page-local-curriculum-view .tab-content:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    #page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list .courseslist {
+        clear: both;
+    }
+    body#page-local-curriculum-affiliateprograms table#assigningrole td#existingcell, 
+    body#page-local-curriculum-affiliateprograms table#assigningrole td#buttonscell, 
+    body#page-local-curriculum-affiliateprograms table#assigningrole td#potentialcell {
+        width: 100%;
+        display: block;
+    }
+    body#page-local-curriculum-affiliateprograms td#buttonscell {
+        padding-top: 0px;
+    }
+    body#page-local-curriculum-index #filters_form .mform .autocomplete .form-inline input[type=text].form-control {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 619px){
+    #page-local-curriculum-index #viewcurriculums tbody tr td {
+        width: 100% !important;
+        float: left;
+        box-sizing: border-box;
+    }
+    .coursenamesub .addfaculty, .coursenamesub .viewfaculty, .yearstabscontent_container .semestercourse_list .course_delete {
+        width: 100%;
+    }
+}
+@media (max-width : 480px) {
+    body#page-local-curriculum-view .curriculumview_container {
+        padding: 15px 0px;
+    }
+    #page-local-curriculum-view .curriculumview_container .curriculum_view_content {
+        padding-left: 0px;
+    }
+    .coursenamesub .addfaculty, .coursenamesub .viewfaculty {
+        min-width: 100%;
+        text-align: center;
+    }
+    #page-local-curriculum-view .tab-content {
+        padding: 10px 0px 10px 10px;
+    }
+    #page-local-curriculum-view .classview_topcontent .curriculum_view_content {
+        padding-left: 30px;
+    }
+}
+@media (max-width : 425px) {
+    #page-local-curriculum-index .curriculum_container.curriculumnew {
+        width: 100%;
+        float: left;
+    }
+}
+@media (max-width : 375px) {
+    #page-local-curriculum-view .classname_strip {
+       width: 100%;
+    }
+   #page-local-curriculum-view .classname_strip .coursename {
+        font-size: 14px;
+    }
+    #page-local-curriculum-view .classname_strip .start_end {
+        font-size: 11px;
+    }
+    #page-local-curriculum-view .enrol_strip {
+        font-size: 15px;
+    }
+    #page-local-curriculum-view .enrol_strip .enroll i.fa {
+        font-size: 26px;
+    }
+    #page-local-curriculum-view .classview_topcontent_right h3 {
+        font-size: 14px;
+    }
+    #page-local-curriculum-view .topcontent_right_middle{
+        font-size: 12px;
+    }
+    #page-local-curriculum-view .lable_name {
+        min-width: 115px;
+    }
+}
+@media (max-width: 365px){
+    #page-local-curriculum-index .curriculumicon_container{
+        display: none;
+    }
+}
+/*media for curriculums ends*/
+#page-local-curriculum-index .department_select,#page-local-curriculum-view .department_select{
+    display: none;
+}
+
+
+/*
+ * ============> styles for curriculum all pages starts here
+ *
+ */
+.path-local-curriculum #region-main .card.card-block,
+#page-local-curriculum-view #region-main .card.card-block{
+    overflow-x: visible;
+}
+.path-local-curriculum .course_extended_menu_list, body#page-local-curriculum-users .course_extended_menu_list{
+    top: -20px;
+}
+
+body.path-local-curriculum .nav-tabs.inner_tabs .nav-link {
+    border-bottom: 5px solid transparent;
+}
+body.path-local-curriculum .ui-dialog.ui-widget{z-index: 1053 !important;}
+body.path-local-curriculum .ui-widget-overlay{z-index: 1052 !important;}
+body.path-local-curriculum .ui-draggable .ui-dialog-titlebar,
+body.path-local-curriculum .ui-dialog .ui-dialog-content{float: left;width: 100%;}
+body.path-local-curriculum .dataTables_wrapper .dataTable{
+    width: 100% !important;
+    float: left;
+}
+/*
+ * ============> styles for curriculum all pages ends here
+ *
+ */
+
+/*
+ * ============> style for index page starts here
+ *
+ */
+ #page-local-curriculum-index .card.card-block, body#page-local-curriculum-users .card.card-block {
+    background-color: #fff;
+    border : 1px solid #ddd;
+    overflow-x: visible;
+}
+#page-local-curriculum-index #status_tabs {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    border-radius: 12px;
+}
+#page-local-curriculum-index #viewcurriculums tbody tr td {
+    width: 33.33%;
+    padding: 15px;
+}
+#page-local-curriculum-index .curriculum_container{
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 12px 12px 0px 0px;
+    position: relative;
+    box-shadow: 0 0 5px 3px #ddd;
+    border-bottom: 3px solid #297b77;
+}
+#page-local-curriculum-index #status_tabs .curriculum_container .curriculumname_status{
+    padding: 10px 15px;
+    height: 60px;
+}
+#page-local-curriculum-index #status_tabs  .curriculum_container .curriculumname_status .class_name{
+    font-weight: bold;
+    font-size: 18px;
+}
+#viewcurriculums .dataContainer .lable_name {
+    min-width: 80px;
+    float: left;
+}
+#viewcurriculums .dataContainer .bcleftlable_name {
+    min-width: 86px;
+    float: left;
+}
+.curriculum_name{
+    line-height: 30px;
+}
+.curriculumicon_container{
+    background-color: #297b77;
+    border: none;
+    float: left;
+    padding: 5px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+.curriculumicon{
+    width: 25px;
+    height: 25px;
+}
+#viewcurriculums .dataContainer .description {
+    width: 100%;
+    float: left;
+    min-height: 77px;
+    word-break: break-all;
+}
+/*
+ * ============> style for index page ends here
+ *
+ */
+
+/*
+ * ============> style for view page starts here
+ *
+ */
+#page-local-curriculum-view .curriculumview_container{
+    width: 100%;
+    float: left;
+    /*padding: 15px;*/
+    background-color: #fff;
+}
+#page-local-curriculum-view .description p{
+    font-size: 12px !important;
+}
+#page-local-curriculum-view .curriculumview_container .curriculum_view_content{
+    padding-left: 20px;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .nav-tabs{
+    border-bottom: none;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .nav-tabs .nav-link{
+    border: none;
+    background: #cccccc;
+    color: #fff;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 17px;
+    margin-top: 10px;
+    word-break: break-all;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .nav-tabs .nav-item + .nav-item{
+    margin-left: 0px;
+}
+#page-local-curriculum-view .nav-tabs .nav-link.active,
+#page-local-curriculum-view .nav-tabs .nav-link.active:hover,
+#page-local-curriculum-view .nav-tabs .nav-link.active:focus{
+    background: #1177d1;
+    border: none;
+   /* line-height: 30px !important;
+    margin-top: -4px;*/
+}
+#page-local-curriculum-view .curriculumview_tabscontainer {
+    background-color: #fff;
+    padding: 0px 15px;
+    width: 100%;
+    float: left;
+    border-radius: 0px 0px 8px 8px;
+}
+/*#page-local-curriculum-view .curriculumview_tabscontainer .semestertabs_list{
+    width: 2%;
+    float: left;
+}*/
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container{
+    border: 1px solid #c8c1c1;
+    border-radius: 16px;
+    width: 98%;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list{
+    border: 1px solid #c8c1c1;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left-color: #297b77;
+    border-left-width: 2px;
+    position: relative;
+    float: left;
+    /*line-height: 30px;*/
+}
+#page-local-curriculum-view .levetop_icons{
+    position: relative;
+    right: 60px;
+}
+/*#page-local-curriculum-view  .addcourse{
+    font-size: 17px;
+    color: #297b77;
+    font-weight: bold;
+    display: block;
+    float: none;
+    text-decoration: underline;
+}*/
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list .semestercourse_left .coursename {
+    line-height: 30px;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list .semestercourse_left .coursename a,
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list .semestercourse_left .coursename i.fa{
+    color: #46ade3;
+    font-size: 19px;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list .addsession_link{
+    color: #46ade3;
+    font-size: 16px;
+    line-height: 66px;
+}
+#page-local-curriculum-view .options {
+    font-size: 14px !important;
+}
+/*#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list .course_edit{
+    color: #39b34a;
+}*/
+/*#page-local-curriculum-view .yearstabscontent_container .semestercourse_list .course_actions{
+    line-height: 64px;
+    float: right;
+}*/
+#page-local-curriculum-view .yearstabscontent_container .semestercourse_list .course_actions a .icon {
+    line-height: 52px;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list .course_delete{
+    color: #cd2428;
+    float: right;
+    text-indent: 0px;
+}
+#page-local-curriculum-view .semestercourse_list .semestercourse_right a .icon {
+    color: inherit;
+}
+#page-local-curriculum-view .semestercourse_list  .reschedule_btn{
+    background-color: #297b77;
+    padding: 2px 10px;
+    font-size: 12px;
+}
+#page-local-curriculum-view .semestercourse_list .session_details{
+    margin-top: 10px;
+    line-height: 25px;
+}
+#page-local-curriculum-view .semestercourse_list .session_details .sessiontime,
+#page-local-curriculum-view .session_location .sessionroom{
+    font-size: 12px;
+}
+#page-local-curriculum-view .semestercourse_list .sessioncompleted{
+    color: #39b34a;
+    font-size: 22px;
+}
+#page-local-curriculum-view .semestercourse_list .sessionnotcompleted{
+    color: #cd2428;
+    font-size: 22px;
+}
+#page-local-curriculum-view .course_status{
+    color: #fff;
+    border-radius: 0px 4px 0px 8px;
+    padding: 4px 8px;
+}
+#page-local-curriculum-view .course_status.completed{
+    background-color: #39b34a;
+    font-size: 13px;
+}
+#page-local-curriculum-view .course_status.inprogress{
+    background-color: #326fb8;
+    font-size: 13px;
+}
+#page-local-curriculum-view .course_status.pending{
+    background-color: #ec5a25;
+}
+#page-local-curriculum-view .semestercourse_right .course_status_tag{
+    position: absolute;
+    top: -3px;
+    right: 0px;
+}
+#page-local-curriculum-view .semestercourse_right .reschedule{
+    margin-top: 35px;
+    float: right;
+}
+#page-local-curriculum-view .session_location{
+    margin-top: 5px;
+}
+.session_icon i.fa {
+    font-size: 22px;
+}
+#page-local-curriculum-view .session_location .sessionlocation i.fa{
+    font-size: 22px;
+    margin-left: 5px;
+}
+#page-local-curriculum-view .showoptions {
+    background: none;
+    /*transform: rotate(-90deg);*/
+    /*margin-top: 17px;
+    margin-right: 5px;*/
+    margin-top: 4px;
+    margin-right: 2px;
+    width: 20px;
+    height: 20px;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .nav-tabs .nav-link .semesterrestrict {
+    font-size: 14px;
+}
+/*#page-local-curriculum-view .actionicons.opened .options_container {
+    background-color: #1177d1;
+    display: inline-flex;
+    top: 7px;
+    right: -55px;
+    transform: rotate(90deg);
+}
+#page-local-curriculum-view .quick_actions_list2.options_container:hover {
+    display: inline-flex;
+    top: 7px;
+    right: -55px;
+    transform: rotate(90deg);
+}
+#page-local-curriculum-view .quick_actions_list1.options_container:hover {
+    display: inline-flex;
+    top: 7px;
+    right: -55px;
+    transform: rotate(90deg);
+}*/
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercomplition {
+    padding: 4px 10px;
+    /* background-color: #3977d1; */
+    color: #fff;
+    border-radius: 10px;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercomplition.inprogress{
+    background-color: #1177d1;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercomplition.completed{
+    background-color: #39b34a;
+}
+#page-local-curriculum-view .nav-tabs .nav-link.Completed {
+    background-color: #39b34a !important;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .yearstabscontent_container .semestercourse_list.Completed {
+    border-left-color: #39b34a;
+    border-color: #39b34a;
+}
+@media (max-width: 1368px) and (min-width: 1200px){
+    .sideways.tabs-left {
+        left: -58px !important;
+    }
+}
+/*
+ * ============> style for view page ends here
+ *
+ */
+
+/*#viewcurriculumsessions thead tr th:last-child, 
+#viewcurriculumsessions tbody tr td:last-child {text-align: center;}
+
+#viewcurriculumsessions tbody tr td .sessionabsent{
+    color: #cd2428;
+    font-size: 17px;
+}
+#viewcurriculumsessions tbody tr td .sessionpresent{
+    color: #39b34a;
+    font-size: 17px;
+}*/
+
+/*
+ * ============> style for a attendance starts here
+ *
+ */
+#page-local-curriculum-attendance #sessionDetails{
+    width: 100%;
+    float: left;
+    margin: 10px auto;
+    border-collapse: unset;
+    border: none;
+}
+#page-local-curriculum-attendance #sessionDetails tbody tr{
+    border: 1px solid #ddd;
+}
+#page-local-curriculum-attendance #sessionDetails tbody tr td{
+    padding: 10px 5px;
+}
+#page-local-curriculum-attendance #sessionDetails .label_name {
+    float: left;
+    min-width: 80px;
+    font-weight: 700;
+    font-size: 14px
+}
+
+#viewcurriculumusers tbody tr td:last-child {
+    text-align: center;
+}
+
+table#viewcurriculumusers td:nth-child(5) {
+    text-align: center;
+}
+/*
+ * ============> style for view attendance ends here
+ *
+ */
+
+
+/*
+ * ============> tabs vertical side ways styles starts here
+ *
+ */
+.sideways {
+  margin-top:50px;
+  border: none;
+  position: relative;
+}
+.sideways>li {
+    height: 61px;
+    width: 132px;
+    margin-bottom: 75px !important;
+}
+.sideways>li>a {
+  border-bottom: 1px solid #ddd;
+  border-right-color: transparent;
+  text-align: center;
+}
+.sideways>li.active>a,
+.sideways>li.active>a:hover,
+.sideways>li.active>a:focus {
+  border-bottom-color: transparent;
+  border-right-color: #ddd;
+  border-left-color: #ddd;
+}
+.sideways.tabs-left {
+  left: -54px;
+  top: 25px;
+}
+.sideways.tabs-left>li {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.tabs-left {
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left>li {
+  float: none;
+}
+.tabs-left>li {
+  margin-right: -1px;
+}
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.tabs-left>li>a {
+  margin-right: 0;
+  display:block;
+}
+/*
+ * ============> tabs vertical side ways styles ends here
+ *
+ */
+
+
+#page-local-curriculum-view .actionicons .options_container:after {
+    content: "";
+    display: inline-block;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #1177d1;
+    position: absolute;
+    bottom: 0px;
+    left: -72px;
+    top: 2px;
+    width: 0;
+    height: 0;
+    margin: auto;
+    transform: rotate(90deg);
+}
+#page-local-curriculum-view .actionicons.opened .options_container {
+    background-color: #1177d1;
+    display: inline-flex;
+    top: -47px;
+    right: -20px;
+    /*-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);*/
+    transform: rotate(-90deg);
+    z-index: 1321;
+}
+#page-local-curriculum-view .quick_actions_list2.options_container:hover {
+    display: inline-flex;
+    top: -47px;
+    right: -20px;
+    /*-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);*/
+    transform: rotate(-90deg);
+}
+
+#page-local-curriculum-sessions .nav-tabs .nav-item {
+    color: #55595c;
+    text-align: center;
+}
+#page-local-curriculum-sessions .nav-tabs .nav-link.active {
+    /*border: none;*/
+    background-color: initial;
+    border-bottom: 5px solid #f7941d;
+}
+#page-local-curriculum-sessions .nav-tabs .nav-link.active {
+    border-color: #007b78;
+}
+
+#page-local-curriculum-sessions table#viewcurriculumsessions tr th,
+#page-local-curriculum-sessions table#viewcurriculumsessions tr td {
+    text-align: center;
+}
+body#page-local-curriculum-sessions #viewcurriculumsessions_wrapper {
+    overflow: auto;
+    width: 100%;
+    display: block;
+}
+body#page-local-curriculum-sessions #viewcurriculumsessions_wrapper table#viewcurriculumsessions {
+    min-width: 870px;
+}
+#viewcurriculumprograms{
+   width:100% !important ;
+   float:left;
+   min-width: 1000px;
+}
+.courseslist {
+    margin-bottom: 1rem;
+}
+/*.coursenamesub:before {
+    position: absolute;
+    content: "\f19d";
+    left: 0px;
+    font-family: FontAwesome;
+}*/
+.coursenamesub {
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    width: 100%;
+    float: left;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0 0 8px 0 #ddd;
+    box-shadow: 0 0 8px 0 #ddd;
+    position: relative;
+}
+/* .coursenamesub .courssubeurl{    
+    width: 52%;
+    display: inline-block;
+    text-align: left;
+    text-indent: 0;
+    word-break: break-word;
+} */
+#page-local-curriculum-view .classview_topcontent .curriculum_view_content {
+    padding-left: 60px;
+    box-sizing: border-box;
+}
+/*.coursenamesub .addfaculty, .coursenamesub .viewfaculty {
+    float: right;
+    text-align: left;
+    text-indent: 0;
+    width: 14.0%;
+    min-width: 110px;
+}*/
+.courseslist .coursenamesub:nth-child(even) {
+    background-color: #fafafa;
+}
+#page-local-curriculum-index .duplicateprogrambtn{
+    float: left;
+}
+#page-local-curriculum-view .curriculumview_tabscontainer .addsemester {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/*added for syllabus page*/
+#page-local-curriculum-syllabus .syllabus .years{
+    background-image: url([[pix:i/item]]);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 5px;
+    padding-left: 20px;
+}
+#page-local-curriculum-syllabus .syllabus .semesters{
+    background-image: url([[pix:i/navigationitem]]);
+    background-position: left 7px;
+    background-repeat: no-repeat;
+    margin-left: 35px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: auto !important;
+}
+#page-local-curriculum-syllabus .syllabus .nosemesters {
+    background-position: left 7px;
+    background-repeat: no-repeat;
+    margin-left: 35px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: auto !important;
+}
+#page-local-curriculum-syllabus .syllabus .courses {
+    background-position: left 7px;
+    margin-left: 70px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: auto !important;
+    position: relative;
+}
+#page-local-curriculum-syllabus .syllabus .nocourses {
+    margin-left: 70px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#page-local-curriculum-syllabus .syllabus .courses:before {
+    position: absolute;
+    content: "";
+    left: -8px;
+    font-family: FontAwesome;
+}
+#page-local-curriculum-index #filters_form #mform1 .col-md-3{
+    /*display: inline-flex;*/
+}
+.program_filters#filters_form #mform1 {
+    width: 100%;
+}
+.program_filters#filters_form #mform1 select.custom-select {
+    min-width: inherit;
+}
+.program_filters#filters_form #mform1 [data-groupname=durationfield] .form-group,
+.program_filters#filters_form #mform1 .date_time_selector .form-group,
+.program_filters#filters_form #mform1 .date_selector .form-group {
+    width: auto;
+    float: none;
+    min-height: inherit;
+}
+.program_filters#filters_form #mform1 .form-group>div label {
+    float: none;
+}
+body#page-local-curriculum-coursefaculty #viewcoursefaculty_wrapper {
+    margin-top: 20px;
+}
+body#page-local-curriculum-index #copyprogramcollege{
+    width: auto;
+    margin: auto;
+}
+body#page-local-curriculum-index #collegeaffliated .col-md-9.form_element.form-inline.felement{
+    text-align: center;
+    width: 50%;
+}
+/*new added*/
+.semcontentlist{
+    /*line-height: 50px;*/
+    /* background-color: #e1f2f9; */
+    border-bottom: 0px solid #e1f2f9;
+    /*border-top-right-radius: 6px;*/
+}
+/*.courselist:nth-child(3n){
+    padding-right: 15px;
+}*/
+.course_footer{
+    min-height: 21px;
+}
+.importlink{
+    position: absolute;
+    left: 0px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 15px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch_course:before {
+    position: absolute;
+    content: "OPT";
+    right: 8px;
+    font-size: 10px;
+    top: 3px;
+    font-weight: 600;
+}
+input:checked + .slider .switch_course:before {
+    content: "MAN";
+    left: 4px;
+    color: #fff;
+}
+.semestercourse_list .course_actions a{
+    padding: 0 3px;
+    /*width: 15px;
+    height: 15px;
+    font-size: 13px;*/
+    color: #17a2b8;
+}
+.semestercourse_list .course_actions a:hover{
+    color: #17a2b8;
+}
+.tab-content .lpcourse_content:nth-last-of-type(2) .semestercourse_list .semcontentlist.semabove:before{
+    content: "\f0d7";
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 20px;
+    top: 10px;
+    left: 15px;
+}
+.tab-content .lpcourse_content:nth-last-of-type(2) .semestercourse_list .semcontentlist.semabove.collapsed:before{
+     content: "\f0da";
+}
+.semcontentlist.semabove[aria-expanded="true"]:before {
+    content: "\f0d7";
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 20px;
+    top: 10px;
+    left: 15px;
+}
+.semcontentlist.semabove[aria-expanded="false"]:before {
+    content: "\f0da";
+    font-family: fontAwesome;
+    position: absolute;
+    font-size: 20px;
+    top: 10px;
+    left: 15px;
+}
+.courseswitchtype{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #3ca2b8;
+    color: #fff;
+    padding: 0px 3px;
+    border-radius: 0px 5px;
+}
+.courseswitchtype.mandatory{
+    background-color: #f05a28;
+}
+.textovr {
+    height: 76px;
+    overflow: hidden;
+    line-height: 23px;
+}
+.textovr.vis {
+    height: inherit;
+}
+a#txtoverflow {
+    position: absolute;
+    right: 30px;
+    bottom: -6px;
+}
+a#txtunderrflow {
+    text-align: right;
+    padding-right: 30px;
+}
+/* Added by harish for Read more link */
+#page-local-curriculum-view a#readmoremyBtn {
+    color: #2739c1;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#page-local-curriculum-index div#filters_form {
+    margin-top: 12px;
+}
+#page-local-curriculum-index #filters_form #filters_form_inner .form-submit {
+    max-width: 80px;
+}
+#page-local-curriculum-index select.form-control:not([size]):not([multiple]) {
+    height: 20px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}/*alignments issue fixing ODL-181*/
+#filters_form{
+    font-size: 13px;
+}
+#page-local-curriculum-index section#region-main {
+    overflow: visible;
+}

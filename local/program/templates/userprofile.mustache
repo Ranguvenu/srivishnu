@@ -1,0 +1,62 @@
+{{!
+    This file is part of eAbyas
+    Copyright eAbyas Info Solutons Pvt Ltd, India
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    
+    @author eabyas  <info@eabyas.in>
+}}
+{{#response}}
+    {{#viewtypeCard}}
+        <div class="" id="programs_tab_content">
+            <table class="w-full pull-left" id = profile_program_content>
+                <thead class="hidden">
+                    <tr>
+                        <th></th>
+                    </tr>
+                </thead>
+                {{# records}}
+                    <tbody>
+                        <tr><td>
+                            <div class="w-full pull-left usercourseslist p-2">
+                                <div class="col-md-7 col-12 pull-left programs-details">
+                                    <h5>{{ name }}</h5>
+                                    {{# description}}
+                                        <p>{{ description }}</p>
+                                    {{/ description}}
+                                    {{^ description}}
+                                        <p class="w-full pull-left alert alert-info text-center">{{#str}}nocoursedesc, local_courses{{/str}}</p>
+                                    {{/ description}}
+                                </div>
+                                <div class="col-md-3 col-12">
+                                        <p><b>Startdate:</b>  {{ startdate }}</p>
+                                        <p><b>Enddate:</b>  {{ enddate }}</p>
+                                        <p><b>Validtill:</b>  {{ validtill }}</p>
+                                    </div>
+                                <div class="col-md-2 col-12 pull-right my-2 p-0">
+                                        <div class="progressprogress-bar d-flex flex-row flex-wrap justify-content-between align-items-center">
+                                            <div class="progress-bar pl-2 pr-2 d-flex flex-row flex-wrap" role="status" >
+                                                <span class="status_lable"><b> Status<span class="ml-1 mr-1">:</span></b></span>
+                                                <span class="status_value">{{ status }}</span>
+                                            </div>
+                                        </div>
+                                    </div
+                            </div>
+                        </td></tr>
+                    </tbody>
+                {{/ records}}
+            </table>
+            {{^ records}}
+                <p class="w-full pull-left alert alert-info text-center">{{# str}} noprogramsuser, local_program {{/ str}}</p>
+            {{/ records}}
+        </div>
+    {{/viewtypeCard}}
+{{/response}}

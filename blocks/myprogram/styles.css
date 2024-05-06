@@ -1,0 +1,16 @@
+.block_myprogram .content .generaltable thead{
+	background: #e7e7e7;
+}
+.block_myprogram .content .generaltable{
+	color: black;
+}
+.block_myprogram .content .generaltable a.launchbutton {
+    padding: 2px 10px 4px;
+    background-color: #424244;
+    color: #FFF;
+    border-radius: 2px;
+}
+.block_myprogram .content .generaltable a.launchbutton:hover,
+.block_myprogram .content .generaltable a.launchbutton:active {
+    background-color: #9F1C33;
+}

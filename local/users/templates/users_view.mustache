@@ -1,0 +1,115 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<div class="col-md-12 col-sm-12 col-12 userscontainer  {{^ visible}} invisible_user {{/ visible}}">
+        <div class="pull-right text-right actionicons showoptions{{userid}}">
+                <span  class="pull-right showoptions" data-action="showoptions{{userid}}" onmouseenter="(function(e){ require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{userid}}' }) })(event)" onmouseleave="(function(e){require('theme_epsilon/quickactions').quickactionsCall({ selector:'showoptions{{userid}}' }) })(event)"><i class="fa fa-ellipsis-h options"></i>
+                </span>
+             <ul class="col-md-12 col-sm-12 col-12 p-0 options_container" id = "showoptions{{userid}}">
+                {{# delcap }}
+                <li>
+                    <a href="javascript:void(0)" title="{{# str}}delete{{/ str}}" onclick="(function(e){ require('local_users/newuser').deleteConfirm({ action: 'delete_user' ,id:{{userid}},context:1, fullname:'{{fullname}}'}) })(event)">
+                        <i class="fa fa-trash fa-fw" aria-hidden="true" title="" aria-label="Delete"></i>
+                    </a>
+                </li>
+                {{/ delcap }}
+                {{# editcap }}
+                <li>
+                    
+                    <a href="javascript:void(0)" data-action="createusermodal" class="createusermodal" data-value="{{userid}}" onclick="(function(e){ require('local_users/newuser').init({selector:'createusermodal', context:1, id:{{userid}}, form_status:0,employee:{{employee}} })})(event)" style="cursor:pointer" title="Edit">
+                        <i class="fa fa-cog fa-fw" title=""></i>
+                    </a>
+                </li>
+                {{/ editcap }}
+                {{# editcap }}
+                    {{# visible}}
+                    <li>
+                        <a href="javascript:void(0)" title="Hide" onclick="(function(e){ require('local_users/newuser').userSuspend({ id:{{userid}},context:1, fullname:'{{fullname}}'}) })(event)">
+                            <i class="fa fa-eye"></i></a>
+                    </li>
+                    {{/ visible}}
+                        
+                    {{^ visible}}
+                    <li>
+                        <a href="javascript:void(0)" title="Show" onclick="(function(e){ require('local_users/newuser').userSuspend({ id:{{userid}},context:1, fullname:'{{fullname}}'}) })(event)">
+                            <i class="fa fa-eye-slash"></i></a>
+                    </li>
+                    {{/ visible}}
+                {{/ editcap }} 
+            </ul>
+        </div>
+    <div class="pull-left p-0 user_image">
+        <div>{{{userpic}}}</div>
+    </div>
+        {{# visible}}
+            <button class="btn btn_active_user">Active</button>
+        {{/ visible}}
+                    
+        {{^ visible}}
+            <button class="btn btn_inactive_user">Inactive</button>
+        {{/ visible}}
+    <!--<div class="user_top_content col-md-11 col-sm-12 col-12 pr-0">
+        <div class="col-md-12 col-sm-12 col-12 pr-0 user_top_left">
+             <div class="col-md-6 col-sm-12 col-12 pull-left p-0">
+                <div class="pull-left">
+                    <span class="pull-left username_lable">Name<span class="pull-right mr-10px">:</span> </span><span><b>{{{ username }}}</b></span>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12 pull-left p-0">
+                <div>
+                    <span class="pull-left userid_lable">Employee ID<span class="pull-right mr-10px"> :</span> </span><span><b>{{ empid }}</b></span>
+                </div>
+            </div>
+        </div>
+                <!-<div class="">
+                    <span class="" style="min-width: 92px; float: left">Contact No<span style="margin-right: 10px;float: right;">:</span> </span><span><b>{{ phno }}</b></span>
+                </div>-->
+                <!--<div class="">
+                    <span class="" style="min-width: 92px; float: left">Last Access <span style="margin-right: 10px;float: right;">:</span> </span><span><b>{{ lastaccess }}</b></span>
+                </div>->
+    </div>-->
+    <div class="col-md-12 col-sm-12 col-12 pt-15px pt-15px pl-0 pr-0">
+
+        <div class="p-0 col-md-7 col-sm-12 col-12 userdetails_left">
+            <p class="mb-10px w-full pull-left">
+                <span class="pull-left user_info_lable">Name<span class="pull-right mr-10px">:</span> </span><span><b>{{{ username }}}</b></span>
+            </p>
+            <p class="mb-10px w-full pull-left">
+                <span class="pull-left user_info_lable">E-Mail <span class="pull-right mr-10px">:</span> </span><span><b>{{ email }}</b></span>
+            </p>
+            <p class="mb-10px w-full pull-left">
+                <span class="pull-left user_info_lable">Organization <span class="pull-right mr-10px">:</span> </span><span title="{{org}}"><b>{{ orgstring }}</b></span>
+            </p>
+            <p class="mb-10px w-full pull-left">
+                <span class="pull-left user_info_lable">Department <span class="pull-right mr-10px">:</span> </span><span title="{{ dept }}"><b>{{ deptstring }}</b></span>
+            </p>
+        </div>
+        <div class="p-0 col-md-5 col-sm-12 col-12 userdetails_right">
+            <p class="mb-10px w-full pull-left">
+                <span class="pull-left user_info_lable userid_lable">Employee ID<span class="pull-right mr-10px"> :</span> </span><span><b>{{ empid }}</b></span>
+            </p>
+            <p class="mb-10px w-full pull-left">
+                <span class="pull-left user_info_lable">Level <span class="pull-right mr-10px">:</span> </span><span><b>{{ group }}</b></span>
+            </p>
+            <p class="mb-10px w-full pull-left">
+                <span class="pull-left user_info_lable">Designation <span class="pull-right mr-10px">:</span> </span><span title="{{ designation }}"><b>{{ designationstring }}</b></span>
+            </p>
+            <p class="mb-10px w-full pull-left">
+                <span class="pull-left user_info_lable">Supervisor <span class="pull-right mr-10px">:</span> </span><span title="{{ supervisor }}"><b>{{ supervisiorstring }}</b></span>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,254 @@
+/* Anchor link offset fix. This makes hash links scroll 60px down to account for the fixed header. */
+$fixed-header-y: $navbar-height;
+
+$drawer-width: 70px !default;
+$drawer-open-width: 240px !default;
+$drawer-padding-x: 20px !default;
+$drawer-padding-y: 10px !default;
+$drawer-offscreen-gutter: 20px !default;
+$usernavlink: #047fb5 !default;
+$leftsidebar: #21315e !default;
+/*$usernavhvrbg: #f5f4f1 !default;*/
+/*$usernavhvrlink: #f1582c !default;*/
+/*$brand-primary = #aaa !default;*/
+
+:target {
+    padding-top: ($fixed-header-y + 30px) !important; /* stylelint-disable declaration-no-important */
+    margin-top: -$fixed-header-y !important; /* negative fixed header height */
+}
+.pagelayout-embedded :target {
+    padding-top: initial;
+    margin-top: initial;
+}
+
+#page {
+    margin-top: $navbar-height;
+}
+
+/* Use a variable for the drawer background colors. */
+$drawer-bg: $gray-lighter !default;
+$drawer-bg: #2c2f3b;
+/*$sidebarbgcolor: #2c2f3b !default;*/
+
+[data-region="drawer"] {
+    position: fixed;
+    /*padding: $drawer-padding-x $drawer-padding-y;*/
+    width: $drawer-width;
+    top: $fixed-header-y;
+    height: calc(100% - #{$navbar-height});
+    /*overflow-y: auto;*/
+    -webkit-overflow-scrolling: touch;
+    z-index: $zindex-dropdown + 10;
+    /*background-color: $sidebarbgcolor;*/
+    -webkit-transition: all 0.5s ease, all 0.5s ease;
+    -moz-transition: all 0.5s ease, all 0.5s ease;
+    transition: all 0.5s ease, all 0.5s ease;
+}
+#nav-drawer {
+    right: auto;
+    left: 0;
+    overflow-y: auto;
+	/*padding: $drawer-padding-x $drawer-padding-y;*/
+    padding: 0px 0px 20px 0px;
+    width: $drawer-open-width;
+    .user_navigation_link_text{
+        display: block;
+        -webkit-transition: text-align 0.5s ease, text-align 0.5s ease;
+        -moz-transition: text-align 0.5s ease, text-align 0.5s ease;
+        transition: text-align 0.5s ease, text-align 0.5s ease;
+        color: #5d5d5d;
+        font-weight: 400;
+        font-size: 13px;
+        padding-top: 2px;
+        padding-bottom: 1px;
+        text-transform: capitalize;
+    }
+    .user_navigation_ul .user_nav_div .fa{
+        text-align: left;
+        -webkit-transition: text-align .5s ease, text-align .5s ease;
+        -moz-transition: text-align .5s ease, text-align .5s ease;
+        -o-transition: text-align .5s ease, text-align .5s ease;
+        transition: text-align .5s ease, text-align .5s ease;
+    }
+}
+#nav-drawer.closed {
+    /*left: $drawer-width;*/
+    overflow: visible;
+    width: $drawer-width;
+    padding: 0px 0px;
+	.user_navigation_link{
+		
+		&:hover{
+			/*background-color: $usernavhvrbg;*/
+            /* color: $usernavhvrlink;*/
+			position: relative;
+			.user_navigation_link_text{
+				/*background-color: $usernavhvrbg;*/
+                /*color: $usernavhvrlink;*/
+				min-width: 150px;
+				line-height: 42px;
+				display: block;
+				position: absolute;
+				left: 100%;
+				top: 0px;
+				z-index: $zindex-dropdown + 9;
+                /*box-shadow: 5px 1px 12px 0px #aaa;*/
+                box-shadow: 7px 1px 5px 0px #aaa;
+                border-left: 0px;
+                margin-top: 0px;
+                padding: 0px;
+			}
+		}
+	}
+    .user_navigation_link_text{
+		display: none;
+    }
+    .user_navigation_ul .user_nav_div .fa{
+        margin-right: 0px;
+        width: 100%;
+        float: left;
+        text-align: center;
+        -webkit-transition: text-align .5s ease, text-align .5s ease;
+        -moz-transition: text-align .5s ease, text-align .5s ease;
+        -o-transition: text-align .5s ease, text-align .5s ease;
+        transition: text-align .5s ease, text-align .5s ease;
+    }
+}
+.user_navigation_ul {
+    background: #e1f2f9;
+    list-style: none;
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    margin-top: 0px;
+    transition: margin 0.8s ease;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    .user_nav_div {
+	    width: 100%;
+	    .user_navigation_link {
+		    float: left;
+		    width: 100%;
+		    padding: 10px 0px;
+            color: $usernavlink;
+		}
+		.fa{
+			font-size: 22px;
+			margin-right: 10px;
+			width: 25px;
+			float: left;
+		}
+	}
+    .user_nav_div.dropdown-item {
+        padding: 0px;
+        &:hover {
+            background-color:transparent;
+        }
+    }
+}
+#page {
+    margin-top: $fixed-header-y;
+}
+.pagelayout-embedded #page {
+    margin-top: 0;
+}
+body.drawer-ease .nav-drawer-overlay{
+    -webkit-transition: all 0.5s ease, all 0.5s ease;
+    -moz-transition: all 0.5s ease, all 0.5s ease;
+    transition: all 0.5s ease, all 0.5s ease;
+}
+/*
+//body.drawer-open-left {
+//    @include media-breakpoint-up(md) {
+//        margin-left: $drawer-width;
+//    }
+//}
+//body.drawer-open-right {
+//    @include media-breakpoint-up(md) {
+//        margin-right: $drawer-width;
+//    }
+//}
+*/
+.nav-drawer-overlay{
+    display: none;
+}
+body{margin-left: 70px;}
+body.pagelayout-maintenance,
+body.pagelayout-redirect,
+body.notloggedin{margin-left: 0px;}
+body.drawer-open-left{
+    margin-left: $drawer-open-width;
+}
+.drawer-open-left .nav-drawer-overlay{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: $zindex-dropdown + 9;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+#nav-drawer::-webkit-scrollbar {
+    width: 0px;
+}
+#nav-drawer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+#nav-drawer::-webkit-scrollbar-thumb {
+  background-color: $brand-primary;
+  outline: none;
+}
+
+/*category new icon css added here*/
+#nav-drawer #id_leftmenu_categories .user_navigation_link {
+    position: relative;
+}
+#nav-drawer #id_leftmenu_categories .user_navigation_link .secbook {
+    position: absolute;
+    top: 4px;
+}
+#nav-drawer #id_leftmenu_categories .user_navigation_link .secbook {
+    left: -4px;
+}
+#nav-drawer.closed #id_leftmenu_categories .user_navigation_link .secbook {
+    right: 6px;
+}
+#nav-drawer .browseclassrooms .user_navigation_link{position: relative;}
+#nav-drawer .browseclassrooms .user_navigation_link .sec_classroom_icon{
+    position: absolute;
+    left: -10px;
+    top: 16px;
+    font-size: 18px;
+}
+.leftmenu_navigator {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    max-width: $drawer-open-width;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 0px;
+    color: #fff;
+    background: #2c2f3b;
+    z-index: 200;
+    box-shadow: -3px 0px 2px 2px #999;
+    -webkit-box-shadow: -3px 0px 2px 2px #999;
+    -mox-box-shadow: -3px 0px 2px 2px #999;
+    position: fixed;
+}
+.closed .leftmenu_navigator {
+    position: absolute;
+}
+.user_navigation_ul.show_more {
+    margin-top: -460px;
+}
+.leftmenu_navigator .leftmenu_navigator_icon:before{
+    content: "\f078";
+}
+.leftmenu_navigator.show_more .leftmenu_navigator_icon:before{
+    content: "\f077";
+}
